@@ -1,0 +1,56 @@
+library(shiny)
+library(shinyjs)
+
+source("helper-text.R")
+
+shinyApp(
+  ui = fixedPage(
+    useShinyjs(),
+    inlineCSS(list(.big = "font-size: 2em",
+                   a = "cursor: pointer")),
+    fixedRow(
+      column(6,
+        h2("shinyjs demo"),
+        checkboxInput("big", "Bigger text", FALSE),
+        div(id = "myapp",
+          textInput("name", "Name", ""),
+          a(id = "toggleAdvanced", "Show/hide advanced info"),
+          hidden(
+            div(id = "advanced",
+              numericInput("age", "Age", 30),
+              textInput("company", "Company", "")
+            )
+          ),
+          p("Timestamp: ",
+            span(id = "time", date()),
+            a(id = "update", "Update")
+          ),
+          actionButton("submit", "Submit")
+        ),
+        br(), br()
+      ),
+      column(6,
+             getHelperText()
+      )
+    )
+  ),
+
+  server = function(input, output, session) {
+    onclick("update", text("time", date()))
+    onclick("toggleAdvanced", toggle(id = "advanced", anim = TRUE))
+
+    observe({
+      toggleClass("myapp", "big", input$big)
+    })
+
+    observe({
+      toggleState("submit", !is.null(input$name) && input$name != "")
+    })
+
+    observe({
+      if (input$submit > 0) {
+        info("Thank you!")
+      }
+    })
+  }
+)
