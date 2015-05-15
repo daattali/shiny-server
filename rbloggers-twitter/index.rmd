@@ -183,8 +183,6 @@ library(dplyr)
 library(magrittr)
 library(twitteR)
 library(ggplot2)
-library(ggvis)
-library(DT)
 
 # for wordcloud
 library(SnowballC)
