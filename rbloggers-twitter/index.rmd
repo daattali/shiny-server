@@ -435,7 +435,7 @@ ggplot(tweets) +
   scale_fill_brewer("Author", type = "qual", palette = 3)
 ```
 
-### Post success by dat of week
+### Post success by day of week
 
 I wanted to see if there is a correlation between when a post is posted and how successful it is. I also wanted to see if there are certain days of the week that are more/less active.
 
