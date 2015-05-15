@@ -1,12 +1,15 @@
 "id","date","day","favorites","retweets","title","url","author","score"
+"599070488149643264",2015-05-15,"Friday",11,3,"GeoJSON Hexagonal “Statebins” in R","http://t.co/lR7DRMoAi6","hrbrmstr",17
+"599110778122186752",2015-05-15,"Friday",10,8,"Getting started with MongoDB in R","http://t.co/P6KKoGhgE9","Jeroen Ooms",26
+"599066732070744064",2015-05-15,"Friday",6,4,"A first look at htmlwidgets","http://t.co/u9451XnnBz","Joseph Rickert",14
 "598667843127758848",2015-05-14,"Thursday",4,4,"Bertrand or (The Importance of Defining Problems Properly)","http://t.co/HLFvErpuX8","aschinchon",12
-"598958510815125504",2015-05-14,"Thursday",16,7,"Reinventing the wheel for ordination biplots with ggplot2","http://t.co/RJDNPEF781","beckmw",30
+"598958510815125504",2015-05-14,"Thursday",17,7,"Reinventing the wheel for ordination biplots with ggplot2","http://t.co/RJDNPEF781","beckmw",31
 "598651483421192192",2015-05-14,"Thursday",17,7,"streaming machine learning with RMOA: stream_in &gt; train &gt; predict","http://t.co/y0j254q1Td","BNOSAC - Belgium Netwo...",31
 "598660312707936257",2015-05-14,"Thursday",22,12,"Survival analysis: basic terms, the exponential model, censoring, examples in R and JAGS","http://t.co/tyxDUS9FfW","Petr Keil",46
 "598436352380645376",2015-05-13,"Wednesday",16,6,"Copulas and Financial Time Series","http://t.co/seBywEm5Fs","arthur charpentier",28
 "598310608979693569",2015-05-13,"Wednesday",5,3,"OpenMP, OS-X and R","http://t.co/V4zQOF41Qd","bhejbiostat",11
 "598577294899224576",2015-05-13,"Wednesday",3,0,"Advertising a Few Systematic ETFs (Strictly Of My Own Volition)","http://t.co/BGnSL3ASFA","Ilya Kipnis",3
-"598587347253362689",2015-05-13,"Wednesday",37,8,"Data Science - Short lesson on cluster analysis","http://t.co/95N6wQ0G3T","Pablo C.",53
+"598587347253362689",2015-05-13,"Wednesday",36,8,"Data Science - Short lesson on cluster analysis","http://t.co/95N6wQ0G3T","Pablo C.",52
 "598324338920566784",2015-05-13,"Wednesday",3,1,"Hadley Wickham Master R Developer Workshop in Chicago – Space Limited","http://t.co/HmgRYODFZk","tareefkawaf",5
 "598375908848762880",2015-05-13,"Wednesday",2,0,"the Flatland paradox","http://t.co/Ddb3pI4NuK","xi'an",2
 "598169541533773825",2015-05-12,"Tuesday",59,54,"Choosing R or Python for data analysis? An infographic","http://t.co/UZJivJbsw2","DataCamp",167
@@ -3039,12 +3042,5 @@ Boris Chen, a data scientist for the New York Times, has been runni...","http://
 "379188005740621824",2013-09-15,"Sunday",4,2,"paste, paste0, and sprintf","http://t.co/isheLCf4sB","tylerrinker",8
 "378964103349301248",2013-09-14,"Saturday",5,1,"Mixed models; Random Coefficients, part 2","http://t.co/1Ts0uzdrFF","Wingfeet",7
 "378591620305674240",2013-09-13,"Friday",2,0,"Clustering Lightning Discharges to Identify Storms","http://t.co/axAUHxLy0S","andrew",2
-"378355008619552769",2013-09-13,"Friday",2,0,"Who uses E-Bikes in Toronto?  Fun with Recursive Partitioning Trees and Toronto Open Data: 
-
-(This ar...","http://t.co/FU8ALN9C8N","inkhorn82",2
 "378647001765650432",2013-09-13,"Friday",1,0,"Alpha Testing RevoScaleR running in Hadoop","http://t.co/Kg6aoFLma2","Joseph Rickert",1
-"378456134547300353",2013-09-13,"Friday",7,4,"A technique for doing parametrized unit testing in R: Case study with stock price data analysis: 
-
-(T...","http://t.co/zwq4DVkGwP","msuzen",15
 "378647002256384000",2013-09-13,"Friday",0,0,"MCMSki IV, Jan. 6-8, 2014, Chamonix (news #6)","http://t.co/fTqYHyGNfd","xi'an",0
-"378302230698676224",2013-09-12,"Thursday",1,0,"pander 0.3.8 is out","http://t.co/lIkTVlnXZK","Gergely Daróczi",1
