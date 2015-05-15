@@ -288,22 +288,11 @@ tweets %<>% na.omit
 
 ### Clean up data
 
-#### Add score to each tweet
-
-Calculate a score metric for every tweet using the little bit of information we have (# of favorites and # of retweets). This is of course very arbitrary - I chose to score a tweet's success as a linear combination of its # of favorites and retweets.  Since there are roughly twice as many favorites as retweets in total, retweets get twice the weight. Very simple formula :)
-
-```{r add-score}
-sum(tweets$favorites) / sum(tweets$retweets)   # = 2.1
-tweets$score <- tweets$favorites + tweets$retweets * 2
-```
-
-#### Final clean up
-
-Now we have all the necessary information in the `tweets` data.frame, so it's time for a bit of cleanup:  
+It's time for a bit of cleanup:  
 
 - Remove the URL and `#rstats` hashtag from every tweet's title  
 
-- Older posts all contain the text "This article was originally posted on ... and kindly contributed by ...". Try to remove that as well.
+- Older posts all contain the text "This article was originally posted on ... and kindly contributed by ..." - try to remove that as well
 
 - Order the day factor levels in order from Monday - Sunday
 
@@ -344,6 +333,15 @@ tweets %<>%
     x
   }) %>%
   arrange(desc(date))
+```
+
+### Add score to each tweet
+
+The last thing we need to do is to calculate a score metric for every tweet using the little bit of information we have (# of favorites and # of retweets). This is of course very arbitrary - I chose to score a tweet's success as a linear combination of its # of favorites and retweets.  Since there are roughly twice as many favorites as retweets in total, retweets get twice the weight. Very simple formula :)
+
+```{r add-score}
+sum(tweets$favorites) / sum(tweets$retweets)   # = 2.1
+tweets$score <- tweets$favorites + tweets$retweets * 2
 ```
 
 #### Save results for later
@@ -435,7 +433,7 @@ ggplot(tweets) +
   scale_fill_brewer("Author", type = "qual", palette = 3)
 ```
 
-### Post success by day of week
+### Post success by dat of week
 
 I wanted to see if there is a correlation between when a post is posted and how successful it is. I also wanted to see if there are certain days of the week that are more/less active.
 
@@ -493,3 +491,4 @@ topwords <-
 wordcloud(names(topwords), topwords, min.freq = 10)
 ```
 
+Remember to check out the [accompanying blog post](http://deanattali.com/2015/05/17/analyzing-rbloggers-posts-via-twitter/)!
