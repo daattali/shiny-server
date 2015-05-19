@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 shiny-server.Rproj
+.httr-oauth
+google-form-mock/responses/
+*.sqlite

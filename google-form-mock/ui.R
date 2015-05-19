@@ -18,13 +18,24 @@ shinyUI(fluidPage(
           title = "Submit form", id = "submitTab", value = "submitTab",
           
           br(),
-          textInput("name", "Name", "testg"),
+          textInput("name", "Name", ""),
           sliderInput("r_num_years", "Number of years using R", 0, 22, 1, ticks = FALSE),
           checkboxInput("used_shiny", "I've built a Shiny app in R", FALSE),
-          selectInput("os_type", "Opearting system used most frequently",
+          selectInput("os_type", "Operating system used most frequently",
                       c("", "Windows", "Mac", "Linux")),
           textInput("favourite_pkg", "Favourite R package"),
           actionButton("submit", "Submit", class = "btn-primary"),
+          
+          shinyjs::hidden(
+            span(id = "submitMsg", "Submitting...", style = "margin-left: 15px;")
+          ),
+          
+          shinyjs::hidden(
+            div(id = "error",
+                div(br(), tags$b("Error: "), span(id = "errorMsg")),
+                style = "color: red;"
+            )
+          ),          
           
           # hidden input field tracking the timestamp of the submission
           shinyjs::hidden(textInput("timestamp", "", get_time_epoch()))
@@ -34,7 +45,7 @@ shinyUI(fluidPage(
           title = "View responses", id = "viewTab", value = "viewTab",
           br(),
           downloadButton("downloadBtn", "Download responses"), br(), br(),
-          tags$a(id = "toggleView", "Show/hide responses", href = "#"),
+          tags$a(id = "toggleView", "Show/hide responses", href = "javascript:void(0);"),
           dataTableOutput("responsesTable")
         )
       )

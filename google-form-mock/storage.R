@@ -4,9 +4,22 @@ library(DBI)
 library(RMySQL)
 library(RSQLite)
 library(rmongodb)
+library(googlesheets)
+library(RAmazonS3)
 
 DB_NAME <- "shinyapps"
 TABLE_NAME <- "google_form_mock"
+
+get_file_name <- function(data) {
+  file_name <- paste0(
+    paste(
+      get_time_human(),
+      digest(data, algo = "md5"),
+      sep = "_"
+    ),
+    ".csv"
+  )
+}
 
 save_data <- function(data, type) {
   fxn <- sprintf("save_data_%s", type)
@@ -35,15 +48,7 @@ results_dir <- "responses"
 # before saving, make sure folder exists
 save_data_flatfile <- function(data) {
   data <- t(data)
-  
-  file_name <- paste0(
-    paste(
-      get_time_human(),
-      digest(data, algo = "md5"),
-      sep = "_"
-    ),
-    ".csv"
-  )
+  file_name <- get_file_name(data)
 
   # write out the results
   write.csv(x = data, file = file.path(results_dir, file_name),
@@ -60,6 +65,33 @@ load_data_flatfile <- function() {
 
 
 #### Method 2: SQLite ####
+
+# before saving, make sure the database exists and
+# the table exists (CREATE TABLE xxx(a text, b text, ...))
+save_data_sqlite <- function(data) {
+  db <- dbConnect(SQLite(), options()$sqlite$file)
+  query <-
+    sprintf("INSERT INTO %s (%s) VALUES ('%s')",
+            TABLE_NAME,
+            paste(names(data), collapse = ", "),
+            paste(data, collapse = "', '")
+    )
+  dbGetQuery(db, query)
+  dbDisconnect(db)
+}
+load_data_sqlite <- function() {
+  db <- dbConnect(SQLite(), options()$sqlite$file)
+  query <- sprintf("SELECT * FROM %s", TABLE_NAME)
+  data <- dbGetQuery(db, query)
+  dbDisconnect(db)
+  
+  data
+}
+
+
+
+
+#### Method 3: MySQL ####
 
 # before saving, make sure the database exists and the
 # table exists (CREATE TABLE xxx(a text, b text, ...))
@@ -84,34 +116,6 @@ load_data_mysql <- function() {
                   post = options()$mysql$port,
                   user = options()$mysql$user,
                   password = options()$mysql$password)
-  query <- sprintf("SELECT * FROM %s", TABLE_NAME)
-  data <- dbGetQuery(db, query)
-  dbDisconnect(db)
-  
-  data
-}
-
-
-
-#### Method 3: MySQL ####
-
-sqlite_file <- file.path("sqlite", paste0(DB_NAME, ".sqlite"))
-
-# before saving, make sure the database exists and
-# the table exists (CREATE TABLE xxx(a text, b text, ...))
-save_data_sqlite <- function(data) {
-  db <- dbConnect(SQLite(), sqlite_file)
-  query <-
-    sprintf("INSERT INTO %s (%s) VALUES ('%s')",
-            TABLE_NAME,
-            paste(names(data), collapse = ", "),
-            paste(data, collapse = "', '")
-    )
-  dbGetQuery(db, query)
-  dbDisconnect(db)
-}
-load_data_sqlite <- function() {
-  db <- dbConnect(SQLite(), sqlite_file) 
   query <- sprintf("SELECT * FROM %s", TABLE_NAME)
   data <- dbGetQuery(db, query)
   dbDisconnect(db)
@@ -156,9 +160,44 @@ load_data_mongodb <- function() {
 
 
 #### Method 5: Google Sheets ####
+# problem 1: is programmatic authentication supported? non-interactive, just using api tokens?)
+# problem 2: authentication in rstudio server doesn't work
+# problem 3: after making a sheet public and trying to access it:
+#            gs_key("126sYt93gzRGJE6n54CY1Z5VgyXl19btsy8zVweLvYu8") -->
+#            "Error in gsheets_GET(x) : Was expecting content-type to be:
+#             application/atom+xml; charset=UTF-8
+#             but instead it's:
+#             text/html; charset=UTF-8"
 
-
-
-
+# before saving, make sure the Google Sheet exists and the header row is set
+save_data_gsheets <- function(data) {
+  sheet <- gs_title(TABLE_NAME)
+  nrows <- sheet %>% get_via_csv %>% nrow
+  edit_cells(sheet, input = data, byrow = TRUE, anchor = paste0("A", nrows + 2))
+}
+load_data_gsheets <- function() {
+  TABLE_NAME %>% gs_title %>% get_via_csv
+}
 
 #### Method 6: Amazon S3 ####
+
+s3_bucket_name <- TABLE_NAME %>% gsub("_", "-", .)
+
+# before saving, make sure bucket exists
+save_data_s3 <- function(data) {
+  file_name <- get_file_name(data)
+  RAmazonS3::addFile(I(paste0(paste(names(data), collapse = ","),
+                              "\n",
+                              paste(data, collapse = ","))),
+                     s3_bucket_name, file_name, virtual = TRUE)
+}
+load_data_s3 <- function(data) {
+  files <- listBucket(s3_bucket_name)$Key %>% as.character
+  data <-
+    lapply(files, function(x) {
+      raw <- getFile("google-form-mock", x, virtual = TRUE)
+      read.csv(text = raw, stringsAsFactors = FALSE)
+    }) %>%
+    rbind_all
+  data
+}

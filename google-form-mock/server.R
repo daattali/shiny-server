@@ -21,21 +21,29 @@ shinyServer(function(input, output, session) {
   observeEvent(input$submit, {
     updateTextInput(session, "timestamp", value = get_time_epoch())
     data <- form_data()
-    save_data(data, input$storage)
+    shinyjs::disable("submit")
+    shinyjs::show("submitMsg")
+    shinyjs::hide("error")
+    
+    tryCatch({
+      save_data(data, input$storage)
+      updateTabsetPanel(session, "mainTabs", "viewTab")
+    },
+    error = function(err) {
+      shinyjs::text("errorMsg", err$message)
+      shinyjs::show(id = "error", anim = TRUE, animType = "fade")      
+      shinyjs::logjs(err)
+    }, finally = {
+      shinyjs::enable("submit")
+      shinyjs::hide("submitMsg")
+    })
   })
   
   shinyjs::onclick("toggleView",
                    shinyjs::toggle(id = "responsesTable", anim = TRUE))
   
   responses_data <- reactive({
-    
-    input$storage
-    input$mainTabs
-
-    if (input$mainTabs != "viewTab") {
-      return()
-    }
-    
+    input$submit
     load_data(input$storage)
   })
   
