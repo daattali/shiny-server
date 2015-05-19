@@ -32,3 +32,7 @@ get_time_epoch <- function() {
 get_time_human <- function() {
   format(Sys.time(), "%Y%m%d-%H%M%OS")
 }
+
+storage_type_notes <- c(
+  "flatfile" = "This method will saving, make sure folder exists"
+)

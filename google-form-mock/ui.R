@@ -47,6 +47,20 @@ shinyUI(fluidPage(
           downloadButton("downloadBtn", "Download responses"), br(), br(),
           tags$a(id = "toggleView", "Show/hide responses", href = "javascript:void(0);"),
           dataTableOutput("responsesTable")
+        ),
+        
+        tabPanel(
+          title = "Code to save/load data", id = "codeTab", value = "codeTab",
+          
+          br(),
+          tags$b("Code to save new responses:"),
+          tags$pre(id = "codeSave"),
+          tags$b("Code to read all responses:"),
+          tags$pre(id = "codeLoad")
+        ),
+        
+        tabPanel(
+          title = "Notes about selected storage type"
         )
       )
     )

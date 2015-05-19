@@ -10,26 +10,23 @@ library(RAmazonS3)
 DB_NAME <- "shinyapps"
 TABLE_NAME <- "google_form_mock"
 
-get_file_name <- function(data) {
-  file_name <- paste0(
-    paste(
-      get_time_human(),
-      digest(data, algo = "md5"),
-      sep = "_"
-    ),
-    ".csv"
-  )
-}
-
-save_data <- function(data, type) {
+get_save_fxn <- function(type) {
   fxn <- sprintf("save_data_%s", type)
   stopifnot(existsFunction(fxn))
+  fxn
+}
+save_data <- function(data, type) {
+  fxn <- get_save_fxn(type)
   do.call(fxn, list(data))
 }
 
-load_data <- function(type) {
+get_load_fxn <- function(type) {
   fxn <- sprintf("load_data_%s", type)
   stopifnot(existsFunction(fxn))
+  fxn
+}
+load_data <- function(type) {
+  fxn <- get_load_fxn(type)
   data <- do.call(fxn, list())
   
   if (nrow(data) == 0) {
@@ -44,11 +41,16 @@ load_data <- function(type) {
 #### Method 1: Local text files ####
 
 results_dir <- "responses"
-
-# before saving, make sure folder exists
 save_data_flatfile <- function(data) {
   data <- t(data)
-  file_name <- get_file_name(data)
+  file_name <- paste0(
+    paste(
+      get_time_human(),
+      digest(data, algo = "md5"),
+      sep = "_"
+    ),
+    ".csv"
+  )
 
   # write out the results
   write.csv(x = data, file = file.path(results_dir, file_name),
@@ -185,7 +187,14 @@ s3_bucket_name <- TABLE_NAME %>% gsub("_", "-", .)
 
 # before saving, make sure bucket exists
 save_data_s3 <- function(data) {
-  file_name <- get_file_name(data)
+  file_name <- paste0(
+    paste(
+      get_time_human(),
+      digest(data, algo = "md5"),
+      sep = "_"
+    ),
+    ".csv"
+  )
   RAmazonS3::addFile(I(paste0(paste(names(data), collapse = ","),
                               "\n",
                               paste(data, collapse = ","))),
