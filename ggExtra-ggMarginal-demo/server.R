@@ -94,7 +94,7 @@ shinyServer(function(input, output, session) {
         marginFill = input$marginFill)
     }
     
-    p
+    print(p)
   })
   
   # the code to reproduce the plot
