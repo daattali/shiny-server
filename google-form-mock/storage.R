@@ -10,6 +10,7 @@ library(RAmazonS3)
 DB_NAME <- "shinyapps"
 TABLE_NAME <- "google_form_mock"
 
+# decide which function to use to save based on storage type
 get_save_fxn <- function(type) {
   fxn <- sprintf("save_data_%s", type)
   stopifnot(existsFunction(fxn))
@@ -20,6 +21,7 @@ save_data <- function(data, type) {
   do.call(fxn, list(data))
 }
 
+# decide which function to use to load based on storage type
 get_load_fxn <- function(type) {
   fxn <- sprintf("load_data_%s", type)
   stopifnot(existsFunction(fxn))
@@ -29,13 +31,15 @@ load_data <- function(type) {
   fxn <- get_load_fxn(type)
   data <- do.call(fxn, list())
   
+  # Just for a nicer UI, if there is no data, construct an empty
+  # dataframe so that the colnames will still be shown
   if (nrow(data) == 0) {
     data <-
       matrix(nrow = 0, ncol = length(fields_all),
              dimnames = list(list(), fields_all)) %>%
       data.frame
   }
-  data
+  data %>% dplyr::arrange(desc(timestamp))
 }
 
 #### Method 1: Local text files ####

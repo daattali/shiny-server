@@ -58,9 +58,11 @@ shinyServer(function(input, output, session) {
   })
   
   # Show the responses in a table
-  output$responsesTable <- renderDataTable(
-    responses_data(),
-    options = list(searching = FALSE, lengthChange = FALSE)
+  output$responsesTable <- DT::renderDataTable(
+    DT::datatable(
+      responses_data(),
+      options = list(searching = FALSE, lengthChange = FALSE)
+    )
   )
 
   # Allow user to download responses

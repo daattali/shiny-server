@@ -46,7 +46,7 @@ shinyUI(fluidPage(
           br(),
           downloadButton("downloadBtn", "Download responses"), br(), br(),
           tags$a(id = "toggleView", "Show/hide responses", href = "javascript:void(0);"),
-          dataTableOutput("responsesTable")
+          DT::dataTableOutput("responsesTable")
         ),
         
         tabPanel(
