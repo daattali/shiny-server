@@ -1,19 +1,39 @@
 library(shiny)
 
+storage_types <- c(
+  "Text file (local)" = "flatfile",
+  "SQLite (local)" = "sqlite",
+  "MySQL database (local or remote)" = "mysql",
+  "MongoDB database (local or remote)" = "mongodb",
+  "Google Sheets (remote)" = "gsheets",
+  "Amazon Simple Storage Service (S3) (remote)" = "s3"
+)
+
 shinyUI(fluidPage(
   shinyjs::useShinyjs(),
   
   titlePanel("Mock Google Form and store persistent data"),
   
+  # Select storage type and show a description about it
   sidebarLayout(
     sidebarPanel(
-      selectInput("storage", "Storage type", storage_types)
+      selectInput("storage", "Select storage type", storage_types),
+      lapply(
+        storage_types,
+        function(x) {
+          conditionalPanel(
+            sprintf("input.storage == '%s'", x),
+            includeMarkdown(file.path("text", sprintf("%s.md", x)))
+          )
+        }
+      )
     ),
     
     mainPanel(
       tabsetPanel(
         id = "mainTabs", type = "tabs",
         
+        # Build the form
         tabPanel(
           title = "Submit form", id = "submitTab", value = "submitTab",
           
@@ -57,10 +77,6 @@ shinyUI(fluidPage(
           tags$pre(id = "codeSave"),
           tags$b("Code to read all responses:"),
           tags$pre(id = "codeLoad")
-        ),
-        
-        tabPanel(
-          title = "Notes about selected storage type"
         )
       )
     )

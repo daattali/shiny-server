@@ -13,15 +13,6 @@ fields_all <- c(
   "timestamp"
 )
 
-storage_types <- c(
-  "Text file (local)" = "flatfile",
-  "SQLite (local)" = "sqlite",
-  "MySQL database (local or remote)" = "mysql",
-  "MongoDB database (local or remote)" = "mongodb",
-  "Google Sheets (remote)" = "gsheets",
-  "Amazon Simple Storage Service (S3) (remote)" = "s3"
-)
-
 # get current Epoch time
 get_time_epoch <- function() {
   return(as.integer(Sys.time()))
@@ -32,7 +23,3 @@ get_time_epoch <- function() {
 get_time_human <- function() {
   format(Sys.time(), "%Y%m%d-%H%M%OS")
 }
-
-storage_type_notes <- c(
-  "flatfile" = "This method will saving, make sure folder exists"
-)

@@ -72,8 +72,6 @@ load_data_flatfile <- function() {
 
 #### Method 2: SQLite ####
 
-# before saving, make sure the database exists and
-# the table exists (CREATE TABLE xxx(a text, b text, ...))
 save_data_sqlite <- function(data) {
   db <- dbConnect(SQLite(), options()$sqlite$file)
   query <-
@@ -99,12 +97,10 @@ load_data_sqlite <- function() {
 
 #### Method 3: MySQL ####
 
-# before saving, make sure the database exists and the
-# table exists (CREATE TABLE xxx(a text, b text, ...))
 save_data_mysql <- function(data) {
   db <- dbConnect(MySQL(), dbname = DB_NAME,
                   host = options()$mysql$host,
-                  post = options()$mysql$port,
+                  port = options()$mysql$port,
                   user = options()$mysql$user,
                   password = options()$mysql$password)
   query <-
@@ -119,7 +115,7 @@ save_data_mysql <- function(data) {
 load_data_mysql <- function() {
   db <- dbConnect(MySQL(), dbname = DB_NAME,
                   host = options()$mysql$host,
-                  post = options()$mysql$port,
+                  port = options()$mysql$port,
                   user = options()$mysql$user,
                   password = options()$mysql$password)
   query <- sprintf("SELECT * FROM %s", TABLE_NAME)
@@ -136,7 +132,6 @@ load_data_mysql <- function() {
 
 collection_name <- sprintf("%s.%s", DB_NAME, TABLE_NAME)
 
-# before saving, make sure the database exists
 save_data_mongodb <- function(data) {
   db <- mongo.create(db = DB_NAME,
                      host = options()$mongodb$host,
@@ -166,16 +161,7 @@ load_data_mongodb <- function() {
 
 
 #### Method 5: Google Sheets ####
-# problem 1: is programmatic authentication supported? non-interactive, just using api tokens?)
-# problem 2: authentication in rstudio server doesn't work
-# problem 3: after making a sheet public and trying to access it:
-#            gs_key("126sYt93gzRGJE6n54CY1Z5VgyXl19btsy8zVweLvYu8") -->
-#            "Error in gsheets_GET(x) : Was expecting content-type to be:
-#             application/atom+xml; charset=UTF-8
-#             but instead it's:
-#             text/html; charset=UTF-8"
 
-# before saving, make sure the Google Sheet exists and the header row is set
 save_data_gsheets <- function(data) {
   sheet <- gs_title(TABLE_NAME)
   nrows <- sheet %>% get_via_csv %>% nrow
@@ -189,7 +175,6 @@ load_data_gsheets <- function() {
 
 s3_bucket_name <- TABLE_NAME %>% gsub("_", "-", .)
 
-# before saving, make sure bucket exists
 save_data_s3 <- function(data) {
   file_name <- paste0(
     paste(
@@ -208,7 +193,7 @@ load_data_s3 <- function(data) {
   files <- listBucket(s3_bucket_name)$Key %>% as.character
   data <-
     lapply(files, function(x) {
-      raw <- getFile("google-form-mock", x, virtual = TRUE)
+      raw <- getFile(s3_bucket_name, x, virtual = TRUE)
       read.csv(text = raw, stringsAsFactors = FALSE)
     }) %>%
     rbind_all
