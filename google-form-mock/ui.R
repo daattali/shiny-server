@@ -38,7 +38,7 @@ shinyUI(fluidPage(
           ),          
           
           # hidden input field tracking the timestamp of the submission
-          shinyjs::hidden(textInput("timestamp", "", get_time_epoch()))
+          shinyjs::hidden(textInput("timestamp", ""))
         ),
         
         tabPanel(

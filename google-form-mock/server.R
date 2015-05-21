@@ -3,8 +3,10 @@ library(magrittr)
 source("storage.R")
 
 shinyServer(function(input, output, session) {
+  # Give an initial value to the timestamp field
+  updateTextInput(session, "timestamp", value = get_time_epoch())
   
-  # enable the Submit button when all mandatory fields are filled out
+  # Enable the Submit button when all mandatory fields are filled out
   observe({
     fields_filled <-
       fields_mandatory %>%
@@ -14,19 +16,24 @@ shinyServer(function(input, output, session) {
     shinyjs::toggleState("submit", fields_filled)
   })
   
+  # Gather all the form inputs
   form_data <- reactive({
     sapply(fields_all, function(x) x = input[[x]])
   })
   
+  # When the Submit button is clicked 
   observeEvent(input$submit, {
+    # Update the timestamp field to be the current time
     updateTextInput(session, "timestamp", value = get_time_epoch())
-    data <- form_data()
+    
+    # User-experience stuff
     shinyjs::disable("submit")
     shinyjs::show("submitMsg")
     shinyjs::hide("error")
     
+    # Save the data (show an error message in case of error)
     tryCatch({
-      save_data(data, input$storage)
+      save_data(form_data(), input$storage)
       updateTabsetPanel(session, "mainTabs", "viewTab")
     },
     error = function(err) {
@@ -39,19 +46,24 @@ shinyServer(function(input, output, session) {
     })
   })
   
+  # Show/hide all the responses
   shinyjs::onclick("toggleView",
                    shinyjs::toggle(id = "responsesTable", anim = TRUE))
   
+  # Update the responses whenever a new submission is made or the
+  # storage type is changed
   responses_data <- reactive({
     input$submit
     load_data(input$storage)
   })
   
+  # Show the responses in a table
   output$responsesTable <- renderDataTable(
     responses_data(),
     options = list(searching = FALSE, lengthChange = FALSE)
   )
 
+  # Allow user to download responses
   output$downloadBtn <- downloadHandler(
     filename = function() { 
       paste0("google-form-mock_", input$storage, "_", get_time_human(), '.csv')
@@ -61,6 +73,7 @@ shinyServer(function(input, output, session) {
     }
   )
   
+  # Show the code to save/load using current storage type
   observe({
     fxn_save <- input$storage %>% get_save_fxn
     fxn_save_body <- fxn_save %>% body %>% format %>% paste(collapse = "\n")
