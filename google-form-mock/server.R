@@ -32,6 +32,10 @@ shinyServer(function(input, output, session) {
     shinyjs::disable("submit")
     shinyjs::show("submitMsg")
     shinyjs::hide("error")
+    on.exit({
+      shinyjs::enable("submit")
+      shinyjs::hide("submitMsg")
+    })
     
     # Save the data (show an error message in case of error)
     tryCatch({
@@ -42,9 +46,6 @@ shinyServer(function(input, output, session) {
       shinyjs::text("errorMsg", err$message)
       shinyjs::show(id = "error", anim = TRUE, animType = "fade")      
       shinyjs::logjs(err)
-    }, finally = {
-      shinyjs::enable("submit")
-      shinyjs::hide("submitMsg")
     })
   })
   
