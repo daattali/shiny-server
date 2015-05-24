@@ -40,6 +40,7 @@ shinyServer(function(input, output, session) {
     # Save the data (show an error message in case of error)
     tryCatch({
       save_data(form_data(), input$storage)
+      shinyjs::reset("form")
       updateTabsetPanel(session, "mainTabs", "viewTab")
     },
     error = function(err) {
