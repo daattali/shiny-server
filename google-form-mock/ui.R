@@ -38,7 +38,7 @@ shinyUI(fluidPage(
           title = "Submit form", id = "submitTab", value = "submitTab",
           
           br(),
-          shinyjs::resettable(div(id = "form",
+          div(id = "form",
             textInput("name", "Name", ""),
             sliderInput("r_num_years", "Number of years using R", 0, 22, 1, ticks = FALSE),
             checkboxInput("used_shiny", "I've built a Shiny app in R", FALSE),
@@ -46,7 +46,7 @@ shinyUI(fluidPage(
                         c("", "Windows", "Mac", "Linux")),
             textInput("favourite_pkg", "Favourite R package"),
             actionButton("submit", "Submit", class = "btn-primary")
-          )),
+          ),
           
           shinyjs::hidden(
             span(id = "submitMsg", "Submitting...", style = "margin-left: 15px;")
