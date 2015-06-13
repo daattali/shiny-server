@@ -18,11 +18,8 @@ datasets <- list(
 shinyServer(function(input, output, session) {
   # show/hide the marginal plots settings
   observe({
-    if (input$show_marginal) {
-      show("marginal-settings", TRUE, "slide", 0.3)
-    } else {
-      hide("marginal-settings", TRUE, "slide", 0.3)
-    }
+    toggle(id = "marginal-settings", anim = TRUE,
+           time = 0.3, condition = input$show_marginal)
   })
   
   output$dataset_select <- renderUI({
@@ -90,11 +87,11 @@ shinyServer(function(input, output, session) {
         type = input$type,
         margins = input$margins,
         size = size(),
-        marginCol = input$marginCol,
-        marginFill = input$marginFill)
+        col = input$col,
+        fill = input$fill)
     }
     
-    print(p)
+    print(p) # normally you don't have to explicitly `print`, this is a bug in shiny
   })
   
   # the code to reproduce the plot
@@ -111,11 +108,11 @@ shinyServer(function(input, output, session) {
         "  type = '%s',\n",
         "  margins = '%s',\n",
         "  size = %s,\n",
-        "  marginCol = '%s',\n",
-        "  marginFill = '%s'\n",
+        "  col = '%s',\n",
+        "  fill = '%s'\n",
         ")"),
-        input$type, input$margins, size(), input$marginCol,
-        input$marginFill))
+        input$type, input$margins, size(), input$col,
+        input$fill))
     } else {
       code <- paste0(code, "p")
     }
