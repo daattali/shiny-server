@@ -87,10 +87,10 @@ shinyServer(function(input, output, session) {
     fxn_save_code <- paste(fxn_save_head, fxn_save_body)
     shinyjs::text("codeSave", fxn_save_code)
 
-    fxn_save <- input$storage %>% get_save_fxn
-    fxn_save_body <- fxn_save %>% body %>% format %>% paste(collapse = "\n")
-    fxn_save_head <- paste0(fxn_save, " <- function(data)")
-    fxn_save_code <- paste(fxn_save_head, fxn_save_body)
-    shinyjs::text("codeLoad", fxn_save_code)
+    fxn_load <- input$storage %>% get_load_fxn
+    fxn_load_body <- fxn_load %>% body %>% format %>% paste(collapse = "\n")
+    fxn_load_head <- paste0(fxn_load, " <- function(data)")
+    fxn_load_code <- paste(fxn_load_head, fxn_load_body)
+    shinyjs::text("codeLoad", fxn_load_code)
   })
 })

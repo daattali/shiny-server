@@ -6,7 +6,8 @@ storage_types <- c(
   "MySQL database (local or remote)" = "mysql",
   "MongoDB database (local or remote)" = "mongodb",
   "Google Sheets (remote)" = "gsheets",
-  "Amazon Simple Storage Service (S3) (remote)" = "s3"
+  "Amazon Simple Storage Service (S3) (remote)" = "s3",
+  "Dropbox (remote)" = "dropbox"
 )
 
 shinyUI(fluidPage(
@@ -45,13 +46,11 @@ shinyUI(fluidPage(
             selectInput("os_type", "Operating system used most frequently",
                         c("", "Windows", "Mac", "Linux")),
             textInput("favourite_pkg", "Favourite R package"),
-            actionButton("submit", "Submit", class = "btn-primary")
+            actionButton("submit", "Submit", class = "btn-primary"),
+            shinyjs::hidden(
+              span(id = "submitMsg", "Submitting...", style = "margin-left: 15px;")
+            )
           ),
-          
-          shinyjs::hidden(
-            span(id = "submitMsg", "Submitting...", style = "margin-left: 15px;")
-          ),
-          
           shinyjs::hidden(
             div(id = "error",
                 div(br(), tags$b("Error: "), span(id = "errorMsg")),

@@ -6,6 +6,7 @@ library(RSQLite)
 library(rmongodb)
 library(googlesheets)
 library(RAmazonS3)
+library(rdrop2)
 
 DB_NAME <- "shinyapps"
 TABLE_NAME <- "google_form_mock"
@@ -198,4 +199,29 @@ load_data_s3 <- function(data) {
     }) %>%
     rbind_all
   data
+}
+
+
+#### Method 7: Dropbox ####
+
+save_data_dropbox <- function(data) {
+  data <- t(data)
+  file_name <- paste0(
+    paste(
+      get_time_human(),
+      digest(data, algo = "md5"),
+      sep = "_"
+    ),
+    ".csv"
+  )  
+  file_path <- file.path(tempdir(), file_name)
+  write.csv(data ,file_path, row.names = FALSE, quote = TRUE)
+  drop_upload(file_path, dest = TABLE_NAME)
+}
+load_data_dropbox <- function() {
+  files_info <- drop_dir(TABLE_NAME)
+  file_paths <- files_info$path
+  data <-
+    lapply(file_paths, drop_read_csv, stringsAsFactors = FALSE) %>%
+    rbind_all
 }
