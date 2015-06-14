@@ -1,0 +1,19 @@
+.error {
+  color: red;
+}
+
+.left-space {
+  margin-left: 10px;
+}
+
+#adminPanelInner {
+  border: 10px solid #aaaaaa;
+  margin-bottom: 15px;
+  padding: 0 20px 20px 20px;
+}
+
+#gitTest,
+#twitterTest,
+#studentNumErr {
+  display: inline-block;
+}
