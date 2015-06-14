@@ -1,0 +1,21 @@
+.error {
+  color: red;
+}
+
+#adminPanelInner {
+  border: 10px solid #aaaaaa;
+  margin-bottom: 15px;
+  padding: 0 20px 20px 20px;
+}
+
+.right {
+  text-align: right;
+}
+
+.hideme {
+  display: none !important;
+}
+
+.inlineb {
+  display: inline-block;
+}
