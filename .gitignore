@@ -4,4 +4,5 @@
 shiny-server.Rproj
 .httr-oauth
 google-form-mock/responses/
+mimic-google-form/responses/
 *.sqlite
