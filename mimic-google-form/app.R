@@ -1,14 +1,18 @@
 library(shiny)
 
+# which fields get saved 
+fieldsAll <- c("name", "favourite_pkg", "used_shiny", "r_num_years", "os_type")
+
+# which fields are mandatory
+fieldsMandatory <- c("name", "favourite_pkg")
+
+# add an asterisk to an input label
 labelMandatory <- function(label) {
   tagList(
     label,
     span("*", class = "mandatory_star")
   )
 }
-setwd
-fieldsAll <- c("name", "favourite_pkg", "used_shiny", "r_num_years", "os_type")
-fieldsMandatory <- c("name", "favourite_pkg")
 
 # get current Epoch time
 epochTime <- function() {
@@ -31,6 +35,7 @@ saveData <- function(data) {
             row.names = FALSE, quote = TRUE)
 }
 
+# load all responses into a data.frame
 loadData <- function() {
   files <- list.files(file.path(responsesDir), full.names = TRUE)
   data <- lapply(files, read.csv, stringsAsFactors = FALSE)
@@ -38,8 +43,10 @@ loadData <- function() {
   data
 }
 
+# directory where responses get stored
 responsesDir <- file.path("responses")
 
+# CSS to use in the app
 appCSS <-
   ".mandatory_star { color: red; }
    .shiny-input-container { margin-top: 25px; }
@@ -47,6 +54,7 @@ appCSS <-
    #error { color: red; }
    #adminPanel { border: 4px solid #aaa; padding: 0 20px 20px; }"
 
+# usernames that are admins
 adminUsers <- c("admin", "prof")
 
 shinyApp(
@@ -137,12 +145,13 @@ shinyApp(
       })
     })
     
+    # submit another response
     observeEvent(input$submit_another, {
       shinyjs::show("form")
       shinyjs::hide("thankyou_msg")
     })
     
-    
+    # render the admin panel
     output$adminPanelContainer <- renderUI({
       if (!isAdmin()) return()
       
@@ -154,6 +163,7 @@ shinyApp(
       )
     })
     
+    # determine if current user is admin
     isAdmin <- reactive({
       is.null(session$user) || session$user %in% adminUsers
     })    
