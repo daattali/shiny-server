@@ -6,3 +6,4 @@ shiny-server.Rproj
 google-form-mock/responses/
 mimic-google-form/responses/
 *.sqlite
+request-basic-info/data/
