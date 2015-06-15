@@ -6,8 +6,8 @@ storage_types <- c(
   "MySQL database (local or remote)" = "mysql",
   "MongoDB database (local or remote)" = "mongodb",
   "Google Sheets (remote)" = "gsheets",
-  "Amazon Simple Storage Service (S3) (remote)" = "s3",
-  "Dropbox (remote)" = "dropbox"
+  "Dropbox (remote)" = "dropbox",
+  "Amazon Simple Storage Service (S3) (remote)" = "s3"
 )
 
 shinyUI(fluidPage(

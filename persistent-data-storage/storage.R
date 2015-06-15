@@ -160,7 +160,6 @@ load_data_mongodb <- function() {
 
 
 
-
 #### Method 5: Google Sheets ####
 
 save_data_gsheets <- function(data) {
@@ -172,7 +171,36 @@ load_data_gsheets <- function() {
   TABLE_NAME %>% gs_title %>% get_via_csv
 }
 
-#### Method 6: Amazon S3 ####
+
+
+#### Method 6: Dropbox ####
+
+save_data_dropbox <- function(data) {
+  data <- t(data)
+  file_name <- paste0(
+    paste(
+      get_time_human(),
+      digest(data, algo = "md5"),
+      sep = "_"
+    ),
+    ".csv"
+  )  
+  file_path <- file.path(tempdir(), file_name)
+  write.csv(data ,file_path, row.names = FALSE, quote = TRUE)
+  drop_upload(file_path, dest = TABLE_NAME)
+}
+load_data_dropbox <- function() {
+  files_info <- drop_dir(TABLE_NAME)
+  file_paths <- files_info$path
+  data <-
+    lapply(file_paths, drop_read_csv, stringsAsFactors = FALSE) %>%
+    rbind_all
+}
+
+
+
+
+#### Method 7: Amazon S3 ####
 
 s3_bucket_name <- TABLE_NAME %>% gsub("_", "-", .)
 
@@ -199,29 +227,4 @@ load_data_s3 <- function() {
     }) %>%
     rbind_all
   data
-}
-
-
-#### Method 7: Dropbox ####
-
-save_data_dropbox <- function(data) {
-  data <- t(data)
-  file_name <- paste0(
-    paste(
-      get_time_human(),
-      digest(data, algo = "md5"),
-      sep = "_"
-    ),
-    ".csv"
-  )  
-  file_path <- file.path(tempdir(), file_name)
-  write.csv(data ,file_path, row.names = FALSE, quote = TRUE)
-  drop_upload(file_path, dest = TABLE_NAME)
-}
-load_data_dropbox <- function() {
-  files_info <- drop_dir(TABLE_NAME)
-  file_paths <- files_info$path
-  data <-
-    lapply(file_paths, drop_read_csv, stringsAsFactors = FALSE) %>%
-    rbind_all
 }
