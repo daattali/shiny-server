@@ -12,7 +12,7 @@ storage_types <- c(
 
 shinyUI(fluidPage(
   shinyjs::useShinyjs(),
-  tags$head(includeCSS(file.path("www", "app.CSS"))),
+  tags$head(includeCSS(file.path("www", "app.css"))),
   
   div(
     id = "titlePanel",
