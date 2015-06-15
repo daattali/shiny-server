@@ -3,7 +3,7 @@
 .RData
 shiny-server.Rproj
 .httr-oauth
-google-form-mock/responses/
+persistent-data-storage/responses/
 mimic-google-form/responses/
 *.sqlite
 request-basic-info/data/
