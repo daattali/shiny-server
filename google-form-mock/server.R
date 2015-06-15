@@ -49,11 +49,7 @@ shinyServer(function(input, output, session) {
       shinyjs::logjs(err)
     })
   })
-  
-  # Show/hide all the responses
-  shinyjs::onclick("toggleView",
-                   shinyjs::toggle(id = "responsesTable", anim = TRUE))
-  
+
   # Update the responses whenever a new submission is made or the
   # storage type is changed
   responses_data <- reactive({
@@ -65,7 +61,7 @@ shinyServer(function(input, output, session) {
   output$responsesTable <- DT::renderDataTable(
     DT::datatable(
       responses_data(),
-      options = list(searching = FALSE, lengthChange = FALSE)
+      options = list(searching = FALSE, lengthChange = FALSE, scrollX = TRUE)
     )
   )
 
@@ -89,7 +85,7 @@ shinyServer(function(input, output, session) {
 
     fxn_load <- input$storage %>% get_load_fxn
     fxn_load_body <- fxn_load %>% body %>% format %>% paste(collapse = "\n")
-    fxn_load_head <- paste0(fxn_load, " <- function(data)")
+    fxn_load_head <- paste0(fxn_load, " <- function()")
     fxn_load_code <- paste(fxn_load_head, fxn_load_body)
     shinyjs::text("codeLoad", fxn_load_code)
   })

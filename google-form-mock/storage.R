@@ -2,11 +2,11 @@ library(dplyr)
 library(digest)
 library(DBI)
 library(RMySQL)
-library(RSQLite)
-library(rmongodb)
-library(googlesheets)
-library(RAmazonS3)
-library(rdrop2)
+# library(RSQLite)
+# library(rmongodb)
+# library(googlesheets)
+# library(RAmazonS3)
+# library(rdrop2)
 
 DB_NAME <- "shinyapps"
 TABLE_NAME <- "google_form_mock"
@@ -190,7 +190,7 @@ save_data_s3 <- function(data) {
                               paste(data, collapse = ","))),
                      s3_bucket_name, file_name, virtual = TRUE)
 }
-load_data_s3 <- function(data) {
+load_data_s3 <- function() {
   files <- listBucket(s3_bucket_name)$Key %>% as.character
   data <-
     lapply(files, function(x) {

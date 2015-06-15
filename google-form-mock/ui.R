@@ -12,27 +12,58 @@ storage_types <- c(
 
 shinyUI(fluidPage(
   shinyjs::useShinyjs(),
+  tags$head(includeCSS(file.path("www", "app.CSS"))),
   
-  titlePanel("Mock Google Form and store persistent data"),
+  div(
+    id = "titlePanel",
+    "Persistent data storage with Shiny"
+  ),
   
   # Select storage type and show a description about it
-  sidebarLayout(
-    sidebarPanel(
-      selectInput("storage", "Select storage type", storage_types),
-      lapply(
-        storage_types,
-        function(x) {
-          conditionalPanel(
-            sprintf("input.storage == '%s'", x),
-            includeMarkdown(file.path("text", sprintf("%s.md", x)))
-          )
-        }
+  fluidRow(
+    column(3, wellPanel(
+      id = "leftPanel",
+      div(
+        id = "storageTypePanel",
+        selectInput("storage", "Select storage type", storage_types)
+      ),
+      div(
+        id = "appDesc",
+        includeMarkdown(file.path("text", "appDesc.md"))
       )
-    ),
+    )),
     
-    mainPanel(
+    column(9, wellPanel(
       tabsetPanel(
         id = "mainTabs", type = "tabs",
+        
+        tabPanel(
+          title = "Storage type description", id ="descTab", value = "descTab",
+          
+          br(),
+          div(
+            id = "storageDesc",
+            lapply(
+              storage_types,
+              function(x) {
+                conditionalPanel(
+                  sprintf("input.storage == '%s'", x),
+                  includeMarkdown(file.path("text", sprintf("%s.md", x)))
+                )
+              }
+            )
+          )
+        ),
+        
+        tabPanel(
+          title = "Code to save/load data", id = "codeTab", value = "codeTab",
+          
+          h2("The code below is the actual code that this app uses to save/load responses"),
+          tags$b("Code to save new responses:"),
+          tags$pre(id = "codeSave"), br(),
+          tags$b("Code to read all responses:"),
+          tags$pre(id = "codeLoad")
+        ),        
         
         # Build the form
         tabPanel(
@@ -66,20 +97,9 @@ shinyUI(fluidPage(
           title = "View responses", id = "viewTab", value = "viewTab",
           br(),
           downloadButton("downloadBtn", "Download responses"), br(), br(),
-          tags$a(id = "toggleView", "Show/hide responses", href = "javascript:void(0);"),
           DT::dataTableOutput("responsesTable")
-        ),
-        
-        tabPanel(
-          title = "Code to save/load data", id = "codeTab", value = "codeTab",
-          
-          br(),
-          tags$b("Code to save new responses:"),
-          tags$pre(id = "codeSave"),
-          tags$b("Code to read all responses:"),
-          tags$pre(id = "codeLoad")
         )
       )
-    )
+    ))
   )
 ))
