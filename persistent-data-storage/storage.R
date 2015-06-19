@@ -65,7 +65,7 @@ load_data_flatfile <- function() {
   files <- list.files(file.path(results_dir), full.names = TRUE)
   data <-
     lapply(files, read.csv, stringsAsFactors = FALSE) %>%
-    rbind_all
+    do.call(rbind, .)
   data
 }
 
@@ -151,7 +151,7 @@ load_data_mongodb <- function() {
   data <-
     mongo.find.all(db, collection_name) %>%
     lapply(data.frame, stringsAsFactors = FALSE) %>%
-    rbind_all %>%
+    do.call(rbind, .) %>%
     .[, -1, FALSE]
   mongo.disconnect(db)
   
@@ -194,7 +194,7 @@ load_data_dropbox <- function() {
   file_paths <- files_info$path
   data <-
     lapply(file_paths, drop_read_csv, stringsAsFactors = FALSE) %>%
-    rbind_all
+    do.call(rbind, .)
 }
 
 
@@ -225,6 +225,6 @@ load_data_s3 <- function() {
       raw <- getFile(s3_bucket_name, x, virtual = TRUE)
       read.csv(text = raw, stringsAsFactors = FALSE)
     }) %>%
-    rbind_all
+    do.call(rbind, .)
   data
 }
