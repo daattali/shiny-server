@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Dean Attali's mini site!</title>
+  <style type="text/css">
+    body, html {
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #F5F5F5;
+      color: #114;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #0000EE;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #titleBar {
+      height: 80px;
+      background-color: #3475b4;
+      overflow: hidden;
+      border-bottom: 1px solid #3475b3;
+      -moz-box-shadow:    0px 0px 10px 3px #BBC;
+      -webkit-box-shadow: 0px 0px 10px 3px #BBC;
+      box-shadow:         0px 0px 10px 3px #BBC;
+    }
+    #titleBar #container {
+      margin-top: 14px;
+    }
+    #titleBar h1 {
+      margin: 0 auto .5em auto;
+      padding: .2em;
+      color: #EEE;
+      text-align: center;
+    }
+    #outer-content {
+      max-width: 910px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #content {
+      margin: 1em auto 1em auto;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div id="titleBar">
+    <div id="container">
+      <h1>Welcome to Dean Attali's DigitalOcean droplet!</h1>
+    </div>
+  </div>
+  <div id="outer-content">
+    <div id="content">
+      <p>You're probably looking for either
+      <a href="./rstudio">my RStudio Server</a>
+      or
+      <a href="./shiny">my Shiny Server</a>
+      (that's all that really exists on this virtual server).
+      </p>
+
+      <p>You can also visit my real website -
+        <a href="http://deanattali.com">deanattali.com</a>.
+      </p>
+
+      <p>Or
+        <a href="http://daattali.com:8080/health">monitor this server's health</a>.
+      </p>
+      <br/>
+      <p>Thanks for stopping by :)</p>
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-59820529-4', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+  </div>
+</body>
+</html>
