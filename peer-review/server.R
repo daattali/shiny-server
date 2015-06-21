@@ -28,6 +28,8 @@ fieldsMandatory <- c(
 # all fields in the form
 fieldsAll <- c(
   fieldsMandatory,
+  "overallMark",
+  "overallComment",
   "timestamp"
 )
 
