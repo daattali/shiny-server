@@ -64,8 +64,9 @@ shinyApp(
     shinyjs::inlineCSS(appCSS),
     titlePanel("Mimicking a Google Form with a Shiny app"),
     h3("This app is a supplement to my",
-       a(href = "http://deanattali.com/2015/06/14/mimicking-google-form-shiny/"
-       "on the topic"),
+       a(href = "http://deanattali.com/2015/06/14/mimicking-google-form-shiny/",
+         "on the topic")
+    ),
     
     fluidRow(
       column(6,
