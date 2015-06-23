@@ -163,12 +163,10 @@ load_data_mongodb <- function() {
 #### Method 5: Google Sheets ####
 
 save_data_gsheets <- function(data) {
-  sheet <- gs_title(TABLE_NAME)
-  nrows <- sheet %>% get_via_csv %>% nrow
-  edit_cells(sheet, input = data, byrow = TRUE, anchor = paste0("A", nrows + 2))
+  TABLE_NAME %>% gs_title %>% gs_add_row(input = data)
 }
 load_data_gsheets <- function() {
-  TABLE_NAME %>% gs_title %>% get_via_csv
+  TABLE_NAME %>% gs_title %>% gs_read_csv
 }
 
 
