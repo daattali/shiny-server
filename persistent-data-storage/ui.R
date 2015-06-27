@@ -22,7 +22,7 @@ shinyUI(fluidPage(
   
   # Select storage type and show a description about it
   fluidRow(
-    column(3, wellPanel(
+    column(4, wellPanel(
       id = "leftPanel",
       div(
         id = "storageTypePanel",
@@ -34,7 +34,7 @@ shinyUI(fluidPage(
       )
     )),
     
-    column(9, wellPanel(
+    column(8, wellPanel(
       tabsetPanel(
         id = "mainTabs", type = "tabs",
         

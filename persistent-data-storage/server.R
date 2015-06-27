@@ -61,6 +61,7 @@ shinyServer(function(input, output, session) {
   output$responsesTable <- DT::renderDataTable(
     DT::datatable(
       responses_data(),
+      rownames = FALSE,
       options = list(searching = FALSE, lengthChange = FALSE, scrollX = TRUE)
     )
   )
