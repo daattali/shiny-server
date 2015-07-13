@@ -5,3 +5,7 @@ To learn how you can get your own Shiny Server in a similar way, [read my tutori
 Shiny servers can host shiny apps and R markdown documents.
 
 The [config](./config) directory contains a few configuration files that are used on the server.
+
+---
+
+Original author: Dean Attali [deanattali.com](http://deanattali.com)
