@@ -91,7 +91,7 @@ shinyServer(function(input, output, session) {
       p <- p + scale_y_log10()
     } else if (input$ytrans == "reverse") {
       p <- p + scale_y_reverse()
-    }    
+    }
     
     if (input$show_marginal) {
       p <- ggExtra::ggMarginal(
@@ -103,7 +103,7 @@ shinyServer(function(input, output, session) {
         fill = input$fill)
     }
     
-    print(p) # normally you don't have to explicitly `print`, this is a bug in shiny
+    p
   })
   
   # the code to reproduce the plot
@@ -113,7 +113,7 @@ shinyServer(function(input, output, session) {
       "  geom_point() + theme_bw(%s)"),
       input$dataset, input$x_var, input$y_var, fontSize()
     )
-
+    
     if (input$xtrans == "log") {
       code <- paste0(code, " + scale_x_log10()")
     } else if (input$xtrans == "reverse") {
