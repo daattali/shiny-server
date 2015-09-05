@@ -5,7 +5,6 @@ source("helper-text.R")
 
 shinyApp(
   ui = fixedPage(
-    title = "shinyjs demo",
     useShinyjs(),
     inlineCSS(list(.big = "font-size: 2em",
                    a = "cursor: pointer")),
@@ -37,7 +36,7 @@ shinyApp(
     )
   ),
 
-  server = function(input, output, session) {
+  server = function(input, output) {
     onclick("update", text("time", date()))
     onclick("toggleAdvanced", toggle(id = "advanced", anim = TRUE))
 
