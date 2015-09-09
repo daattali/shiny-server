@@ -19,9 +19,7 @@ adminUsers <- c("staff", "admin")
 # logic for saving a response
 saveData <- function(data) {
   # Create a unique file name
-  fileName <- sprintf("%s_%s_%s_%s.csv",
-                      data['firstName'],
-                      data['lastName'],
+  fileName <- sprintf("%s_%s.csv",
                       epochTime(),
                       digest(data))
 
@@ -63,10 +61,9 @@ shinyServer(function(input, output, session) {
     }
   }
 
-  # Gather all the form inputs (and add timestamp)
+  # Gather all the form inputs
   formData <- reactive({
     data <- sapply(fieldsAll, function(x) input[[x]])
-    data <- c(data, timestamp = epochTime())
     data
   })
 
