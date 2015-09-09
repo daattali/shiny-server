@@ -1,19 +1,20 @@
-.error {
+body {
+  background: #FCFCFC;
+  padding: 10px 20px;
+}
+
+.mandatory_star {
   color: red;
 }
 
-.left-space {
-  margin-left: 10px;
+#error {
+  color: red;
 }
 
 #adminPanelInner {
-  border: 10px solid #aaaaaa;
-  margin-bottom: 15px;
+  background: #ffffff;
+  border: 8px solid #aaaaaa;
+  margin: 5px 0 15px;
+  border-radius: 5px;
   padding: 0 20px 20px 20px;
-}
-
-#gitTest,
-#twitterTest,
-#studentNumErr {
-  display: inline-block;
 }
