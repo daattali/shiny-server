@@ -19,8 +19,10 @@ adminUsers <- c("staff", "admin")
 # logic for saving a response
 saveData <- function(data) {
   # Create a unique file name
-  fileName <- sprintf("%s_%s.csv",
-                      epochTime(),
+  fileName <- sprintf("%s_%s_%s_%s.csv",
+                      humanTime(),
+                      data['lastName'],
+                      data['firstName'],
                       digest(data))
 
   data <- t(data)
