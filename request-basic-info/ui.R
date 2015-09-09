@@ -36,7 +36,6 @@ shinyUI(fluidPage(
     textInput("firstName", labelMandatory("First name (according to UBC)")),
     textInput("lastName", labelMandatory("Last name (according to UBC)")),
     textInput("studentNum", labelMandatory("Last 4 digits of UBC student number")),
-    hidden(div(id = "studentNumErr", "Student number must be 4 digits")),
     textInput("email", "Preferred email"),
     selectInput("osType", "Operating system",
                 choices = c("", "Windows 7", "Windows 8", "Windows 10",
