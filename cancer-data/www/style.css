@@ -1,0 +1,42 @@
+body {
+	background: url("background.jpg") repeat;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+#headerSection {
+	background: #323232;
+	margin: -25px 0 20px;
+	color: #DAA4A4;
+	padding: 15px 20px;
+} 
+
+#allContent,
+#loadingContent {
+	padding: 0 20px;
+}
+
+.nav-tabs > li > a {
+	font-size: 1.5em;
+}
+
+#dataTable > table {
+	background: #FAFAFA;
+}
+
+.well {
+	background: #FCFCFC;
+}
+
+
+#updateBtn {
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 10px 20px;
+}
+
+#yearText {
+	display: inline;
+}

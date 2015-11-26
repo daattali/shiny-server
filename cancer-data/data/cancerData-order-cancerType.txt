@@ -1,0 +1,22 @@
+Breast
+Prostate
+Lung and Bronchus
+Colon and Rectum
+Urinary Bladder
+Melanoma of the Skin
+Non-Hodgkin Lymphoma
+Kidney and Renal Pelvis
+Corpus Uteri
+Thyroid
+Leukemias
+Pancreas
+Oral Cavity and Pharynx
+Liver
+Stomach
+Brain and Other Nervous System
+Myeloma
+Ovary
+Esophagus
+Larynx
+Cervix Uteri
+Gallbladder

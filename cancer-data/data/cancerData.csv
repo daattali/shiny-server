@@ -1,0 +1,1145 @@
+year,cancerType,stat,value
+1999,Brain and Other Nervous System,deaths,12765
+1999,Breast,deaths,41528
+1999,Cervix Uteri,deaths,4204
+1999,Colon and Rectum,deaths,57222
+1999,Corpus Uteri,deaths,3121
+1999,Esophagus,deaths,11917
+1999,Gallbladder,deaths,2059
+1999,Kidney and Renal Pelvis,deaths,11116
+1999,Larynx,deaths,3815
+1999,Leukemias,deaths,21071
+1999,Liver,deaths,9830
+1999,Lung and Bronchus,deaths,152061
+1999,Melanoma of the Skin,deaths,7215
+1999,Myeloma,deaths,10508
+1999,Non-Hodgkin Lymphoma,deaths,22802
+1999,Oral Cavity and Pharynx,deaths,7486
+1999,Ovary,deaths,13627
+1999,Pancreas,deaths,27594
+1999,Prostate,deaths,31728
+1999,Stomach,deaths,12711
+1999,Thyroid,deaths,1241
+1999,Urinary Bladder,deaths,11910
+1999,Brain and Other Nervous System,cases,17359
+1999,Breast,cases,185254
+1999,Cervix Uteri,cases,12782
+1999,Colon and Rectum,cases,140888
+1999,Corpus Uteri,cases,31982
+1999,Esophagus,cases,12532
+1999,Gallbladder,cases,3066
+1999,Kidney and Renal Pelvis,cases,30669
+1999,Larynx,cases,11511
+1999,Leukemias,cases,32265
+1999,Liver,cases,10381
+1999,Lung and Bronchus,cases,176551
+1999,Melanoma of the Skin,cases,38290
+1999,Myeloma,cases,13989
+1999,Non-Hodgkin Lymphoma,cases,48483
+1999,Oral Cavity and Pharynx,cases,27087
+1999,Ovary,cases,19588
+1999,Pancreas,cases,29081
+1999,Prostate,cases,184722
+1999,Stomach,cases,19092
+1999,Thyroid,cases,17179
+1999,Urinary Bladder,cases,55174
+1999,Brain and Other Nervous System,mortalityRate,0.735353418975747
+1999,Breast,mortalityRate,0.224167899208654
+1999,Cervix Uteri,mortalityRate,0.328900015647004
+1999,Colon and Rectum,mortalityRate,0.406152404747033
+1999,Corpus Uteri,mortalityRate,0.0975861422049903
+1999,Esophagus,mortalityRate,0.950925630386211
+1999,Gallbladder,mortalityRate,0.671559034572733
+1999,Kidney and Renal Pelvis,mortalityRate,0.362450683100199
+1999,Larynx,mortalityRate,0.331422117974112
+1999,Leukemias,mortalityRate,0.653060591972726
+1999,Liver,mortalityRate,0.946922261824487
+1999,Lung and Bronchus,mortalityRate,0.861286540433076
+1999,Melanoma of the Skin,mortalityRate,0.188430399582136
+1999,Myeloma,mortalityRate,0.751161626992637
+1999,Non-Hodgkin Lymphoma,mortalityRate,0.470309180537508
+1999,Oral Cavity and Pharynx,mortalityRate,0.276368737770886
+1999,Ovary,mortalityRate,0.695681029201552
+1999,Pancreas,mortalityRate,0.948866957807503
+1999,Prostate,mortalityRate,0.171760808133303
+1999,Stomach,mortalityRate,0.665776241357637
+1999,Thyroid,mortalityRate,0.0722393620117585
+1999,Urinary Bladder,mortalityRate,0.215862543951861
+1999,Brain and Other Nervous System,deathsPerMillion,45.746129587156
+1999,Breast,deathsPerMillion,148.824541284404
+1999,Cervix Uteri,deathsPerMillion,15.0659403669725
+1999,Colon and Rectum,deathsPerMillion,205.067373853211
+1999,Corpus Uteri,deathsPerMillion,11.1847763761468
+1999,Esophagus,deathsPerMillion,42.7071387614679
+1999,Gallbladder,deathsPerMillion,7.37887041284404
+1999,Kidney and Renal Pelvis,deathsPerMillion,39.8365825688073
+1999,Larynx,deathsPerMillion,13.671875
+1999,Leukemias,deathsPerMillion,75.5124713302752
+1999,Liver,deathsPerMillion,35.2279243119266
+1999,Lung and Bronchus,deathsPerMillion,544.943377293578
+1999,Melanoma of the Skin,deathsPerMillion,25.8565080275229
+1999,Myeloma,deathsPerMillion,37.6576834862385
+1999,Non-Hodgkin Lymphoma,deathsPerMillion,81.7158830275229
+1999,Oral Cavity and Pharynx,deathsPerMillion,26.8276949541284
+1999,Ovary,deathsPerMillion,48.8352924311927
+1999,Pancreas,deathsPerMillion,98.8890481651376
+1999,Prostate,deathsPerMillion,113.704128440367
+1999,Stomach,deathsPerMillion,45.5526089449541
+1999,Thyroid,deathsPerMillion,4.44739105504587
+1999,Urinary Bladder,deathsPerMillion,42.6820527522936
+2000,Brain and Other Nervous System,deaths,12655
+2000,Breast,deaths,42300
+2000,Cervix Uteri,deaths,4200
+2000,Colon and Rectum,deaths,57434
+2000,Corpus Uteri,deaths,3139
+2000,Esophagus,deaths,12232
+2000,Gallbladder,deaths,1949
+2000,Kidney and Renal Pelvis,deaths,11736
+2000,Larynx,deaths,3861
+2000,Leukemias,deaths,21397
+2000,Liver,deaths,10192
+2000,Lung and Bronchus,deaths,155426
+2000,Melanoma of the Skin,deaths,7420
+2000,Myeloma,deaths,10639
+2000,Non-Hodgkin Lymphoma,deaths,22729
+2000,Oral Cavity and Pharynx,deaths,7492
+2000,Ovary,deaths,14060
+2000,Pancreas,deaths,29072
+2000,Prostate,deaths,31078
+2000,Stomach,deaths,12645
+2000,Thyroid,deaths,1328
+2000,Urinary Bladder,deaths,12002
+2000,Brain and Other Nervous System,cases,17979
+2000,Breast,cases,189083
+2000,Cervix Uteri,cases,13144
+2000,Colon and Rectum,cases,145413
+2000,Corpus Uteri,cases,32639
+2000,Esophagus,cases,13051
+2000,Gallbladder,cases,3013
+2000,Kidney and Renal Pelvis,cases,33122
+2000,Larynx,cases,11668
+2000,Leukemias,cases,34754
+2000,Liver,cases,11465
+2000,Lung and Bronchus,cases,182369
+2000,Melanoma of the Skin,cases,42250
+2000,Myeloma,cases,14994
+2000,Non-Hodgkin Lymphoma,cases,50004
+2000,Oral Cavity and Pharynx,cases,28264
+2000,Ovary,cases,20532
+2000,Pancreas,cases,29331
+2000,Prostate,cases,194123
+2000,Stomach,cases,19410
+2000,Thyroid,cases,19524
+2000,Urinary Bladder,cases,57433
+2000,Brain and Other Nervous System,mortalityRate,0.703876745091496
+2000,Breast,mortalityRate,0.223711280231433
+2000,Cervix Uteri,mortalityRate,0.319537431527693
+2000,Colon and Rectum,mortalityRate,0.394971563752897
+2000,Corpus Uteri,mortalityRate,0.0961732896228438
+2000,Esophagus,mortalityRate,0.937246188031568
+2000,Gallbladder,mortalityRate,0.646863591105211
+2000,Kidney and Renal Pelvis,mortalityRate,0.354326429563432
+2000,Larynx,mortalityRate,0.330905039424066
+2000,Leukemias,mortalityRate,0.615670138689072
+2000,Liver,mortalityRate,0.888966419537723
+2000,Lung and Bronchus,mortalityRate,0.852261075073066
+2000,Melanoma of the Skin,mortalityRate,0.175621301775148
+2000,Myeloma,mortalityRate,0.709550486861411
+2000,Non-Hodgkin Lymphoma,mortalityRate,0.454543636509079
+2000,Oral Cavity and Pharynx,mortalityRate,0.265072176620436
+2000,Ovary,mortalityRate,0.684784726280927
+2000,Pancreas,mortalityRate,0.991169752139375
+2000,Prostate,mortalityRate,0.160094373155165
+2000,Stomach,mortalityRate,0.651468315301391
+2000,Thyroid,mortalityRate,0.0680188485965991
+2000,Urinary Bladder,mortalityRate,0.20897393484582
+2000,Brain and Other Nervous System,deathsPerMillion,44.8500562323307
+2000,Breast,deathsPerMillion,149.913660895108
+2000,Cervix Uteri,deathsPerMillion,14.8850443441951
+2000,Colon and Rectum,deathsPerMillion,203.549437348691
+2000,Corpus Uteri,deathsPerMillion,11.1247986181972
+2000,Esophagus,deathsPerMillion,43.3509196233796
+2000,Gallbladder,deathsPerMillion,6.90736938734196
+2000,Kidney and Renal Pelvis,deathsPerMillion,41.5930667674937
+2000,Larynx,deathsPerMillion,13.6836086221279
+2000,Leukemias,deathsPerMillion,75.8322128173196
+2000,Liver,deathsPerMillion,36.1210409419134
+2000,Lung and Bronchus,deathsPerMillion,550.838786247825
+2000,Melanoma of the Skin,deathsPerMillion,26.2969116747447
+2000,Myeloma,deathsPerMillion,37.705234947117
+2000,Non-Hodgkin Lymphoma,deathsPerMillion,80.5528983093357
+2000,Oral Cavity and Pharynx,deathsPerMillion,26.5520838635023
+2000,Ovary,deathsPerMillion,49.8294579712816
+2000,Pancreas,deathsPerMillion,103.032859327248
+2000,Prostate,deathsPerMillion,110.142240030689
+2000,Stomach,deathsPerMillion,44.8146156505588
+2000,Thyroid,deathsPerMillion,4.7065092593074
+2000,Urinary Bladder,deathsPerMillion,42.5357862426261
+2001,Brain and Other Nervous System,deaths,12609
+2001,Breast,deaths,41809
+2001,Cervix Uteri,deaths,4092
+2001,Colon and Rectum,deaths,56808
+2001,Corpus Uteri,deaths,3185
+2001,Esophagus,deaths,12529
+2001,Gallbladder,deaths,1971
+2001,Kidney and Renal Pelvis,deaths,12078
+2001,Larynx,deaths,3797
+2001,Leukemias,deaths,21532
+2001,Liver,deaths,10489
+2001,Lung and Bronchus,deaths,155969
+2001,Melanoma of the Skin,deaths,7542
+2001,Myeloma,deaths,10714
+2001,Non-Hodgkin Lymphoma,deaths,22305
+2001,Oral Cavity and Pharynx,deaths,7701
+2001,Ovary,deaths,14414
+2001,Pancreas,deaths,29425
+2001,Prostate,deaths,30719
+2001,Stomach,deaths,12319
+2001,Thyroid,deaths,1354
+2001,Urinary Bladder,deaths,12225
+2001,Brain and Other Nervous System,cases,17748
+2001,Breast,cases,189070
+2001,Cervix Uteri,cases,12462
+2001,Colon and Rectum,cases,143642
+2001,Corpus Uteri,cases,33657
+2001,Esophagus,cases,13031
+2001,Gallbladder,cases,3130
+2001,Kidney and Renal Pelvis,cases,34846
+2001,Larynx,cases,11390
+2001,Leukemias,cases,35404
+2001,Liver,cases,12016
+2001,Lung and Bronchus,cases,183491
+2001,Melanoma of the Skin,cases,44824
+2001,Myeloma,cases,15233
+2001,Non-Hodgkin Lymphoma,cases,50806
+2001,Oral Cavity and Pharynx,cases,28263
+2001,Ovary,cases,20383
+2001,Pancreas,cases,29802
+2001,Prostate,cases,197674
+2001,Stomach,cases,19141
+2001,Thyroid,cases,20541
+2001,Urinary Bladder,cases,57317
+2001,Brain and Other Nervous System,mortalityRate,0.710446247464503
+2001,Breast,mortalityRate,0.221129740307823
+2001,Cervix Uteri,mortalityRate,0.328358208955224
+2001,Colon and Rectum,mortalityRate,0.395483215215605
+2001,Corpus Uteri,mortalityRate,0.0946311317110854
+2001,Esophagus,mortalityRate,0.961476479165068
+2001,Gallbladder,mortalityRate,0.629712460063898
+2001,Kidney and Renal Pelvis,mortalityRate,0.346610801813695
+2001,Larynx,mortalityRate,0.333362598770852
+2001,Leukemias,mortalityRate,0.608179866681731
+2001,Liver,mortalityRate,0.872919440745672
+2001,Lung and Bronchus,mortalityRate,0.850008992266651
+2001,Melanoma of the Skin,mortalityRate,0.168258076030698
+2001,Myeloma,mortalityRate,0.703341429790586
+2001,Non-Hodgkin Lymphoma,mortalityRate,0.43902295004527
+2001,Oral Cavity and Pharynx,mortalityRate,0.272476382549623
+2001,Ovary,mortalityRate,0.707157925722416
+2001,Pancreas,mortalityRate,0.987349842292464
+2001,Prostate,mortalityRate,0.155402329087285
+2001,Stomach,mortalityRate,0.643592288804138
+2001,Thyroid,mortalityRate,0.0659169465946157
+2001,Urinary Bladder,mortalityRate,0.213287506324476
+2001,Brain and Other Nervous System,deathsPerMillion,44.2469250729435
+2001,Breast,deathsPerMillion,146.714227169061
+2001,Cervix Uteri,deathsPerMillion,14.359458910182
+2001,Colon and Rectum,deathsPerMillion,199.348030735488
+2001,Corpus Uteri,deathsPerMillion,11.1766560676759
+2001,Esophagus,deathsPerMillion,43.9661927384336
+2001,Gallbladder,deathsPerMillion,6.91654289148795
+2001,Kidney and Renal Pelvis,deathsPerMillion,42.3835642026339
+2001,Larynx,deathsPerMillion,13.3242584266767
+2001,Leukemias,deathsPerMillion,75.5591078333428
+2001,Liver,deathsPerMillion,36.8075182084308
+2001,Lung and Bronchus,deathsPerMillion,547.319268514705
+2001,Melanoma of the Skin,deathsPerMillion,26.4660408359219
+2001,Myeloma,deathsPerMillion,37.5970778992399
+2001,Non-Hodgkin Lymphoma,deathsPerMillion,78.2716840155448
+2001,Oral Cavity and Pharynx,deathsPerMillion,27.0239963507604
+2001,Ovary,deathsPerMillion,50.5809483703234
+2001,Pancreas,deathsPerMillion,103.256861786927
+2001,Prostate,deathsPerMillion,107.797707297625
+2001,Stomach,deathsPerMillion,43.229270360345
+2001,Thyroid,deathsPerMillion,4.75139476158026
+2001,Urinary Bladder,deathsPerMillion,42.8994098672959
+2002,Brain and Other Nervous System,deaths,12830
+2002,Breast,deaths,41883
+2002,Cervix Uteri,deaths,3952
+2002,Colon and Rectum,deaths,56603
+2002,Corpus Uteri,deaths,3187
+2002,Esophagus,deaths,12700
+2002,Gallbladder,deaths,1907
+2002,Kidney and Renal Pelvis,deaths,12165
+2002,Larynx,deaths,3722
+2002,Leukemias,deaths,21581
+2002,Liver,deaths,11048
+2002,Lung and Bronchus,deaths,157630
+2002,Melanoma of the Skin,deaths,7513
+2002,Myeloma,deaths,10913
+2002,Non-Hodgkin Lymphoma,deaths,21910
+2002,Oral Cavity and Pharynx,deaths,7737
+2002,Ovary,deaths,14682
+2002,Pancreas,deaths,30126
+2002,Prostate,deaths,30446
+2002,Stomach,deaths,12198
+2002,Thyroid,deaths,1367
+2002,Urinary Bladder,deaths,12627
+2002,Brain and Other Nervous System,cases,18495
+2002,Breast,cases,190310
+2002,Cervix Uteri,cases,12199
+2002,Colon and Rectum,cases,144312
+2002,Corpus Uteri,cases,34300
+2002,Esophagus,cases,13260
+2002,Gallbladder,cases,3006
+2002,Kidney and Renal Pelvis,cases,36943
+2002,Larynx,cases,11201
+2002,Leukemias,cases,35034
+2002,Liver,cases,13096
+2002,Lung and Bronchus,cases,187294
+2002,Melanoma of the Skin,cases,47251
+2002,Myeloma,cases,15742
+2002,Non-Hodgkin Lymphoma,cases,52464
+2002,Oral Cavity and Pharynx,cases,29226
+2002,Ovary,cases,20296
+2002,Pancreas,cases,30263
+2002,Prostate,cases,203034
+2002,Stomach,cases,19623
+2002,Thyroid,cases,22819
+2002,Urinary Bladder,cases,58890
+2002,Brain and Other Nervous System,mortalityRate,0.693701000270343
+2002,Breast,mortalityRate,0.220077767852451
+2002,Cervix Uteri,mortalityRate,0.32396098040823
+2002,Colon and Rectum,mortalityRate,0.392226564665447
+2002,Corpus Uteri,mortalityRate,0.0929154518950437
+2002,Esophagus,mortalityRate,0.957767722473605
+2002,Gallbladder,mortalityRate,0.634397870924817
+2002,Kidney and Renal Pelvis,mortalityRate,0.329291070026798
+2002,Larynx,mortalityRate,0.332291759664316
+2002,Leukemias,mortalityRate,0.616001598447223
+2002,Liver,mortalityRate,0.843616371411118
+2002,Lung and Bronchus,mortalityRate,0.841617990966075
+2002,Melanoma of the Skin,mortalityRate,0.159001925885166
+2002,Myeloma,mortalityRate,0.693241011307331
+2002,Non-Hodgkin Lymphoma,mortalityRate,0.417619701128393
+2002,Oral Cavity and Pharynx,mortalityRate,0.264730034900431
+2002,Ovary,mortalityRate,0.723393772171857
+2002,Pancreas,mortalityRate,0.995473019859234
+2002,Prostate,mortalityRate,0.149955179920604
+2002,Stomach,mortalityRate,0.621617489680477
+2002,Thyroid,mortalityRate,0.0599062185021254
+2002,Urinary Bladder,mortalityRate,0.214416709118696
+2002,Brain and Other Nervous System,deathsPerMillion,44.606662810653
+2002,Breast,deathsPerMillion,145.616590685782
+2002,Cervix Uteri,deathsPerMillion,13.7401037745675
+2002,Colon and Rectum,deathsPerMillion,196.794305149758
+2002,Corpus Uteri,deathsPerMillion,11.0803923910796
+2002,Esophagus,deathsPerMillion,44.1546857128054
+2002,Gallbladder,deathsPerMillion,6.63015635073385
+2002,Kidney and Renal Pelvis,deathsPerMillion,42.2946261178172
+2002,Larynx,deathsPerMillion,12.9404519860679
+2002,Leukemias,deathsPerMillion,75.0316749896105
+2002,Liver,deathsPerMillion,38.4110998232342
+2002,Lung and Bronchus,deathsPerMillion,548.039614874765
+2002,Melanoma of the Skin,deathsPerMillion,26.1207995086856
+2002,Myeloma,deathsPerMillion,37.941738990854
+2002,Non-Hodgkin Lymphoma,deathsPerMillion,76.1755247218556
+2002,Oral Cavity and Pharynx,deathsPerMillion,26.8995908157461
+2002,Ovary,deathsPerMillion,51.0455980815283
+2002,Pancreas,deathsPerMillion,104.740477305825
+2002,Prostate,deathsPerMillion,105.853036315911
+2002,Stomach,deathsPerMillion,42.4093587657323
+2002,Thyroid,deathsPerMillion,4.75271302121299
+2002,Urinary Bladder,deathsPerMillion,43.9008831886294
+2003,Brain and Other Nervous System,deaths,12901
+2003,Breast,deaths,41998
+2003,Cervix Uteri,deaths,3919
+2003,Colon and Rectum,deaths,55783
+2003,Corpus Uteri,deaths,3261
+2003,Esophagus,deaths,12860
+2003,Gallbladder,deaths,1915
+2003,Kidney and Renal Pelvis,deaths,12286
+2003,Larynx,deaths,3791
+2003,Leukemias,deaths,21608
+2003,Liver,deaths,11423
+2003,Lung and Bronchus,deaths,157990
+2003,Melanoma of the Skin,deaths,7818
+2003,Myeloma,deaths,10809
+2003,Non-Hodgkin Lymphoma,deaths,21475
+2003,Oral Cavity and Pharynx,deaths,7777
+2003,Ovary,deaths,14657
+2003,Pancreas,deaths,30777
+2003,Prostate,deaths,29554
+2003,Stomach,deaths,12110
+2003,Thyroid,deaths,1312
+2003,Urinary Bladder,deaths,12483
+2003,Brain and Other Nervous System,cases,19437
+2003,Breast,cases,192597
+2003,Cervix Uteri,cases,12420
+2003,Colon and Rectum,cases,150600
+2003,Corpus Uteri,cases,35162
+2003,Esophagus,cases,14419
+2003,Gallbladder,cases,3276
+2003,Kidney and Renal Pelvis,cases,40878
+2003,Larynx,cases,11944
+2003,Leukemias,cases,37731
+2003,Liver,cases,14489
+2003,Lung and Bronchus,cases,200202
+2003,Melanoma of the Skin,cases,49369
+2003,Myeloma,cases,16837
+2003,Non-Hodgkin Lymphoma,cases,56172
+2003,Oral Cavity and Pharynx,cases,31364
+2003,Ovary,cases,21286
+2003,Pancreas,cases,32890
+2003,Prostate,cases,199363
+2003,Stomach,cases,20799
+2003,Thyroid,cases,25182
+2003,Urinary Bladder,cases,62442
+2003,Brain and Other Nervous System,mortalityRate,0.663734115347019
+2003,Breast,mortalityRate,0.218061548206878
+2003,Cervix Uteri,mortalityRate,0.315539452495974
+2003,Colon and Rectum,mortalityRate,0.370405046480744
+2003,Corpus Uteri,mortalityRate,0.09274216483704
+2003,Esophagus,mortalityRate,0.891878771065955
+2003,Gallbladder,mortalityRate,0.584554334554335
+2003,Kidney and Renal Pelvis,mortalityRate,0.300552864621557
+2003,Larynx,mortalityRate,0.317397856664434
+2003,Leukemias,mortalityRate,0.572685590098328
+2003,Liver,mortalityRate,0.78839119331907
+2003,Lung and Bronchus,mortalityRate,0.78915295551493
+2003,Melanoma of the Skin,mortalityRate,0.15835848406895
+2003,Myeloma,mortalityRate,0.641978974876759
+2003,Non-Hodgkin Lymphoma,mortalityRate,0.38230791141494
+2003,Oral Cavity and Pharynx,mortalityRate,0.247959443948476
+2003,Ovary,mortalityRate,0.688574650004698
+2003,Pancreas,mortalityRate,0.935755548799027
+2003,Prostate,mortalityRate,0.148242151251737
+2003,Stomach,mortalityRate,0.582239530746671
+2003,Thyroid,mortalityRate,0.0521007068541021
+2003,Urinary Bladder,mortalityRate,0.199913519746325
+2003,Brain and Other Nervous System,deathsPerMillion,44.4696560572854
+2003,Breast,deathsPerMillion,144.766809944491
+2003,Cervix Uteri,deathsPerMillion,13.5087653738859
+2003,Colon and Rectum,deathsPerMillion,192.283607770216
+2003,Corpus Uteri,deathsPerMillion,11.2406440123097
+2003,Esophagus,deathsPerMillion,44.3283293463057
+2003,Gallbladder,deathsPerMillion,6.60099150063573
+2003,Kidney and Renal Pelvis,deathsPerMillion,42.3497553925904
+2003,Larynx,deathsPerMillion,13.0675502761932
+2003,Leukemias,deathsPerMillion,74.482623679236
+2003,Liver,deathsPerMillion,39.3750004761159
+2003,Lung and Bronchus,deathsPerMillion,544.590416284825
+2003,Melanoma of the Skin,deathsPerMillion,26.9485908887573
+2003,Myeloma,deathsPerMillion,37.2585468043716
+2003,Non-Hodgkin Lymphoma,deathsPerMillion,74.0241736167897
+2003,Oral Cavity and Pharynx,deathsPerMillion,26.8072641777776
+2003,Ovary,deathsPerMillion,50.5225756787561
+2003,Pancreas,deathsPerMillion,106.088102044421
+2003,Prostate,deathsPerMillion,101.872429665686
+2003,Stomach,deathsPerMillion,41.743084633263
+2003,Thyroid,deathsPerMillion,4.52245475134939
+2003,Urinary Bladder,deathsPerMillion,43.0288130038829
+2004,Brain and Other Nervous System,deaths,12829
+2004,Breast,deaths,41316
+2004,Cervix Uteri,deaths,3850
+2004,Colon and Rectum,deaths,53580
+2004,Corpus Uteri,deaths,3272
+2004,Esophagus,deaths,13023
+2004,Gallbladder,deaths,1936
+2004,Kidney and Renal Pelvis,deaths,12313
+2004,Larynx,deaths,3668
+2004,Leukemias,deaths,21472
+2004,Liver,deaths,11831
+2004,Lung and Bronchus,deaths,158006
+2004,Melanoma of the Skin,deaths,7952
+2004,Myeloma,deaths,10578
+2004,Non-Hodgkin Lymphoma,deaths,20938
+2004,Oral Cavity and Pharynx,deaths,7826
+2004,Ovary,deaths,14716
+2004,Pancreas,deaths,31771
+2004,Prostate,deaths,29002
+2004,Stomach,deaths,11859
+2004,Thyroid,deaths,1409
+2004,Urinary Bladder,deaths,13030
+2004,Brain and Other Nervous System,cases,20427
+2004,Breast,cases,197386
+2004,Cervix Uteri,cases,12463
+2004,Colon and Rectum,cases,151659
+2004,Corpus Uteri,cases,37292
+2004,Esophagus,cases,15299
+2004,Gallbladder,cases,3349
+2004,Kidney and Renal Pelvis,cases,43858
+2004,Larynx,cases,12562
+2004,Leukemias,cases,39075
+2004,Liver,cases,15891
+2004,Lung and Bronchus,cases,206064
+2004,Melanoma of the Skin,cases,53831
+2004,Myeloma,cases,17908
+2004,Non-Hodgkin Lymphoma,cases,59132
+2004,Oral Cavity and Pharynx,cases,32457
+2004,Ovary,cases,21320
+2004,Pancreas,cases,34367
+2004,Prostate,cases,201960
+2004,Stomach,cases,21066
+2004,Thyroid,cases,28130
+2004,Urinary Bladder,cases,65110
+2004,Brain and Other Nervous System,mortalityRate,0.628041317863612
+2004,Breast,mortalityRate,0.209315756943248
+2004,Cervix Uteri,mortalityRate,0.308914386584289
+2004,Colon and Rectum,mortalityRate,0.353292584020731
+2004,Corpus Uteri,mortalityRate,0.0877399978547678
+2004,Esophagus,mortalityRate,0.851232106673639
+2004,Gallbladder,mortalityRate,0.578083009853688
+2004,Kidney and Renal Pelvis,mortalityRate,0.280746956085549
+2004,Larynx,mortalityRate,0.291991721063525
+2004,Leukemias,mortalityRate,0.549507357645553
+2004,Liver,mortalityRate,0.744509470769618
+2004,Lung and Bronchus,mortalityRate,0.766781194192096
+2004,Melanoma of the Skin,mortalityRate,0.147721573071279
+2004,Myeloma,mortalityRate,0.590685727049363
+2004,Non-Hodgkin Lymphoma,mortalityRate,0.354089156463505
+2004,Oral Cavity and Pharynx,mortalityRate,0.241119019009767
+2004,Ovary,mortalityRate,0.690243902439024
+2004,Pancreas,mortalityRate,0.924462420345099
+2004,Prostate,mortalityRate,0.143602693602694
+2004,Stomach,mortalityRate,0.56294502990601
+2004,Thyroid,mortalityRate,0.0500888730892286
+2004,Urinary Bladder,mortalityRate,0.200122868990938
+2004,Brain and Other Nervous System,deathsPerMillion,43.8140979266024
+2004,Breast,deathsPerMillion,141.104004204186
+2004,Cervix Uteri,deathsPerMillion,13.148669188356
+2004,Colon and Rectum,deathsPerMillion,182.988492236913
+2004,Corpus Uteri,deathsPerMillion,11.1746611907275
+2004,Esophagus,deathsPerMillion,44.4766542441455
+2004,Gallbladder,deathsPerMillion,6.61190222043045
+2004,Kidney and Renal Pelvis,deathsPerMillion,42.0518347314877
+2004,Larynx,deathsPerMillion,12.5270957358155
+2004,Leukemias,deathsPerMillion,73.3320064447741
+2004,Liver,deathsPerMillion,40.4056896538805
+2004,Lung and Bronchus,deathsPerMillion,539.628213967631
+2004,Melanoma of the Skin,deathsPerMillion,27.1579785417681
+2004,Myeloma,deathsPerMillion,36.1263954998519
+2004,Non-Hodgkin Lymphoma,deathsPerMillion,71.5082689521554
+2004,Oral Cavity and Pharynx,deathsPerMillion,26.72765845924
+2004,Ovary,deathsPerMillion,50.258653448272
+2004,Pancreas,deathsPerMillion,108.505550333314
+2004,Prostate,deathsPerMillion,99.0487542339483
+2004,Stomach,deathsPerMillion,40.5013163388867
+2004,Thyroid,deathsPerMillion,4.81207139906328
+2004,Urinary Bladder,deathsPerMillion,44.5005609153971
+2005,Brain and Other Nervous System,deaths,13152
+2005,Breast,deaths,41491
+2005,Cervix Uteri,deaths,3924
+2005,Colon and Rectum,deaths,53005
+2005,Corpus Uteri,deaths,3259
+2005,Esophagus,deaths,13499
+2005,Gallbladder,deaths,1989
+2005,Kidney and Renal Pelvis,deaths,12517
+2005,Larynx,deaths,3796
+2005,Leukemias,deaths,21716
+2005,Liver,deaths,12544
+2005,Lung and Bronchus,deaths,159217
+2005,Melanoma of the Skin,deaths,8345
+2005,Myeloma,deaths,10758
+2005,Non-Hodgkin Lymphoma,deaths,20873
+2005,Oral Cavity and Pharynx,deaths,7773
+2005,Ovary,deaths,14787
+2005,Pancreas,deaths,32759
+2005,Prostate,deaths,28905
+2005,Stomach,deaths,11514
+2005,Thyroid,deaths,1462
+2005,Urinary Bladder,deaths,13253
+2005,Brain and Other Nervous System,cases,20473
+2005,Breast,cases,200197
+2005,Cervix Uteri,cases,12755
+2005,Colon and Rectum,cases,150306
+2005,Corpus Uteri,cases,38419
+2005,Esophagus,cases,15228
+2005,Gallbladder,cases,3441
+2005,Kidney and Renal Pelvis,cases,46126
+2005,Larynx,cases,12488
+2005,Leukemias,cases,39091
+2005,Liver,cases,16881
+2005,Lung and Bronchus,cases,210338
+2005,Melanoma of the Skin,cases,58279
+2005,Myeloma,cases,18132
+2005,Non-Hodgkin Lymphoma,cases,59846
+2005,Oral Cavity and Pharynx,cases,32962
+2005,Ovary,cases,21560
+2005,Pancreas,cases,35572
+2005,Prostate,cases,203481
+2005,Stomach,cases,20831
+2005,Thyroid,cases,30938
+2005,Urinary Bladder,cases,66137
+2005,Brain and Other Nervous System,mortalityRate,0.642407072729937
+2005,Breast,mortalityRate,0.207250857904964
+2005,Cervix Uteri,mortalityRate,0.307644061152489
+2005,Colon and Rectum,mortalityRate,0.35264726624353
+2005,Corpus Uteri,mortalityRate,0.0848278195684427
+2005,Esophagus,mortalityRate,0.886459154189651
+2005,Gallbladder,mortalityRate,0.578029642545772
+2005,Kidney and Renal Pelvis,mortalityRate,0.27136539045224
+2005,Larynx,mortalityRate,0.303971812940423
+2005,Leukemias,mortalityRate,0.555524289478397
+2005,Liver,mortalityRate,0.74308394052485
+2005,Lung and Bronchus,mortalityRate,0.756957848795748
+2005,Melanoma of the Skin,mortalityRate,0.143190514593593
+2005,Myeloma,mortalityRate,0.593315684976837
+2005,Non-Hodgkin Lymphoma,mortalityRate,0.348778531564349
+2005,Oral Cavity and Pharynx,mortalityRate,0.235817001395546
+2005,Ovary,mortalityRate,0.685853432282004
+2005,Pancreas,mortalityRate,0.920920949061059
+2005,Prostate,mortalityRate,0.142052574933286
+2005,Stomach,mortalityRate,0.552733906197494
+2005,Thyroid,mortalityRate,0.0472558019264335
+2005,Urinary Bladder,mortalityRate,0.200387075313365
+2005,Brain and Other Nervous System,deathsPerMillion,44.5051142457145
+2005,Breast,deathsPerMillion,140.401588744597
+2005,Cervix Uteri,deathsPerMillion,13.2784419327999
+2005,Colon and Rectum,deathsPerMillion,179.363867137629
+2005,Corpus Uteri,deathsPerMillion,11.0281453259416
+2005,Esophagus,deathsPerMillion,45.6793291668872
+2005,Gallbladder,deathsPerMillion,6.73058639254305
+2005,Kidney and Renal Pelvis,deathsPerMillion,42.3563347790152
+2005,Larynx,deathsPerMillion,12.845302134788
+2005,Leukemias,deathsPerMillion,73.4848738564428
+2005,Liver,deathsPerMillion,42.4477002051584
+2005,Lung and Bronchus,deathsPerMillion,538.775150156625
+2005,Melanoma of the Skin,deathsPerMillion,28.2386844875675
+2005,Myeloma,deathsPerMillion,36.4040464610247
+2005,Non-Hodgkin Lymphoma,deathsPerMillion,70.6322422179744
+2005,Oral Cavity and Pharynx,deathsPerMillion,26.3030910152022
+2005,Ovary,deathsPerMillion,50.0377983843811
+2005,Pancreas,deathsPerMillion,110.853333148978
+2005,Prostate,deathsPerMillion,97.8117645432161
+2005,Stomach,deathsPerMillion,38.962278393032
+2005,Thyroid,deathsPerMillion,4.94726863041626
+2005,Urinary Bladder,deathsPerMillion,44.8468886175832
+2006,Brain and Other Nervous System,deaths,12886
+2006,Breast,deaths,41209
+2006,Cervix Uteri,deaths,3976
+2006,Colon and Rectum,deaths,53196
+2006,Corpus Uteri,deaths,3449
+2006,Esophagus,deaths,13685
+2006,Gallbladder,deaths,2000
+2006,Kidney and Renal Pelvis,deaths,12379
+2006,Larynx,deaths,3821
+2006,Leukemias,deaths,22016
+2006,Liver,deaths,12832
+2006,Lung and Bronchus,deaths,158599
+2006,Melanoma of the Skin,deaths,8441
+2006,Myeloma,deaths,10712
+2006,Non-Hodgkin Lymphoma,deaths,20593
+2006,Oral Cavity and Pharynx,deaths,7720
+2006,Ovary,deaths,14857
+2006,Pancreas,deaths,33454
+2006,Prostate,deaths,28372
+2006,Stomach,deaths,11345
+2006,Thyroid,deaths,1518
+2006,Urinary Bladder,deaths,13474
+2006,Brain and Other Nervous System,cases,20701
+2006,Breast,cases,204729
+2006,Cervix Uteri,cases,12666
+2006,Colon and Rectum,cases,148376
+2006,Corpus Uteri,cases,39517
+2006,Esophagus,cases,15664
+2006,Gallbladder,cases,3497
+2006,Kidney and Renal Pelvis,cases,48549
+2006,Larynx,cases,12525
+2006,Leukemias,cases,40062
+2006,Liver,cases,17991
+2006,Lung and Bronchus,cases,211212
+2006,Melanoma of the Skin,cases,58515
+2006,Myeloma,cases,18300
+2006,Non-Hodgkin Lymphoma,cases,60134
+2006,Oral Cavity and Pharynx,cases,33993
+2006,Ovary,cases,21678
+2006,Pancreas,cases,36858
+2006,Prostate,cases,222418
+2006,Stomach,cases,20918
+2006,Thyroid,cases,33303
+2006,Urinary Bladder,cases,65193
+2006,Brain and Other Nervous System,mortalityRate,0.622482005700208
+2006,Breast,mortalityRate,0.20128560194208
+2006,Cervix Uteri,mortalityRate,0.313911258487289
+2006,Colon and Rectum,mortalityRate,0.358521593788753
+2006,Corpus Uteri,mortalityRate,0.087278892628489
+2006,Esophagus,mortalityRate,0.873659346271706
+2006,Gallbladder,mortalityRate,0.57191878753217
+2006,Kidney and Renal Pelvis,mortalityRate,0.254979505242127
+2006,Larynx,mortalityRate,0.305069860279441
+2006,Leukemias,mortalityRate,0.549548200289551
+2006,Liver,mortalityRate,0.713245511644711
+2006,Lung and Bronchus,mortalityRate,0.750899570100184
+2006,Melanoma of the Skin,mortalityRate,0.144253610185423
+2006,Myeloma,mortalityRate,0.585355191256831
+2006,Non-Hodgkin Lymphoma,mortalityRate,0.342451857518209
+2006,Oral Cavity and Pharynx,mortalityRate,0.227105580560704
+2006,Ovary,mortalityRate,0.6853492019559
+2006,Pancreas,mortalityRate,0.907645558630419
+2006,Prostate,mortalityRate,0.127561618214353
+2006,Stomach,mortalityRate,0.542355865761545
+2006,Thyroid,mortalityRate,0.0455814791460229
+2006,Urinary Bladder,mortalityRate,0.20667863114138
+2006,Brain and Other Nervous System,deathsPerMillion,43.1865533896933
+2006,Breast,deathsPerMillion,138.109163327322
+2006,Cervix Uteri,deathsPerMillion,13.3252938287615
+2006,Colon and Rectum,deathsPerMillion,178.282779304526
+2006,Corpus Uteri,deathsPerMillion,11.5590891386817
+2006,Esophagus,deathsPerMillion,45.8643475972337
+2006,Gallbladder,deathsPerMillion,6.7028640989746
+2006,Kidney and Renal Pelvis,deathsPerMillion,41.4873773406033
+2006,Larynx,deathsPerMillion,12.805821861091
+2006,Leukemias,deathsPerMillion,73.7851280015124
+2006,Liver,deathsPerMillion,43.005576059021
+2006,Lung and Bronchus,deathsPerMillion,531.533771616636
+2006,Melanoma of the Skin,deathsPerMillion,28.2894379297223
+2006,Myeloma,deathsPerMillion,35.9005401141079
+2006,Non-Hodgkin Lymphoma,deathsPerMillion,69.016040195092
+2006,Oral Cavity and Pharynx,deathsPerMillion,25.873055422042
+2006,Ovary,deathsPerMillion,49.7922259592328
+2006,Pancreas,deathsPerMillion,112.118807783548
+2006,Prostate,deathsPerMillion,95.0868301080537
+2006,Stomach,deathsPerMillion,38.0219966014334
+2006,Thyroid,deathsPerMillion,5.08747385112172
+2006,Urinary Bladder,deathsPerMillion,45.1571954347919
+2007,Brain and Other Nervous System,deaths,13234
+2007,Breast,deaths,40969
+2007,Cervix Uteri,deaths,4021
+2007,Colon and Rectum,deaths,53219
+2007,Corpus Uteri,deaths,3377
+2007,Esophagus,deaths,13592
+2007,Gallbladder,deaths,1914
+2007,Kidney and Renal Pelvis,deaths,12703
+2007,Larynx,deaths,3634
+2007,Leukemias,deaths,21928
+2007,Liver,deaths,13291
+2007,Lung and Bronchus,deaths,158683
+2007,Melanoma of the Skin,deaths,8461
+2007,Myeloma,deaths,10872
+2007,Non-Hodgkin Lymphoma,deaths,20528
+2007,Oral Cavity and Pharynx,deaths,8067
+2007,Ovary,deaths,14621
+2007,Pancreas,deaths,34117
+2007,Prostate,deaths,29093
+2007,Stomach,deaths,11388
+2007,Thyroid,deaths,1562
+2007,Urinary Bladder,deaths,13843
+2007,Brain and Other Nervous System,cases,21110
+2007,Breast,cases,210993
+2007,Cervix Uteri,cases,12652
+2007,Colon and Rectum,cases,147689
+2007,Corpus Uteri,cases,40938
+2007,Esophagus,cases,15706
+2007,Gallbladder,cases,3541
+2007,Kidney and Renal Pelvis,cases,50461
+2007,Larynx,cases,12583
+2007,Leukemias,cases,40200
+2007,Liver,cases,19541
+2007,Lung and Bronchus,cases,212618
+2007,Melanoma of the Skin,cases,60841
+2007,Myeloma,cases,18491
+2007,Non-Hodgkin Lymphoma,cases,61434
+2007,Oral Cavity and Pharynx,cases,35617
+2007,Ovary,cases,21645
+2007,Pancreas,cases,37761
+2007,Prostate,cases,235946
+2007,Stomach,cases,21326
+2007,Thyroid,cases,36284
+2007,Urinary Bladder,cases,67040
+2007,Brain and Other Nervous System,mortalityRate,0.62690667929891
+2007,Breast,mortalityRate,0.194172318512936
+2007,Cervix Uteri,mortalityRate,0.317815365159659
+2007,Colon and Rectum,mortalityRate,0.360345049394335
+2007,Corpus Uteri,mortalityRate,0.082490595534711
+2007,Esophagus,mortalityRate,0.865401757290208
+2007,Gallbladder,mortalityRate,0.540525275345948
+2007,Kidney and Renal Pelvis,mortalityRate,0.251738966726779
+2007,Larynx,mortalityRate,0.288802352380196
+2007,Leukemias,mortalityRate,0.54547263681592
+2007,Liver,mortalityRate,0.680159664295584
+2007,Lung and Bronchus,mortalityRate,0.746329097254231
+2007,Melanoma of the Skin,mortalityRate,0.139067405203728
+2007,Myeloma,mortalityRate,0.587961711102699
+2007,Non-Hodgkin Lymphoma,mortalityRate,0.334147214897288
+2007,Oral Cavity and Pharynx,mortalityRate,0.226492966841677
+2007,Ovary,mortalityRate,0.675490875490875
+2007,Pancreas,mortalityRate,0.903498318370806
+2007,Prostate,mortalityRate,0.123303637272935
+2007,Stomach,mortalityRate,0.533996061146019
+2007,Thyroid,mortalityRate,0.0430492779186418
+2007,Urinary Bladder,mortalityRate,0.206488663484487
+2007,Brain and Other Nervous System,deathsPerMillion,43.9330311483963
+2007,Breast,deathsPerMillion,136.005164962872
+2007,Cervix Uteri,deathsPerMillion,13.3485505703265
+2007,Colon and Rectum,deathsPerMillion,176.671602288537
+2007,Corpus Uteri,deathsPerMillion,11.2106578652058
+2007,Esophagus,deathsPerMillion,45.1214870310565
+2007,Gallbladder,deathsPerMillion,6.35392335031211
+2007,Kidney and Renal Pelvis,deathsPerMillion,42.1702655794225
+2007,Larynx,deathsPerMillion,12.0638231217525
+2007,Leukemias,deathsPerMillion,72.7945826675255
+2007,Liver,deathsPerMillion,44.1222545710545
+2007,Lung and Bronchus,deathsPerMillion,526.781410134575
+2007,Melanoma of the Skin,deathsPerMillion,28.0880592826493
+2007,Myeloma,deathsPerMillion,36.0918780901741
+2007,Non-Hodgkin Lymphoma,deathsPerMillion,68.1469898303067
+2007,Oral Cavity and Pharynx,deathsPerMillion,26.7800938698891
+2007,Ovary,deathsPerMillion,48.5374677664124
+2007,Pancreas,deathsPerMillion,113.258517733855
+2007,Prostate,deathsPerMillion,96.5802988665779
+2007,Stomach,deathsPerMillion,37.8048480216062
+2007,Thyroid,deathsPerMillion,5.1853857226685
+2007,Urinary Bladder,deathsPerMillion,45.9547340325865
+2008,Brain and Other Nervous System,deaths,13724
+2008,Breast,deaths,41026
+2008,Cervix Uteri,deaths,4008
+2008,Colon and Rectum,deaths,52857
+2008,Corpus Uteri,deaths,3436
+2008,Esophagus,deaths,13714
+2008,Gallbladder,deaths,1971
+2008,Kidney and Renal Pelvis,deaths,12895
+2008,Larynx,deaths,3760
+2008,Leukemias,deaths,22431
+2008,Liver,deaths,14176
+2008,Lung and Bronchus,deaths,158592
+2008,Melanoma of the Skin,deaths,8623
+2008,Myeloma,deaths,10606
+2008,Non-Hodgkin Lymphoma,deaths,20368
+2008,Oral Cavity and Pharynx,deaths,8019
+2008,Ovary,deaths,14362
+2008,Pancreas,deaths,35234
+2008,Prostate,deaths,28471
+2008,Stomach,deaths,11352
+2008,Thyroid,deaths,1649
+2008,Urinary Bladder,deaths,14036
+2008,Brain and Other Nervous System,cases,21456
+2008,Breast,cases,216427
+2008,Cervix Uteri,cases,12651
+2008,Colon and Rectum,cases,146607
+2008,Corpus Uteri,cases,42454
+2008,Esophagus,cases,16299
+2008,Gallbladder,cases,3559
+2008,Kidney and Renal Pelvis,cases,52345
+2008,Larynx,cases,12536
+2008,Leukemias,cases,40843
+2008,Liver,cases,20639
+2008,Lung and Bronchus,cases,215325
+2008,Melanoma of the Skin,cases,62770
+2008,Myeloma,cases,19423
+2008,Non-Hodgkin Lymphoma,cases,62391
+2008,Oral Cavity and Pharynx,cases,37072
+2008,Ovary,cases,21898
+2008,Pancreas,cases,39472
+2008,Prostate,cases,224478
+2008,Stomach,cases,21184
+2008,Thyroid,cases,39767
+2008,Urinary Bladder,cases,67999
+2008,Brain and Other Nervous System,mortalityRate,0.639634601043997
+2008,Breast,mortalityRate,0.189560452254109
+2008,Cervix Uteri,mortalityRate,0.316812900165995
+2008,Colon and Rectum,mortalityRate,0.360535308682396
+2008,Corpus Uteri,mortalityRate,0.080934658689405
+2008,Esophagus,mortalityRate,0.841401312963986
+2008,Gallbladder,mortalityRate,0.553807249227311
+2008,Kidney and Renal Pelvis,mortalityRate,0.246346355907919
+2008,Larynx,mortalityRate,0.299936183790683
+2008,Leukemias,mortalityRate,0.549200597409593
+2008,Liver,mortalityRate,0.686854983284074
+2008,Lung and Bronchus,mortalityRate,0.73652385928248
+2008,Melanoma of the Skin,mortalityRate,0.137374541978652
+2008,Myeloma,mortalityRate,0.546053647737219
+2008,Non-Hodgkin Lymphoma,mortalityRate,0.326457341603757
+2008,Oral Cavity and Pharynx,mortalityRate,0.216308804488563
+2008,Ovary,mortalityRate,0.655858982555484
+2008,Pancreas,mortalityRate,0.892632752330766
+2008,Prostate,mortalityRate,0.12683202808293
+2008,Stomach,mortalityRate,0.535876132930514
+2008,Thyroid,mortalityRate,0.0414665426107074
+2008,Urinary Bladder,mortalityRate,0.20641480021765
+2008,Brain and Other Nervous System,deathsPerMillion,45.1307869752338
+2008,Breast,deathsPerMillion,134.912246170646
+2008,Cervix Uteri,deathsPerMillion,13.1801365634463
+2008,Colon and Rectum,deathsPerMillion,173.817983616288
+2008,Corpus Uteri,deathsPerMillion,11.2991390299405
+2008,Esophagus,deathsPerMillion,45.0979024029697
+2008,Gallbladder,deathsPerMillion,6.48154919325167
+2008,Kidney and Renal Pelvis,deathsPerMillion,42.404655934541
+2008,Larynx,deathsPerMillion,12.3645991712969
+2008,Leukemias,deathsPerMillion,73.7633840455749
+2008,Liver,deathsPerMillion,46.6171696415706
+2008,Lung and Bronchus,deathsPerMillion,521.523008450618
+2008,Melanoma of the Skin,deathsPerMillion,28.3563666633227
+2008,Myeloma,deathsPerMillion,34.8773773432913
+2008,Non-Hodgkin Lymphoma,deathsPerMillion,66.9792967874936
+2008,Oral Cavity and Pharynx,deathsPerMillion,26.3701384985719
+2008,Ovary,deathsPerMillion,47.2288226856826
+2008,Pancreas,deathsPerMillion,115.865501915286
+2008,Prostate,deathsPerMillion,93.6256656930838
+2008,Stomach,deathsPerMillion,37.3305664341922
+2008,Thyroid,deathsPerMillion,5.42266596634805
+2008,Urinary Bladder,deathsPerMillion,46.1567856298734
+2009,Brain and Other Nervous System,deaths,14176
+2009,Breast,deaths,41076
+2009,Cervix Uteri,deaths,3909
+2009,Colon and Rectum,deaths,51848
+2009,Corpus Uteri,deaths,3333
+2009,Esophagus,deaths,13908
+2009,Gallbladder,deaths,2048
+2009,Kidney and Renal Pelvis,deaths,12995
+2009,Larynx,deaths,3630
+2009,Leukemias,deaths,22688
+2009,Liver,deaths,14963
+2009,Lung and Bronchus,deaths,158081
+2009,Melanoma of the Skin,deaths,9199
+2009,Myeloma,deaths,10690
+2009,Non-Hodgkin Lymphoma,deaths,20389
+2009,Oral Cavity and Pharynx,deaths,7922
+2009,Ovary,deaths,14436
+2009,Pancreas,deaths,35628
+2009,Prostate,deaths,28088
+2009,Stomach,deaths,11184
+2009,Thyroid,deaths,1707
+2009,Urinary Bladder,deaths,14201
+2009,Brain and Other Nervous System,cases,21577
+2009,Breast,cases,221612
+2009,Cervix Uteri,cases,12803
+2009,Colon and Rectum,cases,142349
+2009,Corpus Uteri,cases,44246
+2009,Esophagus,cases,16487
+2009,Gallbladder,cases,3778
+2009,Kidney and Renal Pelvis,cases,53210
+2009,Larynx,cases,12604
+2009,Leukemias,cases,41542
+2009,Liver,cases,22433
+2009,Lung and Bronchus,cases,215453
+2009,Melanoma of the Skin,cases,64880
+2009,Myeloma,cases,20171
+2009,Non-Hodgkin Lymphoma,cases,63610
+2009,Oral Cavity and Pharynx,cases,37592
+2009,Ovary,cases,21476
+2009,Pancreas,cases,39883
+2009,Prostate,cases,219299
+2009,Stomach,cases,21600
+2009,Thyroid,cases,42404
+2009,Urinary Bladder,cases,68862
+2009,Brain and Other Nervous System,mortalityRate,0.656995875237521
+2009,Breast,mortalityRate,0.185350973773983
+2009,Cervix Uteri,mortalityRate,0.305319065843943
+2009,Colon and Rectum,mortalityRate,0.364231571700539
+2009,Corpus Uteri,mortalityRate,0.0753288432852687
+2009,Esophagus,mortalityRate,0.843573724752836
+2009,Gallbladder,mortalityRate,0.542085759661196
+2009,Kidney and Renal Pelvis,mortalityRate,0.244221011088141
+2009,Larynx,mortalityRate,0.288003808314821
+2009,Leukemias,mortalityRate,0.546146069038563
+2009,Liver,mortalityRate,0.66700842508804
+2009,Lung and Bronchus,mortalityRate,0.733714545631762
+2009,Melanoma of the Skin,mortalityRate,0.141784833538841
+2009,Myeloma,mortalityRate,0.529968767041793
+2009,Non-Hodgkin Lymphoma,mortalityRate,0.32053136299324
+2009,Oral Cavity and Pharynx,mortalityRate,0.210736326878059
+2009,Ovary,mortalityRate,0.672192214565096
+2009,Pancreas,mortalityRate,0.893312940350525
+2009,Prostate,mortalityRate,0.128080839401912
+2009,Stomach,mortalityRate,0.517777777777778
+2009,Thyroid,mortalityRate,0.0402556362607301
+2009,Urinary Bladder,mortalityRate,0.206224042287473
+2009,Brain and Other Nervous System,deathsPerMillion,46.2102857009263
+2009,Breast,deathsPerMillion,133.897692963547
+2009,Cervix Uteri,deathsPerMillion,12.7423819698731
+2009,Colon and Rectum,deathsPerMillion,169.011772927598
+2009,Corpus Uteri,deathsPerMillion,10.8647631377813
+2009,Esophagus,deathsPerMillion,45.3366713832169
+2009,Gallbladder,deathsPerMillion,6.67597806965978
+2009,Kidney and Renal Pelvis,deathsPerMillion,42.3605151441547
+2009,Larynx,deathsPerMillion,11.8329103480786
+2009,Leukemias,deathsPerMillion,73.9573195529498
+2009,Liver,deathsPerMillion,48.7757128204684
+2009,Lung and Bronchus,deathsPerMillion,515.305317006781
+2009,Melanoma of the Skin,deathsPerMillion,29.986485479883
+2009,Myeloma,deathsPerMillion,34.8467800608706
+2009,Non-Hodgkin Lymphoma,deathsPerMillion,66.4631429991666
+2009,Oral Cavity and Pharynx,deathsPerMillion,25.8237784510961
+2009,Ovary,deathsPerMillion,47.0578219793011
+2009,Pancreas,deathsPerMillion,116.138548176679
+2009,Prostate,deathsPerMillion,91.5599961038105
+2009,Stomach,deathsPerMillion,36.4570989897827
+2009,Thyroid,deathsPerMillion,5.56440164302209
+2009,Urinary Bladder,deathsPerMillion,46.291779573847
+2010,Brain and Other Nervous System,deaths,14164
+2010,Breast,deaths,41435
+2010,Cervix Uteri,deaths,3939
+2010,Colon and Rectum,deaths,52045
+2010,Corpus Uteri,deaths,3644
+2010,Esophagus,deaths,14490
+2010,Gallbladder,deaths,2105
+2010,Kidney and Renal Pelvis,deaths,13219
+2010,Larynx,deaths,3691
+2010,Leukemias,deaths,22673
+2010,Liver,deaths,15537
+2010,Lung and Bronchus,deaths,158248
+2010,Melanoma of the Skin,deaths,9154
+2010,Myeloma,deaths,11022
+2010,Non-Hodgkin Lymphoma,deaths,20294
+2010,Oral Cavity and Pharynx,deaths,8474
+2010,Ovary,deaths,14572
+2010,Pancreas,deaths,36888
+2010,Prostate,deaths,28560
+2010,Stomach,deaths,11390
+2010,Thyroid,deaths,1686
+2010,Urinary Bladder,deaths,14730
+2010,Brain and Other Nervous System,cases,21341
+2010,Breast,cases,217652
+2010,Cervix Uteri,cases,12357
+2010,Colon and Rectum,cases,137834
+2010,Corpus Uteri,cases,45116
+2010,Esophagus,cases,15813
+2010,Gallbladder,cases,3770
+2010,Kidney and Renal Pelvis,cases,52712
+2010,Larynx,cases,12688
+2010,Leukemias,cases,43252
+2010,Liver,cases,22499
+2010,Lung and Bronchus,cases,211470
+2010,Melanoma of the Skin,cases,64557
+2010,Myeloma,cases,20527
+2010,Non-Hodgkin Lymphoma,cases,63717
+2010,Oral Cavity and Pharynx,cases,38236
+2010,Ovary,cases,20929
+2010,Pancreas,cases,40961
+2010,Prostate,cases,209325
+2010,Stomach,cases,22493
+2010,Thyroid,cases,43292
+2010,Urinary Bladder,cases,68530
+2010,Brain and Other Nervous System,mortalityRate,0.66369898317792
+2010,Breast,mortalityRate,0.190372705052102
+2010,Cervix Uteri,mortalityRate,0.318766690944404
+2010,Colon and Rectum,mortalityRate,0.377591885891725
+2010,Corpus Uteri,mortalityRate,0.080769571770547
+2010,Esophagus,mortalityRate,0.916334661354582
+2010,Gallbladder,mortalityRate,0.558355437665782
+2010,Kidney and Renal Pelvis,mortalityRate,0.250777811504022
+2010,Larynx,mortalityRate,0.290904791929382
+2010,Leukemias,mortalityRate,0.52420697308795
+2010,Liver,mortalityRate,0.690564025067781
+2010,Lung and Bronchus,mortalityRate,0.748323639286896
+2010,Melanoma of the Skin,mortalityRate,0.14179717149186
+2010,Myeloma,mortalityRate,0.536951332391484
+2010,Non-Hodgkin Lymphoma,mortalityRate,0.31850212659102
+2010,Oral Cavity and Pharynx,mortalityRate,0.221623600795062
+2010,Ovary,mortalityRate,0.696258779683692
+2010,Pancreas,mortalityRate,0.900563951075413
+2010,Prostate,mortalityRate,0.136438552490147
+2010,Stomach,mortalityRate,0.506379762592807
+2010,Thyroid,mortalityRate,0.0389448396932459
+2010,Urinary Bladder,mortalityRate,0.214942361009777
+2010,Brain and Other Nervous System,deathsPerMillion,45.7898349702213
+2010,Breast,deathsPerMillion,133.952401298441
+2010,Cervix Uteri,deathsPerMillion,12.7341259494283
+2010,Colon and Rectum,deathsPerMillion,168.252750707792
+2010,Corpus Uteri,deathsPerMillion,11.7804404568968
+2010,Esophagus,deathsPerMillion,46.843738260273
+2010,Gallbladder,deathsPerMillion,6.80511173484298
+2010,Kidney and Renal Pelvis,deathsPerMillion,42.7348085619427
+2010,Larynx,deathsPerMillion,11.9323835692662
+2010,Leukemias,deathsPerMillion,73.2980039734417
+2010,Liver,deathsPerMillion,50.2285135507151
+2010,Lung and Bronchus,deathsPerMillion,511.589226515644
+2010,Melanoma of the Skin,deathsPerMillion,29.5933457580772
+2010,Myeloma,deathsPerMillion,35.632276266717
+2010,Non-Hodgkin Lymphoma,deathsPerMillion,65.6070962218068
+2010,Oral Cavity and Pharynx,deathsPerMillion,27.3950198769878
+2010,Ovary,deathsPerMillion,47.108830498875
+2010,Pancreas,deathsPerMillion,119.252713384745
+2010,Prostate,deathsPerMillion,92.3296870057555
+2010,Stomach,deathsPerMillion,36.8219585082477
+2010,Thyroid,deathsPerMillion,5.45055505223053
+2010,Urinary Bladder,deathsPerMillion,47.6196179830105
+2011,Brain and Other Nervous System,deaths,14491
+2011,Breast,deaths,41374
+2011,Cervix Uteri,deaths,4092
+2011,Colon and Rectum,deaths,51783
+2011,Corpus Uteri,deaths,3714
+2011,Esophagus,deaths,14446
+2011,Gallbladder,deaths,2101
+2011,Kidney and Renal Pelvis,deaths,13559
+2011,Larynx,deaths,3732
+2011,Leukemias,deaths,23194
+2011,Liver,deaths,16631
+2011,Lung and Bronchus,deaths,156953
+2011,Melanoma of the Skin,deaths,9128
+2011,Myeloma,deaths,11411
+2011,Non-Hodgkin Lymphoma,deaths,20317
+2011,Oral Cavity and Pharynx,deaths,8657
+2011,Ovary,deaths,14346
+2011,Pancreas,deaths,37344
+2011,Prostate,deaths,27970
+2011,Stomach,deaths,11035
+2011,Thyroid,deaths,1747
+2011,Urinary Bladder,deaths,15014
+2011,Brain and Other Nervous System,cases,21084
+2011,Breast,cases,222175
+2011,Cervix Uteri,cases,12109
+2011,Colon and Rectum,cases,135260
+2011,Corpus Uteri,cases,45994
+2011,Esophagus,cases,15914
+2011,Gallbladder,cases,3778
+2011,Kidney and Renal Pelvis,cases,53185
+2011,Larynx,cases,12253
+2011,Leukemias,cases,42836
+2011,Liver,cases,23092
+2011,Lung and Bronchus,cases,207339
+2011,Melanoma of the Skin,cases,65647
+2011,Myeloma,cases,20696
+2011,Non-Hodgkin Lymphoma,cases,62445
+2011,Oral Cavity and Pharynx,cases,39152
+2011,Ovary,cases,20593
+2011,Pancreas,cases,41473
+2011,Prostate,cases,209292
+2011,Stomach,cases,22424
+2011,Thyroid,cases,44332
+2011,Urinary Bladder,cases,68070
+2011,Brain and Other Nervous System,mortalityRate,0.687298425346234
+2011,Breast,mortalityRate,0.186222572296613
+2011,Cervix Uteri,mortalityRate,0.33793046494343
+2011,Colon and Rectum,mortalityRate,0.382840455419193
+2011,Corpus Uteri,mortalityRate,0.0807496629995217
+2011,Esophagus,mortalityRate,0.907754178710569
+2011,Gallbladder,mortalityRate,0.556114346214929
+2011,Kidney and Renal Pelvis,mortalityRate,0.254940302716931
+2011,Larynx,mortalityRate,0.304578470578634
+2011,Leukemias,mortalityRate,0.541460453823886
+2011,Liver,mortalityRate,0.720206131993764
+2011,Lung and Bronchus,mortalityRate,0.756987349220359
+2011,Melanoma of the Skin,mortalityRate,0.139046719575914
+2011,Myeloma,mortalityRate,0.551362582141477
+2011,Non-Hodgkin Lymphoma,mortalityRate,0.325358315317479
+2011,Oral Cavity and Pharynx,mortalityRate,0.22111258684103
+2011,Ovary,mortalityRate,0.696644490846404
+2011,Pancreas,mortalityRate,0.900441250934343
+2011,Prostate,mortalityRate,0.13364103740229
+2011,Stomach,mortalityRate,0.492106671423475
+2011,Thyroid,mortalityRate,0.0394072002165479
+2011,Urinary Bladder,mortalityRate,0.220567063317173
+2011,Brain and Other Nervous System,deathsPerMillion,46.50773719161
+2011,Breast,deathsPerMillion,132.786634363789
+2011,Cervix Uteri,deathsPerMillion,13.1329556682126
+2011,Colon and Rectum,deathsPerMillion,166.19351010925
+2011,Corpus Uteri,deathsPerMillion,11.9197940742281
+2011,Esophagus,deathsPerMillion,46.3633131923261
+2011,Gallbladder,deathsPerMillion,6.74299605545322
+2011,Kidney and Renal Pelvis,deathsPerMillion,43.5165556953309
+2011,Larynx,deathsPerMillion,11.9775636739417
+2011,Leukemias,deathsPerMillion,74.439338653109
+2011,Liver,deathsPerMillion,53.3759007131092
+2011,Lung and Bronchus,deathsPerMillion,503.728443546668
+2011,Melanoma of the Skin,deathsPerMillion,29.2956058991799
+2011,Myeloma,deathsPerMillion,36.6227167961812
+2011,Non-Hodgkin Lymphoma,deathsPerMillion,65.2058309655607
+2011,Oral Cavity and Pharynx,deathsPerMillion,27.7839680400088
+2011,Ovary,deathsPerMillion,46.0423709716953
+2011,Pancreas,deathsPerMillion,119.852662872368
+2011,Prostate,deathsPerMillion,89.7675391104362
+2011,Stomach,deathsPerMillion,35.4159740466094
+2011,Thyroid,deathsPerMillion,5.60686059442017
+2011,Urinary Bladder,deathsPerMillion,48.1862650055091
