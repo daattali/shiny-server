@@ -1,0 +1,365 @@
+.container-fluid {
+  padding: 0;
+}
+
+/* Welcome page */
+#welcome_homevsaway {
+  text-align: center;
+  background: #777972;
+  color: #fafafa;
+  font-size: 30px;
+}
+
+#welcome_home,
+#welcome_away {
+  background: #1b1b1b;
+  display: inline-block;
+  padding: 20px 40px 20px 40px;
+  font-style: italic;
+}
+
+#homescore, #awayscore {
+  background: #1b1b1b;
+  display: inline-block;
+  font-style: italic;
+  padding:15px;
+}
+
+#welcome_vs {
+  display: inline-block;
+  background: #b71c1c;
+  padding: 20px 40px 20px 40px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#game_time {
+  background: #b71c1c;
+  font-size: 15px;
+  font-weight: bold;
+    color: #eee;
+    text-shadow: 2px 2px 4px #444;
+}
+
+#welcome_list {
+  padding-top: 100px;
+  background: #888;
+}
+
+.welcome_row:hover {
+  transform: scale(1.005);
+  background-image: url('img/entry-background.png');
+  background-color: #1B1B1B;
+  box-shadow: inset 0 0 0 1000px rgba(255,255,255,.2);
+}
+
+.welcome_homeimg,
+.welcome_awayimg {
+  height: 50px;
+}
+
+/* Welcome Page Tony Edits */
+.welcome_row {
+    background-image: url('img/entry-background.png');
+    background-repeat: no-repeat;
+    background-color: #1B1B1B;
+    background-position: center; 
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+  box-shadow: 0 0 5px black;
+  border: 2px solid #222;
+  border-width: 2px;
+  padding: 7px 0;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+#welcome_homevsaway {
+  box-shadow: 0px 10px 5px rgba(29, 29, 29, 0.38);
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.71);
+}
+
+#welcome_list {
+  background-image: url('img/background-image.png');
+  background-attachment: fixed;
+  background-size:cover;
+}
+
+/* Game page */
+
+#back_to_welcome {
+    color: #B71C1C;
+    left: inherit;
+    top: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container-fluid {
+    padding: 0;
+    background-image: url('game-area-background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#homename, #homelogo, #homescore, #awayscore, #awaylogo, #awayname {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#output_quarter, #output_time {
+	font-size: inherit;
+}
+
+#canvas-wrap {
+    position: relative;
+    width: 800px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+#action-bar {
+    background: aliceblue;
+    margin-top: 100px;
+    padding-top: 25px;
+    height: 300px;
+}
+
+#time-wrapper {
+  width: 800px;
+  margin-bottom: 50px;
+}
+
+#time-wrapper span.irs-min,
+#time-wrapper span.irs-max,
+#time-wrapper span.irs-single {
+  display: none;
+}
+
+#downline {
+  position: absolute;
+  top: 0;
+  bottom: -10px;
+  width: 6px;
+  background: orange;
+  box-shadow: 1px 1px 6px black;
+}
+
+#downline.animate {
+  transition: left 250ms;
+}
+
+#action-bar-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+#time-wrapper .irs-bar,
+#time-wrapper .irs-bar-edge,
+#time-wrapper .irs-line {
+  height: 10px;
+}
+
+#time-wrapper .irs-bar-edge {
+  border-right: 0 none !important;
+}
+
+#time-wrapper .irs-slider {
+  background: #222;
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  border-color: #111;
+  z-index: 10;
+}
+
+#time-wrapper .irs-slider:hover {
+  background: #222;
+}
+
+#time-wrapper .irs-bar {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  background: #777;
+}
+
+#time-wrapper .irs-bar-edge {
+  border: 1px solid #555;
+  background: #777;
+}
+
+.mybtn-pressed {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+#home_events,
+#away_events {
+  position: relative;
+}
+
+.gameevent {
+  position: absolute;
+  width: 6px;
+  margin-left: -3px;
+  transition: all .2s ease-in-out;
+  z-index: 3;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.gameevent:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 3px #777;
+  opacity: 1;
+}
+
+.gameevent.event-home {
+  margin-bottom: -25px;
+  bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+.gameevent.event-away {
+  margin-top: 35px;
+  top: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.gameevent.event-Rush {
+  background: orange;
+  display: none;
+}
+.gameevent.event-Pass {
+  background: blue;
+  display: none;
+}
+.gameevent.event-Score {
+  background: red;
+  display: none;
+}
+#time-wrapper.show-Rush .event-Rush {
+  display: block;
+}
+#time-wrapper.show-Pass .event-Pass {
+  display: block;
+}
+#time-wrapper.show-Score .event-Score {
+  display: block;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+  transition-delay: 0s !important;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after{
+  visibility: visible;
+  transition-delay: 0.5s !important;
+}
+
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 15;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+[data-tooltip]:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  z-index: 15;
+}
+
+/* Horizontally align top/bottom tooltips */
+[data-tooltip]:after{
+  margin-left: -80px;
+}
+
+#eventTypeFilter {
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#eventTypeFilter input[type=checkbox] {
+  margin-top: 7px;
+}
+#eventTypeFilter input[type=checkbox] {
+  margin-top: 7px;
+}
+
+/* Tony's styling */
+
+#nav-bar {
+  background-color: #bdbdbd;
+  overflow: hidden;
+  padding: 0px;
+  box-shadow: 0px 10px 5px rgba(29, 29, 29, 0.38);
+}
+
+#matchups {
+  margin:auto;
+  display: inline-block;
+  color:#252525;
+  vertical-align: middle;
+}
+
+.team-logo {
+    display: inline-block;
+    width: inherit;
+    height: 50px;
+}
+
+.malign {
+  vertical-align: middle;
+}
+
+#versus {
+  display: inline-block;
+  background-color: #b71c1c;
+  color: #ffebee;
+}
+
+#matchups>p {
+  display: inline-block;
+}
+
+#media-area {
+  background-image: url("game-area-background.jpg");
+  padding:15px;
+}

@@ -1,0 +1,452 @@
+.container-fluid {
+  padding: 0;
+}
+
+#myoverlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  background: rgba(0,0,0,0.9);
+}
+
+#youtubeplayer {
+  position: absolute;
+  top: 70px;
+  left: 474px;
+  z-index: 30;
+}
+
+#back_to_welcome {
+  position: fixed;
+  color: blue;
+  left: 10px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#back_to_welcome:hover {
+  text-decoration: underline;
+}
+
+/* Welcome page */
+#welcome_homevsaway {
+  text-align: center;
+  background: #eaeaea;
+  color: #fafafa;
+  font-size: 50px;
+}
+#welcome_home,
+#welcome_away {
+  background: #444;
+  display: inline-block;
+  padding: 10px 25px;
+}
+#welcome_vs {
+  display: inline-block;
+  background: red;
+  padding: 10px 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#welcome_list {
+  padding-top: 20px;
+  background: #888;
+}
+
+.welcome_homename,
+.welcome_awayname,
+.welcome_homeimgwrap,
+.welcome_awayimgwrap,
+.welcome_date {
+  display: inline-block;
+}
+.welcome_date {
+  width: 120px;
+}
+.welcome_homeimgwrap,
+.welcome_awayimgwrap {
+  width: 150px;
+}
+.welcome_homename,
+.welcome_awayname {
+  width: 200px;
+}
+
+.welcome_row {
+  margin-top: 15px;
+  background: #444;
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+  box-shadow: 0 0 5px black;
+  border: 2px solid #222;
+  border-width: 2px 0;
+  padding: 7px 0;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.welcome_row:hover {
+  background: #888;
+  transform: scale(1.2);
+}
+
+.welcome_homeimg,
+.welcome_awayimg {
+  height: 50px;
+}
+
+/* Game page */
+
+#canvas-wrap {
+  position: relative;
+  width: 800px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+#time-wrapper {
+  position: relative;
+  width: 800px;
+  margin-bottom: 50px;
+}
+#action-bar-homelogo {
+  height: 50px;
+  position: absolute;
+  left: -100px;
+  top: 61px;
+}
+
+#action-bar-awaylogo {
+  height: 50px;
+  position: absolute;
+  left: -100px;
+  top: 129px;
+}
+
+#time-wrapper span.irs-min,
+#time-wrapper span.irs-max,
+#time-wrapper span.irs-single {
+  display: none;
+}
+
+#downline {
+  position: absolute;
+  top: 0;
+  bottom: -10px;
+  width: 6px;
+  background: orange;
+  box-shadow: 1px 1px 6px black;
+}
+
+#downline.animate {
+  transition: left 250ms;
+}
+
+#action-bar-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+#time-wrapper .irs-bar,
+#time-wrapper .irs-bar-edge,
+#time-wrapper .irs-line {
+  height: 10px;
+}
+
+#time-wrapper .irs-bar-edge {
+  border-right: 0 none !important;
+}
+
+#time-wrapper .irs-slider {
+  background: #222;
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  border-color: #111;
+  z-index: 10;
+}
+
+#time-wrapper .irs-slider:hover {
+  background: #222;
+}
+
+#time-wrapper .irs-bar {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  background: #777;
+}
+
+#time-wrapper .irs-bar-edge {
+  border: 1px solid #555;
+  background: #777;
+}
+
+.mybtn-pressed {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+#home_events,
+#away_events {
+  position: relative;
+}
+
+.gameevent {
+  position: absolute;
+  width: 6px;
+  margin-left: -3px;
+  transition: all .2s ease-in-out;
+  z-index: 3;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.gameevent:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 3px #777;
+  opacity: 1;
+}
+
+.gameevent.event-home {
+  margin-bottom: -25px;
+  bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+.gameevent.event-away {
+  margin-top: 35px;
+  top: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.gameevent.event-Rush {
+  background: orange;
+  display: none;
+}
+.gameevent.event-Pass {
+  background: blue;
+  display: none;
+}
+.gameevent.event-Score {
+  background: red;
+  display: none;
+}
+#time-wrapper.show-Rush .event-Rush {
+  display: block;
+}
+#time-wrapper.show-Pass .event-Pass {
+  display: block;
+}
+#time-wrapper.show-Score .event-Score {
+  display: block;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+  transition-delay: 0s !important;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after{
+  visibility: visible;
+  transition-delay: 0.5s !important;
+}
+
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 15;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+[data-tooltip]:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  z-index: 15;
+}
+
+/* Horizontally align top/bottom tooltips */
+[data-tooltip]:after{
+  margin-left: -80px;
+}
+
+#buttons_row {
+  width: 800px;
+}
+
+#play {
+  width: 100px;
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+  margin-top: 10px;
+}
+
+#speed-wrap {
+  float: left;
+  margin-left: 20px;
+}
+
+#speed-wrap .irs-grid-pol.small {
+  display: none;
+}
+
+#speed-wrap .irs-grid {
+  height: 33px;
+}
+
+#speed-wrap .irs-grid-pol {
+  width: 2px;
+  border-color: black;
+  color: black;
+  background: black;
+}
+#speed-wrap .irs-grid-text {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  top: 12px;
+}
+#speed-wrap .irs-grid-text:after {
+  content: "x";
+}
+#speed-wrap .irs-max,
+#speed-wrap .irs-min {
+  display: none;
+}
+#speed-wrap .irs-bar,
+#speed-wrap .irs-bar-edge {
+  display: none;
+}
+#speed-wrap .irs-single {
+  display: none;
+}
+#speed-wrap .irs-line {
+  height: 1px;
+  border-color: black;
+}
+
+#speed-wrap .irs-slider {
+  top: 19px;
+  width: 16px;
+  height: 16px;
+  background: #222;
+  border-color: #000;
+}
+#speed-wrap .irs-slider:hover {
+  background: #222;
+}
+
+#eventTypeFilter {
+  float: right;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#eventTypeFilter input[type=checkbox] {
+  margin-top: 7px;
+}
+#eventTypeFilter input[type=checkbox] {
+  margin-top: 7px;
+}
+
+/* Tony's styling */
+
+.malign {
+  vertical-align: middle;
+}
+
+#nav-bar {
+  background-color: #bdbdbd;
+  overflow: hidden;
+  padding: 13px 0;
+  text-align: center;
+  color: #252525;
+  font-size: 30px;
+}
+
+#matchups {
+  margin: -15px 0;
+}
+
+#homename, #homelogo, #homescore, #game_time, #awayscore, #awaylogo, #awayname {
+  display: inline-block;
+}
+
+#homescore, #awayscore {
+  background: #444;
+  padding: 20px;
+  color: #eee;
+  font-style: italic;
+  font-size: 35px;
+  width: 85px;
+}
+
+#game_time {
+  background: red;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: -10px;
+  color: #eee;
+  text-shadow: 2px 2px 4px #444;
+}
+
+#output_quarter {
+  font-size: 20px;
+}
+#output_time {
+  font-size: 26px;
+}
+
+.team-logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.auto-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-width {
+  width:100%;
+}
+
+#media-area {
+  background-image: url("game-area-background.jpg");
+  padding:15px;
+}
