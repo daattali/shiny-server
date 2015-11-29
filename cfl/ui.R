@@ -1,5 +1,6 @@
 library(shiny)
 library(shinyjs)
+library(ggvis)
 
 allgames <- read.csv("data/cfl_games_trim.csv", stringsAsFactors = FALSE) %>%
   arrange(desc(game_date))
@@ -9,7 +10,6 @@ fluidPage(
   useShinyjs(),
   extendShinyjs("www/shinyjs.js"),
   includeScript("www/main.js"),
-  includeScript("www/simplemodal.js"),
   includeCSS("www/style.css"),
   includeCSS("www/tony.css"),
   
@@ -63,7 +63,9 @@ fluidPage(
       # Begin header bar
       div(
         id = "nav-bar", class = "full-width",
-        div(id = "back_to_welcome", "< Back"),
+        div(id = "back_to_welcome", 
+            tags$a(class="btn btn-primary", icon("arrow-left"), "Back")
+        ),
         div(
           id = "matchups",
           div(id = "homename", class = "malign", "BC Lions"),
@@ -81,35 +83,49 @@ fluidPage(
       div(
         id = "canvas-wrap", class = "auto-margin",
         img(src = "field.png"),
-        div(id = "downline")
-      ),
-      div(id = "youtubeplayer"),actionButton("aaa", "fds"),
-      br(),
-      br(),
-      div(
-        id = "time-wrapper", class = "auto-margin",
-        h1(id = "action-bar-title", "The Action Bar"),
-        img(id = "action-bar-homelogo"),
-        img(id = "action-bar-awaylogo"),
-        uiOutput("home_events"),
-        uiOutput("away_events"),
-        sliderInput("time", NULL, 0, MAX_TIME, value = 0, step = 1,
-                    ticks = FALSE, width = "800px")
-      ),
-      br(),
-      
-      div(
-        id = "buttons_row", class = "auto-margin",
-        actionButton("play", "Play", icon = icon("play"),
-                     class = "mybtn mybtn-pressed"),
-        div(id = "speed-wrap", 
-          sliderInput("speed", NULL, min = 1, max = 4, step = 1,
-                      value = 1, ticks = TRUE, width = "200px")
+        div(id = "downline",
+            img(src = "football.png", id = "football")
         ),
-        checkboxGroupInput("eventTypeFilter", NULL,
-                           choices = c("Pass", "Rush", "Score"),
-                           selected = "Score", inline = TRUE)
-      )
+        div(id = "weather-container",
+            div(id = "weathertmp", class = "malign", "BC Lions"),
+            img(id = "weathericon", class = "weather-icon")
+        )
+      ),
+      hidden(div(
+        id = "youtube_area",
+        tags$iframe(id = "youtubeplayer", width="640",height="390",
+                    frameborder="0", allowfullscreen="1"),
+        img(id = "youtube_close", src = "img/close.png")
+      )),
+      div(id = "action-bar",
+        div(
+          id = "time-wrapper", class = "auto-margin",
+          h1(id = "action-bar-title", "The Action Bar"),
+          img(id = "action-bar-homelogo"),
+          img(id = "action-bar-awaylogo"),
+          uiOutput("home_events"),
+          uiOutput("away_events"),
+          sliderInput("time", NULL, 0, MAX_TIME, value = 0, step = 1,
+                      ticks = FALSE, width = "800px")
+        ),
+        
+        div(
+          id = "buttons_row", class = "auto-margin",
+          actionButton("play", "Play", icon = icon("play"),
+                       class = "mybtn mybtn-pressed"),
+          div(id = "speed-wrap", 
+            sliderInput("speed", NULL, min = 1, max = 4, step = 1,
+                        value = 1, ticks = TRUE, width = "200px")
+          ),
+          checkboxGroupInput("eventTypeFilter", NULL,
+                             choices = c("Pass", "Rush", "Score"),
+                             selected = "Score", inline = TRUE)
+        )
+      ),
+      div(id = "reaction-bar",
+          h1(id = "action-bar-title", "The Reaction Bar"),
+          ggvisOutput('reactionPlot')
+      )      
     )
   )
 )

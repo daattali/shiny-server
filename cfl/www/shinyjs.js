@@ -15,9 +15,12 @@ shinyjs.newgame = function(gameinfo) {
   $("#awaylogo").attr('src', "img/" + gameinfo['away_team'] + ".png");
   $("#homelogo").attr('src', "img/" + gameinfo['home_team'] + ".png");
   $("#action-bar-homelogo").attr('src', "img/" + gameinfo['home_team'] + ".png");
-    $("#action-bar-awaylogo").attr('src', "img/" + gameinfo['away_team'] + ".png");
+  $("#action-bar-awaylogo").attr('src', "img/" + gameinfo['away_team'] + ".png");
+  $("#weathertmp").html(Math.round(gameinfo['temp']*10)/10 + "&deg;");
+  $("#icon").text(gameinfo['weathericon']);
+  $("#weathericon").attr('src', "img/" + gameinfo['icon'] + ".png");
 }
 
-shinyjs.playyoutube = function(youtube_id) {
-  playyoutube(youtube_id[0]);
+shinyjs.playyoutube = function(youtube_info) {
+  playyoutube(youtube_info[0]);
 }

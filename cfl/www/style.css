@@ -18,14 +18,32 @@
   left: 474px;
   z-index: 30;
 }
+#youtube_close {
+  position: absolute;
+  top: 44px;
+  LEFT: 1090px;
+  width: 50px;
+  z-index: 30;
+  cursor: pointer;
+}
+
+#youtube_close:hover {
+  opacity: 0.9;
+}
+
 
 #back_to_welcome {
-  position: fixed;
-  color: blue;
-  left: 10px;
-  top: 10px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
   font-size: 20px;
   cursor: pointer;
+}
+
+#football {
+    left: -55px;
+    top: 108px;
+    position: absolute;
 }
 #back_to_welcome:hover {
   text-decoration: underline;
@@ -43,6 +61,7 @@
   background: #444;
   display: inline-block;
   padding: 10px 25px;
+  
 }
 #welcome_vs {
   display: inline-block;
@@ -73,6 +92,7 @@
 .welcome_homename,
 .welcome_awayname {
   width: 200px;
+  font-weight: bold;
 }
 
 .welcome_row {
@@ -382,6 +402,16 @@
   margin-top: 7px;
 }
 
+#eventTypeFilter label.checkbox-inline:nth-child(1) span {
+  color: blue;
+}
+#eventTypeFilter label.checkbox-inline:nth-child(2) span {
+  color: orange;
+}
+#eventTypeFilter label.checkbox-inline:nth-child(3) span {
+  color: red;
+}
+
 /* Tony's styling */
 
 .malign {
@@ -411,12 +441,12 @@
   color: #eee;
   font-style: italic;
   font-size: 35px;
-  width: 85px;
+  width: 120px;
 }
 
 #game_time {
   background: red;
-  padding: 12px;
+  padding: 11px;
   font-size: 20px;
   font-weight: bold;
   margin: -10px;

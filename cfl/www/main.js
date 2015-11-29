@@ -1,6 +1,3 @@
-var videonum = 0;
-var player;
-
 window.onload = function() {
   clear();
   $( "#time-wrapper" ).on( "click", ".gameevent", function(x){
@@ -10,17 +7,6 @@ window.onload = function() {
   $( "#welcome_list" ).on( "click", ".welcome_row", function(x){
     Shiny.onInputChange("gamerowclick", $(this).data("gameinfo"));
   });  
-
-  // load youtube
-  var tag = document.createElement('script');
-
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  function onYouTubeIframeAPIReady() {
-    console.log("youtube ready");
-  }
 };
 
 clear = function() {
@@ -42,13 +28,18 @@ setline = function(num, animate) {
     $("#downline").data("pos", num);
 };
 
-playyoutube = function(youtube_id) {
+playyoutube = function(youtube_info) {
+  $("#youtubeplayer").attr('src', 'https://www.youtube.com/v/' +
+     youtube_info['videoId'] + '?start=' + youtube_info['startSeconds'] + '&end=' + youtube_info['endSeconds'] + '&autoplay=1');
+  return;
   videonum++;
   if (videonum == 1) {
     player = new YT.Player('youtubeplayer', {
       height: '390',
       width: '640',
-      videoId: youtube_id,
+      videoId: youtube_info['videoId'],
+      playerVars : { start : youtube_info['startSeconds'],
+                     end : youtube_info['endSeconds'] },
       events: {
         'onReady': function(event) { event.target.playVideo(); },
         'onStateChange': function(event) {
@@ -60,6 +51,6 @@ playyoutube = function(youtube_id) {
       }
     }); 
   } else {
-    player.loadVideoById(youtube_id);
+    player.loadVideoById(youtube_info);
   }
 }

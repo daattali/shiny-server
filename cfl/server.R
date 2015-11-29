@@ -1,27 +1,45 @@
 library(shiny)
 library(shinyjs)
 library(dplyr)
+library(ggvis)
 
 TEST_GAMEPAGE <- FALSE
+
+demo_clips <- list(
+  list(videoId = "snwanVaPMys", startSeconds = 126, endSeconds = 135),
+  list(videoId = "snwanVaPMys", startSeconds = 145, endSeconds = 153),
+  list(videoId = "snwanVaPMys", startSeconds = 196, endSeconds = 210),
+  list(videoId = "snwanVaPMys", startSeconds = 296, endSeconds = 260),
+  list(videoId = "snwanVaPMys", startSeconds = 359, endSeconds = 368),
+  list(videoId = "mefLj3eB7Gc", startSeconds = 8, endSeconds = 30),
+  list(videoId = "mefLj3eB7Gc", startSeconds = 63, endSeconds = 75),
+  list(videoId = "mefLj3eB7Gc", startSeconds = 122, endSeconds = 138),
+  list(videoId = "mefLj3eB7Gc", startSeconds = 145, endSeconds = 157),
+  list(videoId = "mefLj3eB7Gc", startSeconds = 183, endSeconds = 195)
+)
 
 function(input, output, session) {
   
   values <- reactiveValues(
     playing = FALSE,
     playdata = NULL,
-    gamedata = NULL
+    gamedata = NULL,
+    touchdowns = c()
   )
-  observeEvent(input$aaa, {
-    values$playing <- FALSE
-    shinyjs::show("myoverlay", TRUE, "fade", 0.25)
-    shinyjs::delay(250, shinyjs::show("youtubeplayer"))
-    js$playyoutube("OoT_7UOUquE")
-  })
+
+  closeVideo <- function() {
+    shinyjs::hide("myoverlay", TRUE, "fade", 0.25)
+    shinyjs::hide("youtube_area")
+    shinyjs::delay(250, {values$playing <- TRUE})
+    shinyjs::runjs('$("#youtubeplayer").attr("src", "");')
+  }
+  
+  shinyjs::onclick("youtube_close", closeVideo())
+  shinyjs::onclick("myoverlay", closeVideo())
+  
   observe({
     if (!is.null(input$videodone) && input$videodone > 0) {
-      shinyjs::hide("myoverlay", TRUE, "fade", 0.25)
-      shinyjs::hide("youtubeplayer")
-      shinyjs::delay(250, {values$playing <- TRUE})
+
     }
   })
 
@@ -49,7 +67,12 @@ function(input, output, session) {
     shinyjs::reset("game_page")
     values$playing <- FALSE
     values$playdata <- playdata
-
+    
+    # store time points of touchdowns
+    touchdown_idx <- which(playdata$eventType == "Score" &
+                             playdata$eventScore == 30)
+    values$touchdowns <- playdata[touchdown_idx, ]$seconds
+    
     output$home_events <- renderUI({
       lapply(
         seq(nrow(playdata)),
@@ -128,7 +151,23 @@ function(input, output, session) {
       return()
     }
     
-    isolate(val <- input$time + 10 * input$speed)
+    isolate({
+      prevval <- input$time
+      val <- prevval + 4 * input$speed
+    })
+    
+    # figure out if a touchdown just happened
+    for(touchdown in values$touchdowns) {
+      if (touchdown >= prevval && touchdown < val) {
+        values$playing <- FALSE
+        shinyjs::show("myoverlay", TRUE, "fade", 0.25)
+        shinyjs::delay(250, shinyjs::show("youtube_area"))
+        clip_idx <- sample(length(demo_clips), 1)
+        clip_info <- demo_clips[[clip_idx]]
+        js$playyoutube(clip_info)
+      }
+    }
+    
     if (val >= MAX_TIME) {
       updateSliderInput(session, "time", value = MAX_TIME)
       values$playing <- FALSE
@@ -143,6 +182,48 @@ function(input, output, session) {
       shinyjs::hide("game_page")
     })
   })
+  
+  frame <- reactive({
+    if(is.null(values$gamedata['sked_id'])){
+      return(data.frame(value=double(0),
+                        variable=character(0), 
+                        x = double(0),
+                        id = integer(0)))
+    }
+    set.seed(values$gamedata['sked_id'] %>% unlist)
+    bluPeak = runif(n = floor(runif(n=1,min=2,max=5)),min=1,max=3600)
+    redPeak = runif(n = floor(runif(n=1,min=1,max=4)),min=1,max=3600)
+    blu = c(sample(1:3600,300,replace = T),
+            unlist(sapply(bluPeak,function(x){
+              rnorm(100,mean = x, sd = 150)
+            })))
+    red = c(sample(1:3600,300,replace = T), 
+            unlist(sapply(redPeak,function(x){
+              rnorm(100,mean = x, sd = 150)
+            })))
+    blu = blu %>% density %>% .$y
+    red = red %>% density %>% .$y
+    frame = list(Heart_Rate = blu, Fan_Tweets = red) %>% melt
+    frame$x = 1:length(red)
+    frame$id = 1:nrow(frame)
+    names(frame) = c('value','variable','x','id')
+    frame$value = scale01(frame$value) * 100 
+    return(frame)
+  })
+  
+  
+  frame %>% ggvis(~x ,~value,  stroke= ~variable,key := ~id) %>% 
+    add_tooltip(function(x){
+      return(paste0('<p>',
+                    gsub('_',' ',frame()$variable[x$id]),
+                    '</p><p>',
+                    format(frame()$value[x$id],digits=2),
+                    '</p>'))
+    }) %>%
+    layer_points(size := 4) %>% hide_legend(scales = 'stroke') %>% 
+    hide_axis("x") %>% hide_axis("y") %>% 
+    set_options(height = 70, width = 800,resizable=FALSE,padding = padding(0,0,0,0)) %>% 
+    bind_shiny('reactionPlot')  
   
   ############## TEST GAME PAGE
   if (TEST_GAMEPAGE) {
