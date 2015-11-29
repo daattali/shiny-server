@@ -1,9 +1,11 @@
-shinyjs.clear = function() {
-  clear();
-}
-
-shinyjs.setline = function(num) {
-  setline(num[0], true);
+shinyjs.setline = function(params) {
+  var defaultParams = {
+    pos : 0,
+    end_pos : 0,
+    is_home : false
+  };
+  params = shinyjs.getParams(params, defaultParams);
+  setline(params.pos, params.end_pos, params.is_home);
 }
 
 shinyjs.newgame = function(gameinfo) {
@@ -14,6 +16,8 @@ shinyjs.newgame = function(gameinfo) {
   $("#awayscore").text("0");
   $("#awaylogo").attr('src', "img/" + gameinfo['away_team'] + ".png");
   $("#homelogo").attr('src', "img/" + gameinfo['home_team'] + ".png");
+  $("#lineaway").attr('src', "img/" + gameinfo['away_team'] + ".png");
+  $("#linehome").attr('src', "img/" + gameinfo['home_team'] + ".png");
   $("#action-bar-homelogo").attr('src', "img/" + gameinfo['home_team'] + ".png");
   $("#action-bar-awaylogo").attr('src', "img/" + gameinfo['away_team'] + ".png");
   $("#weathertmp").html(Math.round(gameinfo['temp']*10)/10 + "&deg;");

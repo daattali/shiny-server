@@ -39,11 +39,84 @@
   font-size: 20px;
   cursor: pointer;
 }
-
-#football {
-    left: -55px;
+#linehome,
+#lineaway {
+    z-index: 2;
     top: 108px;
     position: absolute;
+    height: 50px;
+    display: none;
+}
+
+#deltaline1 {
+  top: 0;
+}
+#deltaline2 {
+  bottom: -10px;
+}
+.deltaline {
+  height: 10px;
+  position: absolute;
+  background: #bbb;
+  border: 1px solid #666;
+  transition: left 250ms;
+}
+.deltaline:before, .deltaline:after {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.deltaright .deltaline:after {
+  left: 100%;
+  border-left-color: #bbb;
+  border-width: 9px;
+  margin-top: -9px;
+}
+.deltaright .deltaline:before {
+  left: 100%;
+  border-left-color: #333;
+  border-width: 9px;
+  margin-top: -9px;
+}
+.deltaleft .deltaline:after {
+  right: 100%;
+  border-right-color: #bbb;
+  border-width: 9px;
+  margin-top: -9px;
+}
+.deltaleft .deltaline:before {
+  right: 100%;
+  border-right-color: #333;
+  border-width: 9px;
+  margin-top: -9px;
+}
+.deltanone .deltaline {
+  display: none;
+}
+
+#game_page.ishome #linehome{
+  display: block;
+  left: 0;
+}
+#game_page.isaway #lineaway{
+  display: block;
+  right: 0;
+}
+#game_page.ishome #action-bar-awaylogo {
+  opacity: 0.5;
+}
+#game_page.isaway #action-bar-homelogo {
+  opacity: 0.5;
+}
+#game_page.isaway #action-bar-awaylogo {
+  transform: scale(1.2);
+}
+#game_page.ishome #action-bar-homelogo {
+  transform: scale(1.2);
 }
 #back_to_welcome:hover {
   text-decoration: underline;
@@ -139,6 +212,7 @@
   position: absolute;
   left: -100px;
   top: 61px;
+  transition: all 200ms;
 }
 
 #action-bar-awaylogo {
@@ -146,6 +220,7 @@
   position: absolute;
   left: -100px;
   top: 129px;
+  transition: all 200ms;
 }
 
 #time-wrapper span.irs-min,
@@ -161,9 +236,16 @@
   width: 6px;
   background: orange;
   box-shadow: 1px 1px 6px black;
+  transition: left 250ms;
 }
 
-#downline.animate {
+#downline2 {
+  position: absolute;
+  top: 0;
+  bottom: -10px;
+  width: 3px;
+  background: orange;
+  box-shadow: 1px 1px 6px black;
   transition: left 250ms;
 }
 

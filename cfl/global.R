@@ -31,9 +31,9 @@ load_playdata <- function(gameid) {
   gamedata <- returnGameData(gameid)
   playbyplay <- gamedata$playByPlay %>%
     select(quarter, time, down, secondsTotal, details, yardsFromHome,
-           home_score_after, away_score_after, isHome,
+           end_yardsFromHome, home_score_after, away_score_after, isHome,
            epicEvent, epicness) %>%
-    rename(seconds = secondsTotal, pos = yardsFromHome,
+    rename(seconds = secondsTotal, pos = yardsFromHome, end_pos = end_yardsFromHome,
            eventHome = isHome, eventType = epicEvent,
            eventScore = epicness) %>%
     arrange(seconds)

@@ -1,6 +1,10 @@
 library(dplyr)
 library(magrittr)
+library(Rforecastio)
+library(jsonlite)
 library(data.table)
+library(RCurl)
+library(curl)
 
 scale01 = function(x){
   scaleToInt(x,1,0)
@@ -41,8 +45,8 @@ returnGameData = function(gameID){
     
     toYardFromHome = function(x){
         x %>% sapply(function(x){
-            team = x %>% substr(start = 1, stop =3 )
-            yard = x %>% substr(start = 4, stop =5 ) %>% as.numeric
+            team = gsub("([0-9])*",'',x)
+            yard = gsub("([A-Z]|[a-z])*",'',x) %>% as.numeric
             if (tolower(team)==home){
                 return(yard)
             } else {

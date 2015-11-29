@@ -2,6 +2,7 @@ library(shiny)
 library(shinyjs)
 library(dplyr)
 library(ggvis)
+library(reshape2)
 
 TEST_GAMEPAGE <- FALSE
 
@@ -111,8 +112,16 @@ function(input, output, session) {
     })
     shinyjs::hide("welcome_page")
     shinyjs::show("game_page")
+
+    pos <- playdata$pos[1]
+    end_pos <- playdata$end_pos[1]
+    ishome <- playdata$eventHome[1]
+    
+    js$setline(pos, end_pos, ishome)    
   }  
   
+  shinyjs::text("output_quarter", "Q1")
+  shinyjs::text("output_time", "15:00")
   output$output_quarter <- renderText({
     paste0("Q", get_quarter(input$time))
   })
@@ -124,7 +133,10 @@ function(input, output, session) {
     playdata <- values$playdata
     index <- findInterval(input$time, playdata$second, all.inside = TRUE)
     pos <- playdata$pos[index]
-    js$setline(pos)
+    end_pos <- playdata$end_pos[index]
+    ishome <- playdata$eventHome[index]
+    
+    js$setline(pos, end_pos, ishome)
     shinyjs::text(id = "homescore", text = playdata$home_score_after[index])
     shinyjs::text(id = "awayscore", text = playdata$away_score_after[index])
   })
@@ -178,6 +190,7 @@ function(input, output, session) {
   
   observe({
     onclick("back_to_welcome", {
+      values$playing <- FALSE
       shinyjs::show("welcome_page")
       shinyjs::hide("game_page")
     })

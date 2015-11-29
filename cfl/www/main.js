@@ -1,5 +1,4 @@
 window.onload = function() {
-  clear();
   $( "#time-wrapper" ).on( "click", ".gameevent", function(x){
     Shiny.onInputChange("gameeventclick", $(this).data("time"));
   });
@@ -9,23 +8,41 @@ window.onload = function() {
   });  
 };
 
-clear = function() {
-  setline(55, false);
-};
-
-setline = function(num, animate) {
-    if ($("#downline").data("pos") == num) {
+setline = function(pos, end_pos, is_home) {
+    if ($("#downline").data("pos") == pos) {
         return;
     }
-    var pos = 109 + 580 * num / 110;
-    if (!animate) {
-      $("#downline").removeClass("animate");
-    }
+    pos = 109 + 580 * pos / 110;
+    end_pos = 109 + 580 * end_pos / 110;
+    
     $("#downline").css("left", pos + "px");
-    if (!animate) {
-      $("#downline").addClass("animate");
+    $("#downline2").css("left", end_pos + "px");
+    $("#downline").data("pos", pos);
+    if (is_home) {
+      $("#game_page").removeClass("isaway");
+      $("#game_page").addClass("ishome");
+    } else {
+      $("#game_page").removeClass("ishome");
+      $("#game_page").addClass("isaway");
     }
-    $("#downline").data("pos", num);
+    
+    $("#downline").data("pos", pos);
+    
+    if (Math.abs(pos - end_pos) < 15) {
+      $("#canvas-wrap").addClass("deltanone");
+    } else if (pos < end_pos) {
+      $("#canvas-wrap").removeClass("deltanone");
+      $(".deltaline").css("left", pos + "px");
+      $(".deltaline").css("width", (end_pos - pos - 5) + "px");
+      $("#canvas-wrap").addClass("deltaright");
+      $("#canvas-wrap").removeClass("deltaleft");
+    } else {
+      $("#canvas-wrap").removeClass("deltanone");
+      $(".deltaline").css("left", (end_pos + 7) + "px");
+      $(".deltaline").css("width", (pos - end_pos) + "px");
+      $("#canvas-wrap").addClass("deltaleft");
+      $("#canvas-wrap").removeClass("deltaright");
+    }
 };
 
 playyoutube = function(youtube_info) {

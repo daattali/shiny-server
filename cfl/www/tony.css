@@ -5,7 +5,7 @@
 /* Welcome page */
 #welcome_homevsaway {
   text-align: center;
-  background: #777972;
+  background: #555;
   color: #fafafa;
   font-size: 30px;
 }
@@ -129,7 +129,7 @@
 }
 
 img#weathericon {
-    width: 110px;
+    width: 100px;
 }
 
 div#weathertmp {
@@ -144,8 +144,8 @@ div#weathertmp {
 
 div#weather-container {
     width: 150px;
-    top: -50px;
-    left: 100px;
+    top: -30px;
+    left: 82px;
     position: absolute;
 }
 
@@ -179,9 +179,6 @@ div#weather-container {
   width: 6px;
   background: orange;
   box-shadow: 1px 1px 6px black;
-}
-
-#downline.animate {
   transition: left 250ms;
 }
 

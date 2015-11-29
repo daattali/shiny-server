@@ -41,7 +41,7 @@ fluidPage(
             )),
             span(
               class = "welcome_date",
-              format(as.Date(gamedata$game_date), format="%B %d %Y")
+              format(as.Date(gamedata$game_date), format="%B %d, %Y")
             ),
             span(class = "welcome_awayimgwrap",
               img(
@@ -84,8 +84,12 @@ fluidPage(
         id = "canvas-wrap", class = "auto-margin",
         img(src = "field.png"),
         div(id = "downline",
-            img(src = "football.png", id = "football")
+            img(id = "linehome"),
+            img(id = "lineaway")
         ),
+        div(id = "downline2"),
+        div(id = "deltaline1", class = "deltaline"),
+        div(id = "deltaline2", class = "deltaline"),
         div(id = "weather-container",
             div(id = "weathertmp", class = "malign", "BC Lions"),
             img(id = "weathericon", class = "weather-icon")
