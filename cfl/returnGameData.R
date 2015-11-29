@@ -1,10 +1,7 @@
 library(dplyr)
 library(magrittr)
-library(Rforecastio)
 library(jsonlite)
 library(data.table)
-library(RCurl)
-library(curl)
 
 scale01 = function(x){
   scaleToInt(x,1,0)
