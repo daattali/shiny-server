@@ -54,6 +54,7 @@ function(input, output, session) {
   
   # On welcome page, user clicks on a game row
   observeEvent(input$gamerowclick, {
+    shinyjs::addClass(selector = "body", class = "game_page")
     values$gamedata <- input$gamerowclick
     gameid <- values$gamedata[['sked_id']]
     playdata <- load_playdata(gameid)
@@ -193,6 +194,7 @@ function(input, output, session) {
       values$playing <- FALSE
       shinyjs::show("welcome_page")
       shinyjs::hide("game_page")
+      shinyjs::removeClass(selector = "body", class = "game_page")
     })
   })
   

@@ -71,3 +71,7 @@ playyoutube = function(youtube_info) {
     player.loadVideoById(youtube_info);
   }
 }
+
+$().ready(function() {
+  $('.container-fluid').tubular({videoId: 'pQ-TODedlzs'});
+});

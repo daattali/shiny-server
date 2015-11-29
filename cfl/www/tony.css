@@ -5,7 +5,6 @@
 /* Welcome page */
 #welcome_homevsaway {
   text-align: center;
-  background: #555;
   color: #fafafa;
   font-size: 30px;
 }
@@ -42,8 +41,7 @@
 }
 
 #welcome_list {
-  padding-top: 100px;
-  background: #888;
+  padding-top: 500px;
 }
 
 .welcome_row:hover {
@@ -79,17 +77,10 @@
 }
 
 #welcome_homevsaway {
-  box-shadow: 0px 10px 5px rgba(29, 29, 29, 0.38);
   z-index: 100;
   position: fixed;
   width: 100%;
   text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.71);
-}
-
-#welcome_list {
-  background-image: url('img/background-image.jpg');
-  background-attachment: fixed;
-  background-size:cover;
 }
 
 /* Game page */
@@ -103,11 +94,19 @@
     cursor: pointer;
 }
 
-.container-fluid {
+body.game_page .container-fluid {
     padding: 0;
     background-image: url('game-area-background.jpg');
     background-attachment: fixed;
     background-size: cover;
+}
+
+#tubular-container {
+  opacity: 0.8;
+}
+
+body.game_page #tubular-container {
+  display: none;
 }
 
 #homename, #homelogo, #homescore, #awayscore, #awaylogo, #awayname {

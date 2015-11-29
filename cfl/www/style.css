@@ -125,7 +125,7 @@
 /* Welcome page */
 #welcome_homevsaway {
   text-align: center;
-  background: #eaeaea;
+  
   color: #fafafa;
   font-size: 50px;
 }
@@ -144,8 +144,7 @@
   margin-right: -15px;
 }
 #welcome_list {
-  padding-top: 20px;
-  background: #888;
+
 }
 
 .welcome_homename,
@@ -156,7 +155,7 @@
   display: inline-block;
 }
 .welcome_date {
-  width: 120px;
+  width: 160px;
 }
 .welcome_homeimgwrap,
 .welcome_awayimgwrap {
@@ -556,9 +555,4 @@
 
 .full-width {
   width:100%;
-}
-
-#media-area {
-  background-image: url("game-area-background.jpg");
-  padding:15px;
 }

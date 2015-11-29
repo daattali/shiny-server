@@ -10,8 +10,22 @@ fluidPage(
   useShinyjs(),
   extendShinyjs("www/shinyjs.js"),
   includeScript("www/main.js"),
+  includeScript("www/ext/js/jquery.tubular.1.0.js"),
   includeCSS("www/style.css"),
   includeCSS("www/tony.css"),
+  
+  # prefetch images
+  hidden(
+    img(src = "game-area-background.jpg"),
+    img(src = "img/clear-day.png"),
+    img(src = "img/clear-night.png"),
+    img(src = "img/cloudy.png"),
+    img(src = "img/fog.png"),
+    img(src = "img/partly-cloudy-day.png"),
+    img(src = "img/partly-cloudy-night.png"),
+    img(src = "img/rain.png"),
+    img(src = "img/windy.png")
+  ),
   
   hidden(div(id = "myoverlay")),
   

@@ -9,6 +9,7 @@ shinyjs.setline = function(params) {
 }
 
 shinyjs.newgame = function(gameinfo) {
+  window.scrollTo(0, 0);
   gameinfo = gameinfo[0];
   $("#homename").text(gameinfo['home_team']);
   $("#awayname").text(gameinfo['away_team']);

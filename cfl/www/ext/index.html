@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>tubular, a YouTube Background Player jQuery Plugin | Sean McCambridge Design</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/png" href="/media/layout/favicon.png" />
+
+	<link href="css/screen.css" rel="stylesheet" type="text/css" /> 
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+	<div id="main">
+		<a href="http://www.seanmccambridge.com/tubular/"><img src="media/logo.png" alt="Tubular logo" id="logo" /></a>
+		<p id="video-controls" class="black-65">Video controls:<br /><a href="#" class="tubular-play">Play</a> | <a href="#" class="tubular-pause">Pause</a> | <a href="#" class="tubular-volume-up">Volume Up</a> | <a href="#" class="tubular-volume-down">Volume Down</a> | <a href="#" class="tubular-mute">Mute</a></p>
+		<div class="black-50">
+			<h1>jQuery tubular</h1>
+			<p>Tubular is a jQuery plugin that lets you set a YouTube video as your page background.  Just attach it to your page wrapper element, set some options, and you're on your way.</p>
+			<p><code>$(<em>page content wrapper element</em>).tubular(<em>options</em>);</code></p>
+		</div>
+		<div class="black-50">
+			<h2>Tubular's <em>hello, world</em></h2>
+			<p>Assuming you're happy with the default options and you use a wrapper div with the id of <em>wrapper</em>, you simply attach to your wrapper div and specify the video you want to load:</p>
+			<p><code>$('#wrapper').tubular({videoId: '0Bmhjf0rKe8'});</code></p>
+			<p>and <em>Presto!</em> ... kittens in your website background!</p>
+		</div>
+		<div class="black-50">
+			<h2>A word of caution</h2>
+			<p>Tubular does not design your website for you. It works here thanks to alpha transparency on these gray boxes and the png logo on the top left. I built tubular thinking it would help experienced web designers and developers add some subtle background elements &mdash; emphasis on subtle &mdash; to their work. I'm sure there are some tasteful ways to use tubular and many, many more not so tasteful ways to use it. With great power comes great responsibility. The kitten example above is not to be taken seriously! :-)</p>
+		</div>
+		<div class="black-50">
+			<h2>Options and defaults</h2>
+			<code>
+				<ul>
+					<li>ratio: 16/9 // usually either 4/3 or 16/9 -- tweak as needed</li>
+	        		<li>videoId: 'ZCAnLxRvNNc' // toy robot in space is a good default, no?</li>
+			        <li>mute: true</li>
+	        		<li>repeat: true</li>
+		        	<li>width: $(window).width() // no need to override</li>
+	        		<li>wrapperZIndex: 99</li>
+	        		<li>playButtonClass: 'tubular-play'</li>
+			        <li>pauseButtonClass: 'tubular-pause'</li>
+			        <li>muteButtonClass: 'tubular-mute'</li>
+			        <li>volumeUpClass: 'tubular-volume-up'</li>
+			        <li>volumeDownClass: 'tubular-volume-down'</li>
+			        <li>increaseVolumeBy: 10 // increment value; volume range is 1-100</li>
+			        <li>start: 0 // starting position in seconds</li>
+	        	</ul>
+	        </code>
+		</div>
+	</div>
+	<div id="sidebar">
+		<div class="black-50">
+			<h2>Download</h2>
+			<p><a href="http://code.google.com/p/jquery-tubular/">Download jQuery tubular on Google Code</a></p>
+		</div>
+		<div class="black-50">
+			<h2>Credits</h2>
+			<p>Beautiful time lapse video of the U.S. Southwest by Tom Lowe and Catherine Laplace-Builhe. <a href="http://www.youtube.com/watch?v=e4Is32W-ppk">Original video here</a>. Code by <a href="http://seanmccambridge.com">Sean McCambridge</a>. Released under <a href="http://opensource.org/licenses/mit-license.php">the MIT License</a>.</p>
+		</div>
+		<div class="black-50">
+			<h2>Remember</h2>
+			<p>Tubular does one thing well. It takes a single video from YouTube at injects it as a full-screen background on a website. It scales the video, offsets the video and provides some basic controls for the video.  That's it.</p>
+			<p>Tubular makes some assumptions on how your website works. First, it assumes you have a single wrapper element under the body tag that envelops all of your website content. It promotes that wrapper to z-index: 99 and position: relative. You can configure the z-index value in the options. So it's assuming your wrapper can accept positioning without breaking your site.</p>
+			<p>Finally, tubular injects the YouTube video you specified as an iframe using fixed position at z-index: 1.  Browsers that do not support fixed positioning will not support tubular. Also, since the YouTube iframe API requires the HTML5 postMessage feature, browsers that do not support it (I'm looking at you, IE7) will not support tubular &mdash; tubular will return false before any changes are made to your CSS in IE7.</p>
+		</div>
+	</div>
+</div><!-- #wrapper -->
+</body>
+</html>
