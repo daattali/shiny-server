@@ -10,7 +10,7 @@ demo_clips <- list(
   list(videoId = "snwanVaPMys", startSeconds = 126, endSeconds = 135),
   list(videoId = "snwanVaPMys", startSeconds = 145, endSeconds = 153),
   list(videoId = "snwanVaPMys", startSeconds = 196, endSeconds = 210),
-  list(videoId = "snwanVaPMys", startSeconds = 296, endSeconds = 260),
+  list(videoId = "snwanVaPMys", startSeconds = 260, endSeconds = 296),
   list(videoId = "snwanVaPMys", startSeconds = 359, endSeconds = 368),
   list(videoId = "mefLj3eB7Gc", startSeconds = 8, endSeconds = 30),
   list(videoId = "mefLj3eB7Gc", startSeconds = 63, endSeconds = 75),
