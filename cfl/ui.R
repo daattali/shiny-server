@@ -42,7 +42,7 @@ fluidPage(
     )),
     div(
       id = "welcome_message",
-      "Re-live the Best Moments of the CFL"
+      "Relive the ", span("Best Moments"), br(),"of the CFL"
     ),
     div(
       id = "welcome_list",

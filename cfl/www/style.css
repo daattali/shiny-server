@@ -583,14 +583,18 @@
 
 #welcome_message {
   width: 1000px;
-  background: rgba(200,200,200,0.7);
+  /*background: rgba(200,200,200,0.7);*/
   margin: 200px auto 70px;
-  text-shadow: 0 0 5px black;
+  text-shadow: 4px 3px 6px black;
   font-size: 80px;
-  color: orange;
-  padding: 15px;
+  color: #F9F9F9;
+  /*padding: 15px;
   text-align: center;
-  font-weight: bold;
+  font-weight: bold;*/
+}
+#welcome_message span {
+  font-weight: bolder;
+  color: rgb(255, 202, 0);
 }
 
 #welcome_list {
