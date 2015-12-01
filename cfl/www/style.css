@@ -556,3 +556,14 @@
 .full-width {
   width:100%;
 }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fafafa;
+  padding: 3px;
+  text-align: center;
+  border-top: 1px solid #E7E7E7;
+  box-shadow: 0px 0px 5px #333;
+}

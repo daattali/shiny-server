@@ -145,5 +145,14 @@ fluidPage(
           ggvisOutput('reactionPlot')
       )      
     )
+  ),
+  div(
+    id = "footer",
+    "Created by",
+    a("Dean Attali", href = "http://deanattali.com"),
+    HTML("&bull;"),
+    "Team members: Tony Hui, Ogan Mancarci, Jonathan Ho",
+    HTML("&bull;"),
+    a("SportsHack2015", href = "http://sportshackweekend.org/ca/2015/")
   )
 )
