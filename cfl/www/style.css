@@ -124,7 +124,7 @@
 
 /* Welcome page */
 #welcome_page {
-  z-index: 2;
+  z-index: 3;
   position: relative; 
 }
 #welcome_homevsaway {
@@ -595,4 +595,13 @@
 
 #welcome_list {
   margin-bottom: 50px;
+}
+
+#youtube_shield {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }

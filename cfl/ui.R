@@ -30,6 +30,7 @@ fluidPage(
   hidden(div(id = "myoverlay")),
   
   div(id = "bg_youtube_player"),
+  div(id = "youtube_shield"),
   
   div(
     id = "welcome_page",

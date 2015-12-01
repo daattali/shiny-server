@@ -104,6 +104,9 @@ body.game_page .container-fluid {
 body.game_page #bg_youtube_player {
   display: none;
 }
+body.game_page #youtube_shield {
+  displaY: none;
+}
 
 #homename, #homelogo, #homescore, #awayscore, #awaylogo, #awayname {
     font-size: 30px;
