@@ -7,10 +7,10 @@ allgames <- read.csv("data/cfl_games_trim.csv", stringsAsFactors = FALSE) %>%
   
 
 fluidPage(
+  title = "Impact Replays",
   useShinyjs(),
   extendShinyjs("www/shinyjs.js"),
   includeScript("www/main.js"),
-  includeScript("www/ext/js/jquery.tubular.1.0.js"),
   includeCSS("www/style.css"),
   includeCSS("www/tony.css"),
   
@@ -29,13 +29,19 @@ fluidPage(
   
   hidden(div(id = "myoverlay")),
   
+  div(id = "bg_youtube_player"),
+  
   div(
     id = "welcome_page",
-    div(
+    hidden(div(
       id = "welcome_homevsaway",
       div(id = "welcome_home", "Home"),
       div(id = "welcome_vs", "VS"),
       div(id = "welcome_away", "Away")
+    )),
+    div(
+      id = "welcome_message",
+      "Re-live the Best Moments of the CFL"
     ),
     div(
       id = "welcome_list",
@@ -140,10 +146,10 @@ fluidPage(
                              selected = "Score", inline = TRUE)
         )
       ),
-      div(id = "reaction-bar",
+      hidden(div(id = "reaction-bar",
           h1(id = "action-bar-title", "The Reaction Bar"),
           ggvisOutput('reactionPlot')
-      )      
+      ))     
     )
   ),
   div(

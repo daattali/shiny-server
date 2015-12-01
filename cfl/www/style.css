@@ -123,9 +123,12 @@
 }
 
 /* Welcome page */
+#welcome_page {
+  z-index: 2;
+  position: relative; 
+}
 #welcome_homevsaway {
   text-align: center;
-  
   color: #fafafa;
   font-size: 50px;
 }
@@ -142,9 +145,6 @@
   padding: 10px 15px;
   margin-left: -15px;
   margin-right: -15px;
-}
-#welcome_list {
-
 }
 
 .welcome_homename,
@@ -416,7 +416,7 @@
 
 #speed-wrap {
   float: left;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 #speed-wrap .irs-grid-pol.small {
@@ -424,7 +424,7 @@
 }
 
 #speed-wrap .irs-grid {
-  height: 33px;
+  height: 39px;
 }
 
 #speed-wrap .irs-grid-pol {
@@ -454,14 +454,16 @@
   display: none;
 }
 #speed-wrap .irs-line {
-  height: 1px;
+  height: 4px;
   border-color: black;
+  top: 17px;
+  background: #333;
 }
 
 #speed-wrap .irs-slider {
-  top: 19px;
-  width: 16px;
-  height: 16px;
+  top: 9px;
+  width: 18px;
+  height: 18px;
   background: #222;
   border-color: #000;
 }
@@ -471,9 +473,10 @@
 
 #eventTypeFilter {
   float: right;
-  padding-top: 12px;
-  font-size: 18px;
+  padding-top: 3px;
+  font-size: 20px;
   font-weight: bold;
+  text-shadow: 0 0 1px white;
 }
 
 #eventTypeFilter input[type=checkbox] {
@@ -566,4 +569,30 @@
   text-align: center;
   border-top: 1px solid #E7E7E7;
   box-shadow: 0px 0px 5px #333;
+  z-index: 100;
+}
+
+#bg_youtube_player {
+  overflow: hidden;
+  position: fixed;
+  opacity:0.8;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#welcome_message {
+  width: 1000px;
+  background: rgba(200,200,200,0.7);
+  margin: 200px auto 70px;
+  text-shadow: 0 0 5px black;
+  font-size: 80px;
+  color: orange;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#welcome_list {
+  margin-bottom: 50px;
 }

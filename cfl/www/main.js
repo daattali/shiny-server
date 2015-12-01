@@ -1,13 +1,3 @@
-window.onload = function() {
-  $( "#time-wrapper" ).on( "click", ".gameevent", function(x){
-    Shiny.onInputChange("gameeventclick", $(this).data("time"));
-  });
-
-  $( "#welcome_list" ).on( "click", ".welcome_row", function(x){
-    Shiny.onInputChange("gamerowclick", $(this).data("gameinfo"));
-  });  
-};
-
 setline = function(pos, end_pos, is_home) {
     if ($("#downline").data("pos") == pos) {
         return;
@@ -61,7 +51,6 @@ playyoutube = function(youtube_info) {
         'onReady': function(event) { event.target.playVideo(); },
         'onStateChange': function(event) {
           if (event.data == 0) {
-            console.log("now");
             Shiny.onInputChange("videodone", videonum);
           }
         }
@@ -70,8 +59,60 @@ playyoutube = function(youtube_info) {
   } else {
     player.loadVideoById(youtube_info);
   }
-}
+};
 
 $().ready(function() {
-  $('.container-fluid').tubular({videoId: 'pQ-TODedlzs'});
+  $( "#time-wrapper" ).on( "click", ".gameevent", function(x){
+    Shiny.onInputChange("gameeventclick", $(this).data("time"));
+  });
+
+  $( "#welcome_list" ).on( "click", ".welcome_row", function(x){
+    Shiny.onInputChange("gamerowclick", $(this).data("gameinfo"));
+  });
+  
+  videoId = 'pQ-TODedlzs';
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  calculateBgYTDims();
 });
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('bg_youtube_player', {
+    playerVars: { 'autoplay': 1, 'controls': 0,
+                  'wmode':'transparent', 'showinfo' : 0, 'loop' : 1,
+                  'playlist' : videoId, 'modestbranding' : 1
+    },
+    videoId: videoId,
+    events: {
+      'onReady': function(event) {
+        event.target.mute();
+        event.target.playVideo();
+      }
+    }
+  });
+}
+
+window.onresize = function(event) {
+  calculateBgYTDims();
+};
+
+calculateBgYTDims = function() {
+  var w = $(window).width();
+  var h = $(window).height();
+  var ratio = 0.563;
+  if (w*ratio > h) {
+    $('#bg_youtube_player').width(w);
+    $('#bg_youtube_player').height(w*ratio);
+    $('#bg_youtube_player').css('left', '0');
+    $('#bg_youtube_player').css('top', ((w*ratio) - h) / -2);
+  } else {
+    $('#bg_youtube_player').height(h);
+    $('#bg_youtube_player').width(h/ratio);
+    $('#bg_youtube_player').css('top', '0');
+    $('#bg_youtube_player').css('left', ((h/ratio) - w) / -2);
+  }
+};

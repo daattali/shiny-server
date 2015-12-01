@@ -40,10 +40,6 @@
   text-shadow: 2px 2px 4px #444;
 }
 
-#welcome_list {
-  padding-top: 500px;
-}
-
 .welcome_row:hover {
   transform: scale(1.005);
   background-image: url('img/entry-background.png');
@@ -105,7 +101,7 @@ body.game_page .container-fluid {
   opacity: 0.8;
 }
 
-body.game_page #tubular-container {
+body.game_page #bg_youtube_player {
   display: none;
 }
 
@@ -338,12 +334,6 @@ div#weather-container {
 /* Horizontally align top/bottom tooltips */
 [data-tooltip]:after{
   margin-left: -80px;
-}
-
-#eventTypeFilter {
-  float: right;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 #eventTypeFilter input[type=checkbox] {
