@@ -1,1 +1,0 @@
-shiny::shinyAppDir(system.file("shiny", package = "ddpcr"))
