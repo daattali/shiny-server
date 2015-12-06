@@ -34,6 +34,9 @@ server {
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection "upgrade";
 
+		# daattali: not sure if the next line is best practice or not, but it works
+		# redirects /shiny/myapp to /shiny/myapp/
+		rewrite ^(/shiny/[^/]+)$ $1/ permanent;
 	}
 
 	location /rstudio/ {
