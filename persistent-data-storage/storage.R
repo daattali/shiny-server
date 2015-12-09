@@ -3,7 +3,7 @@ library(digest)
 library(DBI)
 library(RMySQL)
 library(RSQLite)
-library(rmongodb)
+library(mongolite)
 library(googlesheets)
 library(RAmazonS3)
 library(rdrop2)
@@ -66,6 +66,7 @@ load_data_flatfile <- function() {
   data <-
     lapply(files, read.csv, stringsAsFactors = FALSE) %>%
     do.call(rbind, .)
+  
   data
 }
 
@@ -134,27 +135,26 @@ load_data_mysql <- function() {
 collection_name <- sprintf("%s.%s", DB_NAME, TABLE_NAME)
 
 save_data_mongodb <- function(data) {
-  db <- mongo.create(db = DB_NAME,
-                     host = options()$mongodb$host,
-                     username = options()$mongodb$username,
-                     password = options()$mongodb$password)
-  mongo.insert(db,
-               collection_name,
-               mongo.bson.from.list(as.list(data)))
-  mongo.disconnect(db)
+  db <- mongo(collection = TABLE_NAME,
+              url = sprintf(
+                "mongodb://%s:%s@%s/%s",
+                options()$mongodb$username,
+                options()$mongodb$password,
+                options()$mongodb$host,
+                DB_NAME))
+  data <- as.data.frame(t(data))
+  db$insert(data)
 }
 load_data_mongodb <- function() {
-  db <- mongo.create(db = DB_NAME,
-                     host = options()$mongodb$host,
-                     username = options()$mongodb$username,
-                     password = options()$mongodb$password)
-  data <-
-    mongo.find.all(db, collection_name) %>%
-    lapply(data.frame, stringsAsFactors = FALSE) %>%
-    do.call(rbind, .) %>%
-    .[, -1, FALSE]
-  mongo.disconnect(db)
-  
+  db <- mongo(collection = TABLE_NAME,
+              url = sprintf(
+                "mongodb://%s:%s@%s/%s",
+                options()$mongodb$username,
+                options()$mongodb$password,
+                options()$mongodb$host,
+                DB_NAME))
+  data <- db$find()
+
   data
 }
 
@@ -193,6 +193,8 @@ load_data_dropbox <- function() {
   data <-
     lapply(file_paths, drop_read_csv, stringsAsFactors = FALSE) %>%
     do.call(rbind, .)
+
+  data
 }
 
 
@@ -224,5 +226,6 @@ load_data_s3 <- function() {
       read.csv(text = raw, stringsAsFactors = FALSE)
     }) %>%
     do.call(rbind, .)
+
   data
 }
