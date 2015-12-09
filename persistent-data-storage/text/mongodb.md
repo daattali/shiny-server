@@ -10,4 +10,4 @@ All you need to do is create a mongoDB database. Since there is no schema, it's 
 
 #### Details
 
-You can use the [rmongodb](https://github.com/mongosoup/rmongodb) package to interact with mongoDB from R. To connect to the database you need to provide the following: db, host, username, password. Note that responses need to be converted to BSON (binary JSON) in order to be inserted into a mongoDB collection.
+You can use the [mongolite](https://github.com/jeroenooms/mongolite) package to interact with mongoDB from R. To connect to the database you need to provide the following: db, host, username, password.
