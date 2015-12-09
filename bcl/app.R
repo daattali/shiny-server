@@ -69,7 +69,7 @@ server <- function(input, output, session) {
     selectInput("typeInput", "Product type",
                 sort(unique(bcl$Type)),
                 multiple = TRUE,
-                selected = c("BEER", "WINE")
+                selected = c("BEER", "WINE"))
   })
   
   output$summaryText <- renderText({
