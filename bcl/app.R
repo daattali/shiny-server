@@ -42,7 +42,9 @@ ui <- fluidPage(
       tags$a("OpenDataBC",
              href = "https://www.opendatabc.ca/dataset/bc-liquor-store-product-price-list-current-prices"),
       br(),
-      span("Created by", a(href = "http://deanattali.com", "Dean Attali"))
+      span("Created by", a(href = "http://deanattali.com", "Dean Attali")),
+      br(),
+      span("Source code available", a(href = "https://github.com/daattali/shiny-server/tree/master/bcl", "on GitHub"))
     ),
     mainPanel(
       h2(textOutput("summaryText")),
@@ -67,7 +69,7 @@ server <- function(input, output, session) {
     selectInput("typeInput", "Product type",
                 sort(unique(bcl$Type)),
                 multiple = TRUE,
-                selected = unique(bcl$Type))
+                selected = c("BEER", "WINE")
   })
   
   output$summaryText <- renderText({
