@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 
 # load the data (retrieve and clean raw data if this is the first time)
-filename <- file.path("data", "bcl.csv")
+filename <- file.path("data", "bcl-data.csv")
 if (file.exists(filename)) {
   bcl <- read.csv(filename, stringsAsFactors = FALSE)
 } else {
