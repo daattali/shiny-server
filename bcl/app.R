@@ -37,14 +37,17 @@ ui <- fluidPage(
         condition = "input.filterCountry",
         uiOutput("countrySelectorOutput")
       ),
+      hr(),
+      
+      span("Data source:", 
+        tags$a("OpenDataBC",
+             href = "https://www.opendatabc.ca/dataset/bc-liquor-store-product-price-list-current-prices")),
       br(),
-      "Data source:", 
-      tags$a("OpenDataBC",
-             href = "https://www.opendatabc.ca/dataset/bc-liquor-store-product-price-list-current-prices"),
+      span("Learn how to build this app", a(href = "http://deanattali.com/blog/building-shiny-apps-tutorial/", "with my Shiny tutorial")),
       br(),
-      span("Created by", a(href = "http://deanattali.com", "Dean Attali")),
+      span("Source code available", a(href = "https://github.com/daattali/shiny-server/tree/master/bcl", "on GitHub")),
       br(),
-      span("Source code available", a(href = "https://github.com/daattali/shiny-server/tree/master/bcl", "on GitHub"))
+      span("Created by", a(href = "http://deanattali.com", "Dean Attali"))
     ),
     mainPanel(
       h2(textOutput("summaryText")),
