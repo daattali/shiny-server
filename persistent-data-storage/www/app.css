@@ -65,6 +65,12 @@ pre {
 
 #appDesc {
   padding: 19px;
+  font-weight: bold;
+}
+
+#created-by-dean {
+  font-weight: normal;
+  font-size: 0.9em;
 }
 
 .dataTables_scrollHeadInner,
