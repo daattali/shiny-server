@@ -14,6 +14,11 @@ body {
 	box-shadow: 0 0 7px #000;
 } 
 
+#headerSection a {
+  color: white !important;
+  text-decoration: underline;
+}
+
 #allContent,
 #loadingContent {
 	padding: 0 20px;
