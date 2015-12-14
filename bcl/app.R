@@ -30,6 +30,10 @@ ui <- fluidPage(
   titlePanel("BC Liquor Store prices"),
   sidebarLayout(
     sidebarPanel(
+      h4(
+        "Had a long day?  This app will help you find the right drink for tonight! Just use the filters below..."
+      ),
+      br(),
       sliderInput("priceInput", "Price", 0, 100, c(25, 40), pre = "$"),
       uiOutput("typeSelectOutput"),
       checkboxInput("filterCountry", "Filter by country", FALSE),
@@ -38,19 +42,20 @@ ui <- fluidPage(
         uiOutput("countrySelectorOutput")
       ),
       hr(),
-      
       span("Data source:", 
         tags$a("OpenDataBC",
              href = "https://www.opendatabc.ca/dataset/bc-liquor-store-product-price-list-current-prices")),
       br(),
       span("Learn how to build this app", a(href = "http://deanattali.com/blog/building-shiny-apps-tutorial/", "with my Shiny tutorial")),
-      br(),
-      span("Source code available", a(href = "https://github.com/daattali/shiny-server/tree/master/bcl", "on GitHub")),
-      br(),
-      span("Created by", a(href = "http://deanattali.com", "Dean Attali"))
+      br(), br(),
+      em(
+        span("Created by", a(href = "http://deanattali.com", "Dean Attali")),
+        HTML("&bull;"),
+        span("Code", a(href = "https://github.com/daattali/shiny-server/tree/master/bcl", "on GitHub"))
+      )
     ),
     mainPanel(
-      h2(textOutput("summaryText")),
+      h3(textOutput("summaryText")),
       downloadButton("download", "Download results"),
       br(),
       plotOutput("plot"),

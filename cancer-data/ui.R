@@ -22,9 +22,14 @@ fluidPage(
 		titlePanel("Cancer data in the United States"),
 	
 		# author info
-		em(
+		span(
 			span("Created by "),
-			a("Dean Attali", href = "http://deanattali.com"), br(),
+			a("Dean Attali", href = "http://deanattali.com"),
+			HTML("&bull;"),
+			span("Code"),
+			a("on GitHub", href = "https://github.com/daattali/shiny-server/tree/master/cancer-data"),
+			br(),
+			
 			span("November 21, 2014")
 		)
 	),
