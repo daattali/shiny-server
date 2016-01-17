@@ -84,7 +84,7 @@ shinyServer(function(input, output, session) {
       show("thanksMsg")
     },
     error = function(err) {
-      text("errmsg", err$message)
+      html("errmsg", err$message)
       show(id = "error", anim = TRUE, animType = "fade")
     },
     finally = {

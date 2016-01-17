@@ -46,9 +46,9 @@ function(input, output, session) {
 
   observe({
     if (values$playing) {
-      shinyjs::text("play", paste0(icon("pause"), " Pause"))
+      shinyjs::html("play", paste0(icon("pause"), " Pause"))
     } else {
-      shinyjs::text("play", paste0(icon("play"), " Play"))
+      shinyjs::html("play", paste0(icon("play"), " Play"))
     }
   })
   
@@ -121,8 +121,8 @@ function(input, output, session) {
     js$setline(pos, end_pos, ishome)    
   }  
   
-  shinyjs::text("output_quarter", "Q1")
-  shinyjs::text("output_time", "15:00")
+  shinyjs::html("output_quarter", "Q1")
+  shinyjs::html("output_time", "15:00")
   output$output_quarter <- renderText({
     paste0("Q", get_quarter(input$time))
   })
@@ -138,8 +138,8 @@ function(input, output, session) {
     ishome <- playdata$eventHome[index]
     
     js$setline(pos, end_pos, ishome)
-    shinyjs::text(id = "homescore", text = playdata$home_score_after[index])
-    shinyjs::text(id = "awayscore", text = playdata$away_score_after[index])
+    shinyjs::html(id = "homescore", html = playdata$home_score_after[index])
+    shinyjs::html(id = "awayscore", html = playdata$away_score_after[index])
   })
   
   observeEvent(input$play, {

@@ -44,7 +44,7 @@ shinyServer(function(input, output, session) {
       updateTabsetPanel(session, "mainTabs", "viewTab")
     },
     error = function(err) {
-      shinyjs::text("errorMsg", err$message)
+      shinyjs::html("errorMsg", err$message)
       shinyjs::show(id = "error", anim = TRUE, animType = "fade")      
       shinyjs::logjs(err)
     })
@@ -82,12 +82,12 @@ shinyServer(function(input, output, session) {
     fxn_save_body <- fxn_save %>% body %>% format %>% paste(collapse = "\n")
     fxn_save_head <- paste0(fxn_save, " <- function(data)")
     fxn_save_code <- paste(fxn_save_head, fxn_save_body)
-    shinyjs::text("codeSave", fxn_save_code)
+    shinyjs::html("codeSave", fxn_save_code)
 
     fxn_load <- input$storage %>% get_load_fxn
     fxn_load_body <- fxn_load %>% body %>% format %>% paste(collapse = "\n")
     fxn_load_head <- paste0(fxn_load, " <- function()")
     fxn_load_code <- paste(fxn_load_head, fxn_load_body)
-    shinyjs::text("codeLoad", fxn_load_code)
+    shinyjs::html("codeLoad", fxn_load_code)
   })
 })
