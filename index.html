@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Dean Attali's Shiny Server</title>
   <style type="text/css">
     body, html {
@@ -33,7 +34,6 @@
 	  font-size: 20px;
     }
     #content {
-      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
 	  text-align: center;
@@ -45,7 +45,7 @@
 	  color: #444;
 	  border-radius: 5px;
 	  border: 1px solid #ccc;
-	  width: 290px;
+	  width: 300px;
 	  float: left;
 	  margin-top: 20px;
 	  margin-left: 20px;
@@ -56,10 +56,6 @@
       box-shadow: 0 0 2px #999;
       border-color: #888;
       background: #fff;
-	}
-	#shinyapps-big .shinyapp:nth-child(3n+1) {
-	  clear: left;
-	  margin-left: 0;
 	}
 	#shinyapps-big .shinyapp .apptitle {
 	  text-align: center;
@@ -87,6 +83,59 @@
 	  line-height: 1.3em;
 	  border-radius: 0 0 5px 5px;
 	}
+    @media only screen and (min-width: 980px) { 
+      #content {
+      	max-width: 980px;
+      }
+      #shinyapps-big .shinyapp:nth-child(3n+1) {
+        clear: left;
+        margin-left: 0;
+      }
+    }
+    @media only screen and (max-width: 980px) { 
+      #content {
+      	max-width: 650px;
+      }
+      #shinyapps-big .shinyapp:nth-child(2n+1) {
+        clear: left;
+        margin-left: 0;
+      }
+    }    
+    @media only screen and (max-width: 650px) and (min-width: 510px) { 
+      #content {
+      	max-width: 500px;
+      }
+      #shinyapps-big .shinyapp:nth-child(2n+1) {
+        clear: left;
+        margin-left: 0;
+      }
+      #shinyapps-big .shinyapp {
+      	margin-top: 10px;
+      	margin-left: 10px;
+      	width: 230px;
+      }
+    }    
+    @media only screen and (max-width: 510px) { 
+      #content {
+      	max-width: 350px;
+      }
+      #shinyapps-big .shinyapp:nth-child(1n+1) {
+        clear: left;
+        margin-left: 0;
+      }
+    }        
+    @media only screen and (max-width: 750px) {
+      #title {
+    	font-size: 40px;
+    	padding: 20px 0 10px;
+      }
+      #titleBar {
+      	padding-bottom: 15px;
+      }
+      #links {
+      	font-size: 17px;
+      }
+    }	
 	#otherlinks {
 	  text-align: left;
 	  margin-top: 100px;
@@ -248,3 +297,4 @@
   </div>
 </body>
 </html>
+
