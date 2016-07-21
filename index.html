@@ -28,11 +28,14 @@
     #title {
       color: #666;
 	  margin: 0;
-	  padding: 25px 0 15px;
+	  padding: 22px 0 10px;
 	  font-size: 60px;
     }
-	#links {
-	  font-size: 20px;
+    #links {
+      font-size: 20px;
+    }
+    #links .link {
+      margin: 2px 0;
     }
     #content {
       margin-left: auto;
@@ -137,10 +140,15 @@
       #links {
       	font-size: 17px;
       }
+    }
+
+    #tutorial-shiny-server {
+      text-align: left;
+      margin-top: 70px;
     }	
 	#otherlinks {
 	  text-align: left;
-	  margin-top: 100px;
+	  margin-top: 70px;
 	}
 	
     .shiny-apps li {
@@ -153,12 +161,9 @@
   <div id="titleBar">
     <h1 id="title">Dean Attali's Shiny Server</h1>
 	<div id="links">
-	  <a href="http://deanattali.com">Who is Dean Attali?</a><br/>
-	  <!--
-	  <a href = "http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/">Tutorial for hosting a similar site yourself</a><br/>
-	  -->
-	  <a href="https://www.paypal.me/daattali/20">Support my work</a><br/>
-          <a href="https://github.com/daattali/shiny-server">Code for this website and all apps is on GitHub</a><br/>
+	  <div class="link"><a href="http://deanattali.com">Who is Dean Attali?</a></div>
+	  <div class="link"><a href="https://www.paypal.me/daattali/20">Support my work</a> or <strong><a href="http://deanattali.com/contact">Hire me!</a></strong></div>
+          <div class="link"><a href="https://github.com/daattali/shiny-server">Code for this website and all apps is on GitHub</a></div>
 	</div>
   </div>
   
@@ -313,14 +318,18 @@
 	
 	<div style="clear:both;"></div>
 	
-	<div id="otherlinks">
+    <div id="tutorial-shiny-server">
+      <a href= "http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/">Tutorial for hosting a similar Shiny server website yourself</a>	
+    </div>
+
+    <div id="otherlinks">
       <h3>Other Shiny apps that exist here</h3>
 	  <ul class="shiny-apps">
         <li><strong><a href="./shinyjs-basic/">shinyjs basic app</a></strong> - a very basic Shiny app showing how <a href="https://github.com/daattali/shinyjs">shinyjs</a> functions can be used together in a simply app.</li> 
         <li><strong><a href="./request-basic-info/">Basic info form</a></strong> - a simple form that we used in a course to collect some basic information about students (example of how to use forms to collect data from a shiny app).</li>
         <li><strong><a href="./peer-review/">Peer review form</a></strong> - a marking sheet that we used in a course for students to peer-review other students' assignments (example of how to use forms to collect data from a shiny app).</li>
         <li><strong><a href="./loading-screen/">Loading screen demo</a></strong> - an example of how to implement a simple loading screen in a Shiny app.</li>	
-      <a href="http://daattali.com">&lt; Back to main site</a>
+      <br/><a href="http://daattali.com">&lt; Back to daattali.com</a>
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <a href="http://daattali.com:4151">admin</a>	
 	</div>
