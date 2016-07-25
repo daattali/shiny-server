@@ -53,7 +53,9 @@ appCSS <-
    .shiny-input-container { margin-top: 25px; }
    #submit_msg { margin-left: 15px; }
    #error { color: red; }
-   #adminPanel { border: 4px solid #aaa; padding: 0 20px 20px; }"
+   body { background: #fcfcfc; }
+   #header { background: #fff; border-bottom: 1px solid #ddd; margin: -20px -15px 0; padding: 15px 15px 10px; }
+  "
 
 # usernames that are admins
 adminUsers <- c("admin", "prof")
@@ -62,10 +64,21 @@ shinyApp(
   ui = fluidPage(
     shinyjs::useShinyjs(),
     shinyjs::inlineCSS(appCSS),
-    titlePanel("Mimicking a Google Form with a Shiny app"),
-    h3("This app is a supplement to my",
-       a(href = "http://deanattali.com/2015/06/14/mimicking-google-form-shiny/",
-         "blog post on the topic")
+    title = "Mimicking a Google Form with a Shiny app",
+    div(id = "header",
+      h1("Mimicking a Google Form with a Shiny app"),
+      h4("This app is a supplement to my",
+         a(href = "http://deanattali.com/2015/06/14/mimicking-google-form-shiny/",
+           "blog post on the topic")
+      ),
+      strong( 
+      span("Created by "),
+      a("Dean Attali", href = "http://deanattali.com"),
+      HTML("&bull;"),
+      span("Code"),
+      a("on GitHub", href = "https://github.com/daattali/shiny-server/tree/master/mimic-google-form"),
+      HTML("&bull;"),
+      a("More apps", href = "http://daattali.com/shiny/"), "by Dean")
     ),
     
     fluidRow(
