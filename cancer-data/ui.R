@@ -8,6 +8,7 @@ library(shinyjs)
 
 fluidPage(
   useShinyjs(),
+  title = "Cancer data in the United States",
   
 	# add custom JS and CSS
 	singleton(
@@ -19,10 +20,11 @@ fluidPage(
 	
 	# enclose the header in its own section to style it nicer
 	div(id = "headerSection",
-		titlePanel("Cancer data in the United States"),
+		h1("Cancer data in the United States"),
 	
 		# author info
 		span(
+                  style = "font-size: 1.2em",
 			span("Created by "),
 			a("Dean Attali", href = "http://deanattali.com"),
 			HTML("&bull;"),
@@ -46,7 +48,7 @@ fluidPage(
 		# sidebar - filters for the data
 		sidebarLayout(
 			sidebarPanel(
-				h3("Filter data"),
+				h3("Filter data", style = "margin-top: 0;"),
 
 				# show all the cancers or just specific types?
 				selectInput(
