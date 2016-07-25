@@ -30,6 +30,8 @@ fluidPage(
 			HTML("&bull;"),
 			span("Code"),
 			a("on GitHub", href = "https://github.com/daattali/shiny-server/tree/master/cancer-data"),
+                        HTML("&bull;"),
+                        a("More apps", href = "http://daattali.com/shiny/"), "by Dean",
 			br(),
 			
 			span("November 21, 2014")
