@@ -2,11 +2,29 @@ body {
   background-color: #fafafa;
 }
 
-#titlePanel {
+#header {
   text-align: center;
-  font-size: 40px;
-  margin: 10px 0 -10px;
-  font-weight: bold;
+  color: #fdfdfd;
+  text-shadow: 0 0 1px #000;
+  padding: 30px 0 45px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 -30px 20px;
+  background: url('header.jpg');
+}
+
+#title {
+  font-size: 5em;
+  text-shadow: 0 0 5px #000;
+  margin-bottom: 5px
+}
+
+#subsubtitle {
+  font-size: 1.3em;
+}
+
+#subsubtitle a {
+  color: #fdfdfd;
+  text-decoration: underline;
 }
 
 .well {

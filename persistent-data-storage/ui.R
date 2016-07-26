@@ -14,10 +14,25 @@ shinyUI(fluidPage(
   title = "Persistent data storage with Shiny",
   shinyjs::useShinyjs(),
   tags$head(includeCSS(file.path("www", "app.css"))),
-  
-  div(
-    id = "titlePanel",
-    "Persistent data storage with Shiny"
+  tags$a(
+    href="https://github.com/daattali/shiny-server/tree/master/persistent-data-storage",
+    tags$img(style="position: absolute; top: 0; right: 0; border: 0;",
+             src="github-orange-right.png",
+             alt="Fork me on GitHub")
+  ),
+  div(id = "header",
+      div(id = "title",
+          "Persistent data storage with Shiny"
+      ),
+      div(id = "subsubtitle",
+          "Created by",
+          tags$a(href = "http://deanattali.com/", "Dean Attali"),
+          HTML("&bull;"),
+          tags$a(href = "http://deanattali.com/blog/shiny-persistent-data-storage/", "Tutorial"),
+          "on storing data in Shiny",
+          HTML("&bull;"),
+          tags$a(href = "http://daattali.com/shiny/", "More apps"), "by Dean"
+      )
   ),
   
   # Select storage type and show a description about it
