@@ -21,16 +21,16 @@
       text-decoration: underline;
     }
     #titleBar {
-	  background: #fff;
-	  text-align: center;
-	  padding-bottom: 20px;
-	  border-bottom: 1px solid #ddd;
+      background: #fff;
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
     }
     #title {
       color: #666;
-	  margin: 0;
-	  padding: 22px 0 10px;
-	  font-size: 60px;
+      margin: 0;
+      padding: 22px 0 10px;
+      font-size: 60px;
     }
     #links {
       font-size: 20px;
@@ -43,52 +43,52 @@
       margin-right: auto;
 	  text-align: center;
     }
-	#shinyapps-big {
-	  display: inline-block;
-	}
-	#shinyapps-big .shinyapp {
-	  color: #444;
-	  border-radius: 5px;
-	  border: 1px solid #ccc;
-	  width: 300px;
-	  float: left;
-	  margin-top: 20px;
-	  margin-left: 20px;
-  	  background: #fafafa;
-	  vertical-align: top;
-	  transition: all 250ms;
-	}
-	#shinyapps-big .shinyapp:hover {
+    #shinyapps-big {
+      display: inline-block;
+    }
+    #shinyapps-big .shinyapp {
+      color: #444;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 300px;
+      float: left;
+      margin-top: 20px;
+      margin-left: 20px;
+        background: #fafafa;
+      vertical-align: top;
+      transition: all 250ms;
+    }
+    #shinyapps-big .shinyapp:hover {
       box-shadow: 0 3px 7px #aaa;
       border-color: #888;
       background: #fff;
-	}
-	#shinyapps-big .shinyapp .apptitle {
-	  text-align: center;
-	  padding: 10px;
-	  border-bottom: 4px double #aaa;
-	  font-weight: bold;
-	  border-radius: 5px 5px 0 0;
-	  cursor: pointer;
-	  font-size: 1.5em;
-	}
-	#shinyapps-big .shinyapp .appimg {
-	  width: 100%;
-	  cursor: pointer;
-	}
-	#shinyapps-big .applink {
-	  color: inherit;
-	  text-decoration: none !important;
-	}
-	#shinyapps-big .shinyapp .appdesc {
-	  text-align: left;
-	  padding: 10px;
-	  border-top: 4px double #aaa;
-	  margin-top: -4px;
-	  font-size: 15px;
-	  line-height: 1.3em;
-	  border-radius: 0 0 5px 5px;
-	}
+    }
+    #shinyapps-big .shinyapp .apptitle {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 4px double #aaa;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+    #shinyapps-big .shinyapp .appimg {
+      width: 100%;
+      cursor: pointer;
+    }
+    #shinyapps-big .applink {
+      color: inherit;
+      text-decoration: none !important;
+    }
+    #shinyapps-big .shinyapp .appdesc {
+      text-align: left;
+      padding: 10px;
+      border-top: 4px double #aaa;
+      margin-top: -4px;
+      font-size: 15px;
+      line-height: 1.3em;
+      border-radius: 0 0 5px 5px;
+    }
     @media only screen and (min-width: 980px) { 
       #content {
       	max-width: 980px;
@@ -147,10 +147,10 @@
       text-align: left;
       margin-top: 70px;
     }	
-	#otherlinks {
-	  text-align: left;
-	  margin-top: 70px;
-	}
+    #otherlinks {
+      text-align: left;
+      margin-top: 70px;
+    }
 	
     .shiny-apps li {
       margin-bottom: 8px;
@@ -161,177 +161,177 @@
 <body>
   <div id="titleBar">
     <h1 id="title">Dean Attali's Shiny Server</h1>
-	<div id="links">
-	  <div class="link"><a href="http://deanattali.com">Who is Dean Attali?</a></div>
-	  <div class="link"><a href="https://www.paypal.me/daattali/20">Support my work</a> or <strong><a href="http://deanattali.com/contact">Hire me!</a></strong></div>
-          <div class="link"><a href="https://github.com/daattali/shiny-server">Code for this website is on GitHub</a></div>
-	</div>
+	  <div id="links">
+	    <div class="link"><a href="http://deanattali.com">Who is Dean Attali?</a></div>
+	    <div class="link"><a href="https://www.paypal.me/daattali/20">Support my work</a> or <strong><a href="http://deanattali.com/contact">Hire me!</a></strong></div>
+      <div class="link"><a href="https://github.com/daattali/shiny-server">Code for this website is on GitHub</a></div>
+	  </div>
   </div>
   
   <div id="content">
     <div id="shinyapps-big">
-	
-                <div class="shinyapp">
-                  <a class="applink" href="./timevis-demo/">
-                        <div class="apptitle">
-                          timevis
-                        </div>
-                        <img class="appimg" src="./img/timevis-demo.png" />
-                  </a>
-                  <div class="appdesc">
-                        <a href="https://github.com/daattali/timevis">timevis</a> is an R package I built that lets you create interactive timeline visualizations in R. 
-                  </div>
-                </div>
 
-                <div class="shinyapp">
-                  <a class="applink" href="./lightsout/">
-                        <div class="apptitle">
-                          Lights Out game
-                        </div>
-                        <img class="appimg" src="./img/lightsout.png" />
-                  </a>
-                  <div class="appdesc">
-                        Lights Out is a fun brain-teasing puzzle game. I wrote an R implementation of the game in the package <a href="https://github.com/daattali/lightsout">lightsout</a>, and you can play the R (Shiny) version of the game <a href="./lightsout/">here</a>.
-                  </div>
-                </div>
-
-	
-		<div class="shinyapp">
-		  <a class="applink" href="./shinyjs-demo/">
-			<div class="apptitle">
-			  shinyjs demo
-			</div>
-			<img class="appimg" src="./img/shinyjs.png" />
-		  </a>
-		  <div class="appdesc">
-			<a href="https://github.com/daattali/shinyjs">shinyjs</a> is an R package I built that makes it easy to perform common JavaScript operations in Shiny apps. This demo allows you to experiment with different shinyjs functions
-		  </div>
-		</div>	
-
-		<div class="shinyapp">
-		  <a class="applink" href="./colourInput/">
-			<div class="apptitle">
-			  colourInput
-			</div>
-			<img class="appimg" src="./img/colourinput.png" />
-		  </a>
-		  <div class="appdesc">
-			Demo of using the colourInput input control (available from <a href="https://github.com/daattali/shinyjs">shinyjs</a>) in Shiny apps to allow users to select colours.
-		  </div>
-		</div>	
-
-                <div class="shinyapp">
-                  <a class="applink" href="./ddpcr/">
-                        <div class="apptitle">
-                          Digital droplet PCR analysis
-                        </div>
-                        <img class="appimg" src="./img/ddpcr.png" />
-                  </a>
-                  <div class="appdesc">
-                        Analyze and visualize droplet digital PCR data (part of the <a href="https://github.com/daattali/ddpcr">ddpcr package</a>). Part of my masters thesis. Manuscript available on <a href="http://f1000research.com/articles/5-1411/v1">F1000Research</a>.
-                  </div>
-                </div>
-
-
-		<div class="shinyapp">
-		  <a class="applink" href="./ggExtra-ggMarginal-demo/">
-			<div class="apptitle">
-			  ggExtra::ggMarginal() demo
-			</div>
-			<img class="appimg" src="./img/ggmarginal.png" />
-		  </a>
-		  <div class="appdesc">
-			Demo of how my package <a href="https://github.com/daattali/ggExtra">ggExtra</a> can be used to add marginal plots to ggplot2.
-		  </div>
-		</div>
-    
-		<div class="shinyapp">
-		  <a class="applink" href="./persistent-data-storage/">
-			<div class="apptitle">
-			  Persistent data storage with Shiny
-			</div>
-			<img class="appimg" src="./img/persistent.png" />
-		  </a>
-		  <div class="appdesc">
-			Supplement to my <a href="http://deanattali.com/blog/shiny-persistent-data-storage/">blog post</a> that shows how to store and retrieve data in Shiny apps.
-		  </div>
-		</div>	
-
-    <div class="shinyapp">
-      <a class="applink" href="./cfl/">
-        <div class="apptitle">
-          Impact Replays
+      <div class="shinyapp">
+        <a class="applink" href="./timevis-demo/">
+              <div class="apptitle">
+                timevis
+              </div>
+              <img class="appimg" src="./img/timevis-demo.png" />
+        </a>
+        <div class="appdesc">
+              <a href="https://github.com/daattali/timevis">timevis</a> is an R package I built that lets you create interactive timeline visualizations in R. 
         </div>
-        <img class="appimg" src="./img/cfl.png" />
-      </a>
-      <div class="appdesc">
-        An app I wrote that won third place nationally at a CFL (Canadian Football) hackathon. The app allows you to relive the exciting moments of any CFL game.
       </div>
-    </div>
 
-		<div class="shinyapp">
-		  <a class="applink" href="./mimic-google-form/">
-			<div class="apptitle">
-			  Mimicking a Google Form with a Shiny app
-			</div>
-			<img class="appimg" src="./img/mimic.png" />
-		  </a>
-		  <div class="appdesc">
-			Supplement to my <a href="http://deanattali.com/2015/06/14/mimicking-google-form-shiny/">blog post</a> that shows how to create forms and save/load submissions with shiny.
-		  </div>
-		</div>	
+      <div class="shinyapp">
+        <a class="applink" href="./lightsout/">
+              <div class="apptitle">
+                Lights Out game
+              </div>
+              <img class="appimg" src="./img/lightsout.png" />
+        </a>
+        <div class="appdesc">
+              Lights Out is a fun brain-teasing puzzle game. I wrote an R implementation of the game in the package <a href="https://github.com/daattali/lightsout">lightsout</a>, and you can play the R (Shiny) version of the game <a href="./lightsout/">here</a>.
+        </div>
+      </div>
 
-		<div class="shinyapp">
-		  <a class="applink" href="./cancer-data/">
-			<div class="apptitle">
-			  Cancer data
-			</div>
-			<img class="appimg" src="./img/cancer.png" />
-		  </a>
-		  <div class="appdesc">
-			Interactively explore data about cancer incidences/deaths in the US
-		  </div>
-		</div>
 
-		<div class="shinyapp">
-		  <a class="applink" href="./bingo/">
-			<div class="apptitle">
-			  Bingo card generator
-			</div>
-			<img class="appimg" src="./img/bingo.png" />
-		  </a>
-		  <div class="appdesc">
-        The name says it all - a simple app that lets you generate bingo cards
-		  </div>
-		</div>	    
+      <div class="shinyapp">
+        <a class="applink" href="./shinyjs-demo/">
+        <div class="apptitle">
+          shinyjs demo
+        </div>
+        <img class="appimg" src="./img/shinyjs.png" />
+        </a>
+        <div class="appdesc">
+        <a href="https://github.com/daattali/shinyjs">shinyjs</a> is an R package I built that makes it easy to perform common JavaScript operations in Shiny apps. This demo allows you to experiment with different shinyjs functions
+        </div>
+      </div>	
 
-		<div class="shinyapp">
-		  <a class="applink" href="./rbloggers-twitter/">
-			<div class="apptitle">
-			  Analyzing R-Bloggers' posts via Twitter
-			</div>
-			<img class="appimg" src="./img/rbloggers.png" />
-		  </a>
-		  <div class="appdesc">
-			Supplement to my <a href="http://deanattali.com/2015/05/17/analyzing-rbloggers-posts-via-twitter/">blog post</a> that explores the success of all Rbloggers posts on Twitter.
-		  </div>
-		</div>			
+      <div class="shinyapp">
+        <a class="applink" href="./colourInput/">
+        <div class="apptitle">
+          colourInput
+        </div>
+        <img class="appimg" src="./img/colourinput.png" />
+        </a>
+        <div class="appdesc">
+        Demo of using the colourInput input control (available from <a href="https://github.com/daattali/shinyjs">shinyjs</a>) in Shiny apps to allow users to select colours.
+        </div>
+      </div>	
 
-		<div class="shinyapp">
-		  <a class="applink" href="./bcl/">
-			<div class="apptitle">
-			  BC Liquor Store prices
-			</div>
-			<img class="appimg" src="./img/bcl.png" />
-		  </a>
-		  <div class="appdesc">
-			Simple app that is built as part of a <a href="http://deanattali.com/blog/building-shiny-apps-tutorial">Shiny tutorial</a> I've written. The app lets you find what to get from the liquor store based on filters you choose.
-		  </div>
-		</div>	
+      <div class="shinyapp">
+        <a class="applink" href="./ddpcr/">
+              <div class="apptitle">
+                Digital droplet PCR analysis
+              </div>
+              <img class="appimg" src="./img/ddpcr.png" />
+        </a>
+        <div class="appdesc">
+              Analyze and visualize droplet digital PCR data (part of the <a href="https://github.com/daattali/ddpcr">ddpcr package</a>). Part of my masters thesis. Manuscript available on <a href="http://f1000research.com/articles/5-1411/v1">F1000Research</a>.
+        </div>
+      </div>
+
+
+      <div class="shinyapp">
+        <a class="applink" href="./ggExtra-ggMarginal-demo/">
+        <div class="apptitle">
+          ggExtra::ggMarginal() demo
+        </div>
+        <img class="appimg" src="./img/ggmarginal.png" />
+        </a>
+        <div class="appdesc">
+        Demo of how my package <a href="https://github.com/daattali/ggExtra">ggExtra</a> can be used to add marginal plots to ggplot2.
+        </div>
+      </div>
+      
+      <div class="shinyapp">
+        <a class="applink" href="./persistent-data-storage/">
+        <div class="apptitle">
+          Persistent data storage with Shiny
+        </div>
+        <img class="appimg" src="./img/persistent.png" />
+        </a>
+        <div class="appdesc">
+        Supplement to my <a href="http://deanattali.com/blog/shiny-persistent-data-storage/">blog post</a> that shows how to store and retrieve data in Shiny apps.
+        </div>
+      </div>	
+
+      <div class="shinyapp">
+        <a class="applink" href="./cfl/">
+          <div class="apptitle">
+            Impact Replays
+          </div>
+          <img class="appimg" src="./img/cfl.png" />
+        </a>
+        <div class="appdesc">
+          An app I wrote that won third place nationally at a CFL (Canadian Football) hackathon. The app allows you to relive the exciting moments of any CFL game.
+        </div>
+      </div>
+
+      <div class="shinyapp">
+        <a class="applink" href="./mimic-google-form/">
+        <div class="apptitle">
+          Mimicking a Google Form with a Shiny app
+        </div>
+        <img class="appimg" src="./img/mimic.png" />
+        </a>
+        <div class="appdesc">
+        Supplement to my <a href="http://deanattali.com/2015/06/14/mimicking-google-form-shiny/">blog post</a> that shows how to create forms and save/load submissions with shiny.
+        </div>
+      </div>	
+
+      <div class="shinyapp">
+        <a class="applink" href="./cancer-data/">
+        <div class="apptitle">
+          Cancer data
+        </div>
+        <img class="appimg" src="./img/cancer.png" />
+        </a>
+        <div class="appdesc">
+        Interactively explore data about cancer incidences/deaths in the US
+        </div>
+      </div>
+
+      <div class="shinyapp">
+        <a class="applink" href="./bingo/">
+        <div class="apptitle">
+          Bingo card generator
+        </div>
+        <img class="appimg" src="./img/bingo.png" />
+        </a>
+        <div class="appdesc">
+          The name says it all - a simple app that lets you generate bingo cards
+        </div>
+      </div>	    
+
+      <div class="shinyapp">
+        <a class="applink" href="./rbloggers-twitter/">
+        <div class="apptitle">
+          Analyzing R-Bloggers' posts via Twitter
+        </div>
+        <img class="appimg" src="./img/rbloggers.png" />
+        </a>
+        <div class="appdesc">
+        Supplement to my <a href="http://deanattali.com/2015/05/17/analyzing-rbloggers-posts-via-twitter/">blog post</a> that explores the success of all Rbloggers posts on Twitter.
+        </div>
+      </div>			
+
+      <div class="shinyapp">
+        <a class="applink" href="./bcl/">
+        <div class="apptitle">
+          BC Liquor Store prices
+        </div>
+        <img class="appimg" src="./img/bcl.png" />
+        </a>
+        <div class="appdesc">
+        Simple app that is built as part of a <a href="http://deanattali.com/blog/building-shiny-apps-tutorial">Shiny tutorial</a> I've written. The app lets you find what to get from the liquor store based on filters you choose.
+        </div>
+      </div>	
 		
     </div>
 	
-	<div style="clear:both;"></div>
+    <div style="clear:both;"></div>
 	
     <div id="tutorial-shiny-server">
       <a href= "http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/">Tutorial for hosting a similar Shiny server website yourself</a>	
@@ -339,15 +339,16 @@
 
     <div id="otherlinks">
       <h3>Other Shiny apps that exist here</h3>
-	  <ul class="shiny-apps">
+	    <ul class="shiny-apps">
         <li><strong><a href="./shinyjs-basic/">shinyjs basic app</a></strong> - a very basic Shiny app showing how <a href="https://github.com/daattali/shinyjs">shinyjs</a> functions can be used together in a simply app.</li> 
         <li><strong><a href="./request-basic-info/">Basic info form</a></strong> - a simple form that we used in a course to collect some basic information about students (example of how to use forms to collect data from a shiny app).</li>
         <li><strong><a href="./peer-review/">Peer review form</a></strong> - a marking sheet that we used in a course for students to peer-review other students' assignments (example of how to use forms to collect data from a shiny app).</li>
         <li><strong><a href="./loading-screen/">Loading screen demo</a></strong> - an example of how to implement a simple loading screen in a Shiny app.</li>	
+      </ul>
       <br/><a href="http://daattali.com">&lt; Back to daattali.com</a>
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <a href="http://daattali.com:4151">admin</a>	
-	</div>
+	  </div>
   </div>
 </body>
 </html>
