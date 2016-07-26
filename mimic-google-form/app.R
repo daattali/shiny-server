@@ -92,6 +92,12 @@ shinyApp(
       tags$meta(name = "twitter:description", content = share$description),
       tags$meta(name = "twitter:image", content = share$image)
     ),
+    tags$a(
+      href="https://github.com/daattali/shiny-server/tree/master/mimic-google-form",
+      tags$img(style="position: absolute; top: 0; right: 0; border: 0;",
+               src="github-green-right.png",
+               alt="Fork me on GitHub")
+    ),
     div(id = "header",
       h1("Mimicking a Google Form with a Shiny app"),
       h4("This app is a supplement to my",
