@@ -7,11 +7,13 @@ body {
 }
 
 #headerSection {
-	background: #333;
 	margin: -25px 0 20px;
 	color: #FAFAFA;
 	padding: 15px 20px;
 	box-shadow: 0 0 7px #000;
+        background: #232526;
+        background: -webkit-linear-gradient(to left, #232526 , #414345);
+        background: linear-gradient(to left, #232526 , #414345);
 } 
 
 #headerSection a {

@@ -2,6 +2,15 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 
+# YOU CAN IGNORE THIS: metadata for when sharing the app on facebook/twitter
+share <- list(
+  title = "BC Liquor Store prices",
+  url = "http://daattali.com/shiny/bcl/",
+  image = "http://daattali.com/shiny/img/bcl.png",
+  description = "Had a long day? This app will help you find the right drink for tonight!",
+  twitter_user = "daattali"
+)
+
 # load the data (retrieve and clean raw data if this is the first time)
 filename <- file.path("data", "bcl-data.csv")
 if (file.exists(filename)) {
@@ -27,6 +36,24 @@ if (file.exists(filename)) {
 }
 
 ui <- fluidPage(
+  # Ignore this tags$head section, just adding metadata for facebook/twitter sharing
+  tags$head(
+    tags$link(rel = "shortcut icon", type="image/x-icon", href="http://daattali.com/shiny/img/favicon.ico"),
+    # Facebook OpenGraph tags
+    tags$meta(property = "og:title", content = share$title),
+    tags$meta(property = "og:type", content = "website"),
+    tags$meta(property = "og:url", content = share$url),
+    tags$meta(property = "og:image", content = share$image),
+    tags$meta(property = "og:description", content = share$description),
+    
+    # Twitter summary cards
+    tags$meta(name = "twitter:card", content = "summary"),
+    tags$meta(name = "twitter:site", content = paste0("@", share$twitter_user)),
+    tags$meta(name = "twitter:creator", content = paste0("@", share$twitter_user)),
+    tags$meta(name = "twitter:title", content = share$title),
+    tags$meta(name = "twitter:description", content = share$description),
+    tags$meta(name = "twitter:image", content = share$image)
+  ),
   titlePanel("BC Liquor Store prices"),
   sidebarLayout(
     sidebarPanel(

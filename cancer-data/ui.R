@@ -6,17 +6,41 @@
 library(shiny)
 library(shinyjs)
 
+share <- list(
+  title = "Cancer data in the United States",
+  url = "http://daattali.com/shiny/cancer-data/",
+  image = "http://daattali.com/shiny/img/cancer.png",
+  description = "Explore trends in cancer incidence over the years and compare different cancer types.",
+  twitter_user = "daattali"
+)
+
 fluidPage(
   useShinyjs(),
   title = "Cancer data in the United States",
   
-	# add custom JS and CSS
-	singleton(
-		tags$head(includeScript(file.path('www', 'message-handler.js')),
-							includeScript(file.path('www', 'helper-script.js')),
-							includeCSS(file.path('www', 'style.css'))
-		)
-	),
+  # add custom JS and CSS
+  singleton(
+    tags$head(
+      includeScript(file.path('www', 'message-handler.js')),
+      includeScript(file.path('www', 'helper-script.js')),
+      includeCSS(file.path('www', 'style.css')),
+      tags$link(rel = "shortcut icon", type="image/x-icon", href="http://daattali.com/shiny/img/favicon.ico"),
+      # Facebook OpenGraph tags
+      tags$meta(property = "og:title", content = share$title),
+      tags$meta(property = "og:type", content = "website"),
+      tags$meta(property = "og:url", content = share$url),
+      tags$meta(property = "og:image", content = share$image),
+      tags$meta(property = "og:description", content = share$description),
+    
+      # Twitter summary cards
+      tags$meta(name = "twitter:card", content = "summary"),
+      tags$meta(name = "twitter:site", content = paste0("@", share$twitter_user)),
+      tags$meta(name = "twitter:creator", content = paste0("@", share$twitter_user)),
+      tags$meta(name = "twitter:title", content = share$title),
+      tags$meta(name = "twitter:description", content = share$description),
+      tags$meta(name = "twitter:image", content = share$image)
+    )
+  ),
 	
 	# enclose the header in its own section to style it nicer
 	div(id = "headerSection",
