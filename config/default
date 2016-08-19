@@ -20,7 +20,6 @@
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server ipv6only=on;
-
 	root /usr/share/nginx/html;
 	index index.html index.htm;
 
@@ -40,7 +39,9 @@ server {
 	}
 
 	location /rstudio/ {
-		proxy_pass http://127.0.0.1:8787/;
+                rewrite ^/rstudio/(.*)$ /$1 break;
+		proxy_pass http://localhost:8787;
+                proxy_redirect http://localhost:8787/ $scheme://$host/rstudio/;
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection "upgrade";
