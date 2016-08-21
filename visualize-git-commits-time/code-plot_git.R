@@ -2,7 +2,7 @@
 #' 
 #' IMPORTANT: Before calling this function, you must use the `create_git_log_file()` function
 #' to generate the data file that is used to make the plot!
-#' You also need to have 'dplyr', 'git2r', 'ggplot2', 'ggExtra' and 'scales' packages installed.
+#' You also need to have 'foreach', dplyr', 'git2r', 'ggplot2', 'ggExtra' and 'scales' packages installed.
 #' 
 #' @param logfile The output from `create_git_log_file()`. This is a file containing all the 
 #'   necessary info for generating the activity plots. You must call `create_git_log_file()`
@@ -31,10 +31,6 @@ plot_git_commits <- function(logfile, num_months = 6,
   
   plot_type <- match.arg(plot_type)
   
-  if (!file.exists(logfile)) {
-    stop("The git log file was not found", call. = FALSE)
-  }
-  
   if (!is.numeric(num_months) || num_months < 1) {
     stop("num_months must be a positive integer", call. = FALSE)
   }
@@ -60,15 +56,13 @@ plot_git_commits <- function(logfile, num_months = 6,
 #' @param username The GitHub username of the user you want to track their commits
 #' @param repos A list of all the GitHub repos you want to analyze (all these repos will get cloned locally
 #' @param dir The directory where all the git repos will 
-#' @param logfile THe name of the data file (the file with all the git lgs
 create_git_log_file <- function(
   username = "daattali",
   repos = c("beautiful-jekyll",
             "shinyjs",
             "timevis",
             "jennybc/bingo"),
-  dir ="git_repos_vis",
-  logfile = "project-logs.csv") {
+  dir ="git_repos_vis") {
   
   if (!requireNamespace("git2r", quietly = TRUE)) {
     stop("You need to install the 'git2r' package", call. = FALSE)
@@ -78,68 +72,51 @@ create_git_log_file <- function(
     dir.create(dir, recursive = TRUE, showWarnings = FALSE)
   }
   
-  dir <- normalizePath(dir)
+  #dir <- normalizePath(dir)
+  
+  require(foreach)
   
   # clone all the git repos into one folder
-  for (repo in repos) {
+  logdata <- foreach(repo = repos, .combine = 'rbind') %do% {
     if (!grepl("/", repo)) {
       repo <- paste0(username, "/", repo)
     }
     repo_name <- sub(".*/(.*)", replacement = "\\1", repo)
-    if (dir.exists(file.path(dir, repo_name))) {
+    dir_repo <- file.path(dir, repo_name)
+    if (dir.exists(dir_repo)) {
       message("Note: Not cloning ", repo, " because a folder with that name already exists")
-      next
     } else {
       message("Cloning ", repo) 
+      repo_url <- paste0("https://github.com/", repo)
+      git2r::clone(url = repo_url, local_path = dir_repo, 
+                   progress = FALSE)
     }
-    repo_url <- paste0("https://github.com/", repo)
-    git2r::clone(url = repo_url, local_path = file.path(dir, repo_name), progress = FALSE)
+    repo <- git2r::repository(dir_repo)
+    commits <- git2r::commits(repo)
+    dates <- sapply(commits, function(commit) as(commit@author@when, "POSIXct"))
+    data.frame(repo = rep(repo_name, length(commits)), timestamp = dates)
   }
   
-  # create a shell script to get the commit logs of all repos
-  sh_script_log <- paste0('cd ', dir, ' 
-                          TMPLOG=$(pwd)/tmp-project-log.csv; 
-                          echo "project,timestamp" > $TMPLOG;
-                          for repo in *; do 
-                          if [ -d $repo ] && [ -d $repo/.git ]; then
-                          cd $repo;
-                          git log --author="', username, '" --pretty=format:"$repo,%ai" >> $TMPLOG;
-                          echo "" >> $TMPLOG;
-                          cd ..;
-                          fi
-                          done
-                          grep . $TMPLOG > ', logfile, ';
-                          rm $TMPLOG;')
-  system(sh_script_log)
-  
-  logfile <- file.path(dir, logfile)
-  if (file.exists(logfile)) {
-    message("Created logfile at ", normalizePath(logfile))
-  } else {
-    stop("The git log file could not get creatd for some reason", call. = FALSE)
-  }
-  
-  return(logfile)
+  return(logdata)
 }
 
 #--- Helper functions ---#
 
-get_git_df <- function(logfile, num_months) {
+get_git_df <- function(gitdata, num_months) {
   library(dplyr)
   
-  date_cutoff <- as.POSIXct(seq(Sys.Date(), length = 2, by = paste0(-num_months, " months"))[2])
-  gitdata <- read.csv(logfile) %>%
-    dplyr::filter(project != "") %>%
-    dplyr::mutate(ts = as.POSIXct(timestamp)) %>%
+  date_cutoff <- as.POSIXct(seq(Sys.Date(), length = 2, 
+                                by = paste0(-num_months, " months"))[2])
+  
+  gitdata %<>%
+    dplyr::mutate(ts = as.POSIXct(timestamp, origin = "1970-01-01", tz = "UTC")) %>%
     dplyr::filter(ts >= date_cutoff) %>%
     dplyr::mutate(
-      repo = as.factor(project),
       date = as.Date(ts),
-      time_short = strftime(ts, format = "%H:%M"),
-      time = as.POSIXct(time_short, format = "%H:%M", tz = "PST"),
-      weekday = factor(weekdays(date),
-                       levels = c("Monday", "Tuesday", "Wednesday",
-                                  "Thursday", "Friday", "Saturday", "Sunday"))
+      time_short = format(ts, format = "%H:%M"),
+      time = as.POSIXct(time_short, format = "%H:%M", tz = "UTC"),
+      weekday = factor(weekdays(date), 
+                       levels = weekdays(as.Date("2000-01-03") + 0:6))
     ) %>%
     dplyr::select(repo, date, time_short, time, weekday) %>%
     droplevels()
