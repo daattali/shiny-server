@@ -7,3 +7,12 @@ These are some of the configuration files that are used on the server
 
 
 Instructions for setting up SSL: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04
+
+Setting up firewall:
+
+```
+sudo ufw allow ssh
+sudo ufw allow https
+sudo ufw allow ftp
+sudo ufw enable
+```
