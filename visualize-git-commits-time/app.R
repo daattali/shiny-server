@@ -98,7 +98,7 @@ ui <- fixedPage(
             p(class = "custom-inst",
               "In order to use your own data, you must run the following function (", code("create_git_log_file()"), ") yourself",
               "and upload the resulting file. I cannot do it from this app because it's slow and will",
-              "fill up my server with too much junk. Note this code will only work on Linux."),
+              "fill up my server with too much junk."),
             pre(id = "custom-script", includeText("code-create_git_log_file.R"))
           )
         )
@@ -107,7 +107,7 @@ ui <- fixedPage(
         "Code",
         p("If you want to replicate these kinds of plots, here is the exact R code that was used to",
           "generate all the plots. The two functions you need to call are", code("create_git_log_file()"), "to",
-          "generate the data file, and then", code("plot_git_commits()"), "to visualize the data. Note this code will only work on Linux.",
+          "generate the data file, and then", code("plot_git_commits()"), "to visualize the data.",
           br(), br(),
           "I know this code isn't amazing and could be optimized some more (I especially don't love that",
           "I'm using system calls) but I wanted to get this out ASAP because I have real projects I need to work on :)"),
