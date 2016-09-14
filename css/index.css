@@ -1,0 +1,213 @@
+body, html {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #1E6DE8;
+}
+a:hover {
+  text-decoration: underline;
+}
+#more-apps-by-dean {
+  display: none;
+}
+#titleBar {
+  background: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+#header {
+  background: #fff;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+#title {
+  color: #444;
+  margin: 0;
+  padding: 22px 0 0;
+  font-size: 60px;
+}
+#links {
+  font-size: 20px;
+}
+#links .link {
+  margin: 3px 0;
+}
+#aboutme-section {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#aboutme-section .about-text {
+  text-align: left;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 5px;
+}
+#aboutme-section .about-text .fa {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+#below-apps {
+  font-family: Arial;
+  letter-spacing: -1px;
+  font-size: 25px;
+  color: #bbb;
+}
+#contact-me-btn {
+  margin-bottom: 30px;
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#shinyapps-big {
+  display: inline-block;
+}
+#shinyapps-big .shinyapp {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  vertical-align: top;
+  transition: all 250ms;
+}
+#shinyapps-big .shinyapp:hover {
+  box-shadow: 0 0 4px #aaa;
+  border-color: #222;
+}
+#shinyapps-big .shinyapp .apptitle {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 4px double #aaa;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+#shinyapps-big .shinyapp .appimg {
+  width: 100%;
+  cursor: pointer;
+}
+#shinyapps-big .applink {
+  color: inherit;
+  text-decoration: none !important;
+}
+#shinyapps-big .shinyapp .appdesc {
+  text-align: left;
+  padding: 10px;
+  border-top: 4px double #aaa;
+  margin-top: -4px;
+  font-size: 15px;
+  line-height: 1.3em;
+  border-radius: 0 0 5px 5px;
+}
+@media only screen and (min-width: 980px) { 
+  #content {
+    max-width: 980px;
+  }
+  #shinyapps-big .shinyapp:nth-child(3n+1) {
+    clear: left;
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 980px) { 
+  #content {
+    max-width: 650px;
+  }
+  #shinyapps-big .shinyapp:nth-child(2n+1) {
+    clear: left;
+    margin-left: 0;
+  }
+}    
+@media only screen and (max-width: 650px) and (min-width: 510px) { 
+  #content {
+    max-width: 500px;
+  }
+  #shinyapps-big .shinyapp:nth-child(2n+1) {
+    clear: left;
+    margin-left: 0;
+  }
+  #shinyapps-big .shinyapp {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 230px;
+  }
+}    
+@media only screen and (max-width: 510px) { 
+  #content {
+    max-width: 350px;
+  }
+  #shinyapps-big .shinyapp:nth-child(1n+1) {
+    clear: left;
+    margin-left: 0;
+  }
+}        
+@media only screen and (max-width: 750px) {
+  #title {
+    font-size: 40px;
+    padding: 20px 0 10px;
+  }
+  #titleBar {
+    padding-bottom: 15px;
+  }
+  #links {
+    font-size: 17px;
+  }
+}
+
+#tutorial-shiny-server {
+  text-align: left;
+  margin-top: 70px;
+}	
+#otherlinks {
+  text-align: left;
+  margin-top: 70px;
+}
+    
+.shiny-apps li {
+  margin-bottom: 8px;
+}
+
+.actionbtn {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px 17px;
+  border: 1px solid #2e1c95;
+  border-radius: 8px;
+  background: #5635ff;
+  background: linear-gradient(to bottom, #5635ff, #2e1c95);
+  text-shadow: #1b1158 1px 1px 1px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.actionbtn:hover,
+.actionbtn:focus {
+  border: 1px solid #3621af;
+  background: #6740ff;
+  background: linear-gradient(to bottom, #6740ff, #3722b3);
+}
+.actionbtn:active {
+  background: #2e1c95;
+  background: linear-gradient(to bottom, #2e1c95, #2e1c95);
+}
+
