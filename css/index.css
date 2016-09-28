@@ -1,6 +1,10 @@
+html.in-iframe #learn-more-link {
+  display: none;
+}
+
 body, html {
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
   color: #333;
   margin: 0;
   padding: 0;
@@ -15,23 +19,18 @@ a:hover {
 #more-apps-by-dean {
   display: none;
 }
-#titleBar {
-  background: #fff;
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-}
 #header {
   background: #fff;
   text-align: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
 }
 #title {
-  color: #444;
   margin: 0;
-  padding: 22px 0 0;
-  font-size: 60px;
+  padding-top: 30px;
+  margin-bottom: -10px;
+  font-size: 70px;
+}
+#subtitle  {
+  font-size: 45px;
 }
 #links {
   font-size: 20px;
@@ -40,15 +39,14 @@ a:hover {
   margin: 3px 0;
 }
 #aboutme-section {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 20px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: 910px;
+  margin: 30px auto 45px;
+  font-size: 21px;
 }
 #aboutme-section .about-text {
   text-align: left;
   position: relative;
-  padding-left: 40px;
+  padding-left: 45px;
   padding-right: 5px;
 }
 #aboutme-section .about-text .fa {
@@ -56,112 +54,186 @@ a:hover {
   left: 5px;
   top: 5px;
 }
-#below-apps {
-  font-family: Arial;
-  letter-spacing: -1px;
-  font-size: 25px;
-  color: #bbb;
+#clients-link {
+  cursor: pointer;
+  color: #1E6DE8;
 }
-#contact-me-btn {
-  margin-bottom: 30px;
+#clients-link:hover {
+  text-decoration: underline;
 }
 
-#content {
-  margin-left: auto;
-  margin-right: auto;
+#services-out {
+  background: #f5f5f5;
   text-align: center;
+  border: 1px solid #eee;
+  border-width: 1px 0;
+}
+#services {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #615d6d;
+  text-shadow: 0 1px #fff;
+}
+#services-title {
+  font-size: 34px;
+}
+#services .service {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 5px;
+  font-size: 20px;
+  width: 350px;
+  cursor: default;
+  vertical-align: top;
+}
+#services .service:hover {
+  background: #fafafa;
+}
+#contact-me-btn {
+  margin: 8px 0;
+}
+#contact-me-btn .fa {
+  width: 21px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+#portfolio-out {
+  background: #fff;
+  text-align: center;
+}
+#portfolio {
+  margin: 0 auto;
+  padding-top: 40px;
+}
+#portfolio-title {
+  color: #615d6d;
+  font-size: 34px;
+  margin-bottom: 45px;
+  cursor: pointer;
+  display: inline-block;
+}
+#portfolio-title:hover {
+  color: #999;
 }
 #shinyapps-big {
   display: inline-block;
 }
 #shinyapps-big .shinyapp {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #444;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 300px;
+  color: #3d3852;
+  width: 350px;
   float: left;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-left: 40px;
   background: #fff;
   vertical-align: top;
   transition: all 250ms;
+  text-align: left;
+  box-shadow: 0 0 20px #ccc;
+  border: 1px solid #eee;
 }
 #shinyapps-big .shinyapp:hover {
-  box-shadow: 0 0 4px #aaa;
-  border-color: #222;
+  box-shadow: 0 0 20px #666;
+  background: #f2f6f9;
+  border-color: #aaa;
 }
 #shinyapps-big .shinyapp .apptitle {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 4px double #aaa;
   font-weight: bold;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
   width: 100%;
   cursor: pointer;
+  border-bottom: 1px solid #eee;
 }
 #shinyapps-big .applink {
   color: inherit;
+  display: block;
   text-decoration: none !important;
 }
 #shinyapps-big .shinyapp .appdesc {
-  text-align: left;
-  padding: 10px;
-  border-top: 4px double #aaa;
-  margin-top: -4px;
-  font-size: 15px;
-  line-height: 1.3em;
-  border-radius: 0 0 5px 5px;
+  padding: 0 15px 15px;
+  font-size: 16px;
+  line-height: 1.5em;
 }
-@media only screen and (min-width: 980px) { 
-  #content {
-    max-width: 980px;
+@media only screen and (min-width: 1180px) { 
+  #portfolio {
+    width: 1150px;
   }
   #shinyapps-big .shinyapp:nth-child(3n+1) {
     clear: left;
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 980px) { 
-  #content {
+@media only screen and (max-width: 1179px) { 
+  #portfolio {
+    max-width: 980px;
+  }
+  #shinyapps-big .shinyapp:nth-child(3n+1) {
+    clear: left;
+    margin-left: 0;
+  }
+  #shinyapps-big .shinyapp {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  #services .service {
+    width: 300px;
+    padding: 10px 5px;
+  }
+}
+@media only screen and (max-width: 999px) { 
+  #portfolio {
     max-width: 650px;
   }
   #shinyapps-big .shinyapp:nth-child(2n+1) {
     clear: left;
     margin-left: 0;
   }
-}    
-@media only screen and (max-width: 650px) and (min-width: 510px) { 
-  #content {
-    max-width: 500px;
+  #services .service {
+    width: 180px;
+    font-size: 18px;
   }
-  #shinyapps-big .shinyapp:nth-child(2n+1) {
+}    
+@media only screen and (max-width: 650px) { 
+  #shinyapps-big .shinyapp {
     clear: left;
     margin-left: 0;
   }
   #shinyapps-big .shinyapp {
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 230px;
+    margin-bottom: 20px;
+    width: 300px;
   }
-}    
-@media only screen and (max-width: 510px) { 
-  #content {
-    max-width: 350px;
+  #services .service {
+    display: block;
+    width: auto;
+    margin: 0 auto;
   }
-  #shinyapps-big .shinyapp:nth-child(1n+1) {
-    clear: left;
-    margin-left: 0;
+  #services {
+    padding: 15px 0;
   }
-}        
+  #portfolio-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 751px) {
+  #title {
+    margin-left: -175px;
+    margin-bottom: -30px;
+  }
+  #subtitle {
+    margin-left: 175px;
+  }
+}
 @media only screen and (max-width: 750px) {
   #title {
     font-size: 40px;
-    padding: 20px 0 10px;
+  }
+  #subtitle {
+    font-size: 30px;
   }
   #titleBar {
     padding-bottom: 15px;
@@ -171,43 +243,107 @@ a:hover {
   }
 }
 
-#tutorial-shiny-server {
-  text-align: left;
-  margin-top: 70px;
-}	
-#otherlinks {
-  text-align: left;
-  margin-top: 70px;
+.section-sep {
+  border: 0 none;
+  max-width: 700px;
+  height: 2px;
+  background: #eee;
+  margin: 20px auto 0;
 }
-    
-.shiny-apps li {
-  margin-bottom: 8px;
+#qualifications .section-sep {
+  background: #DDD;
+  margin: 30px auto;
+}
+#services-out,
+#clients-out,
+#qualifications-out,
+#more-links-out {
+  color: #615d6d;
+  text-align: center;
+  padding: 40px 0;
+}
+#clients,
+#qualifications,
+#more-links {
+  max-width: 910px;
+  margin: 0 auto;
+}
+#clients-title,
+#qualifications-title,
+#more-links-title {
+  text-align: center;
+  font-size: 34px;
+}
+#clients-subtitle {
+  font-size: 22px;
+  margin: 20px 0 30px;
+}
+#clients a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}
+#clients img {
+  width: 200px;
+}
+#clients a:hover {
+  box-shadow: 0 0 10px #aaa;
+}
+
+#qualifications-out {
+  background: #f5f5f5;
+  text-shadow: 0 1px #fff;
+}
+#qualifications-title {
+  color: #615d6d;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#qualifications-list {
+  text-align: left;
+}
+#qualifications .more-info {
+  font-size: 21px;
+  margin-bottom: 20px;
+  position: relative;
+  line-height: 1.5em;
+  padding-left: 35px;
+}
+#qualifications .more-info .fa {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+#more-links {
+  text-align: left;
+}
+#more-links .shiny-apps {
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 30px;
+}
+#more-links .shiny-apps div {
+  margin-bottom: 15px;
 }
 
 .actionbtn {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
+  font-family: arial;
   text-align: center;
   vertical-align: middle;
-  padding: 7px 17px;
-  border: 1px solid #2e1c95;
-  border-radius: 8px;
-  background: #5635ff;
-  background: linear-gradient(to bottom, #5635ff, #2e1c95);
-  text-shadow: #1b1158 1px 1px 1px;
+  padding: 15px 30px;
+  border-radius: 2px;
+  background: #4fc949;
   font-size: 20px;
   color: #fff;
   text-decoration: none !important;
   cursor: pointer;
+  letter-spacing: 1px;
+  text-shadow: none;
 }
 .actionbtn:hover,
 .actionbtn:focus {
-  border: 1px solid #3621af;
-  background: #6740ff;
-  background: linear-gradient(to bottom, #6740ff, #3722b3);
+  background: #3fb13a;
 }
-.actionbtn:active {
-  background: #2e1c95;
-  background: linear-gradient(to bottom, #2e1c95, #2e1c95);
-}
-
