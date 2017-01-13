@@ -197,10 +197,10 @@ a:hover {
 #clients a {
   display: inline-block;
   vertical-align: middle;
-  padding: 10px;
+  padding: 15px;
 }
 #clients img {
-  width: 200px;
+  height: 80px;
 }
 #clients a:hover {
   box-shadow: 0 0 10px #aaa;
