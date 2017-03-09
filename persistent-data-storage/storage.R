@@ -5,7 +5,7 @@ library(RMySQL)
 library(RSQLite)
 library(mongolite)
 library(googlesheets)
-library(RAmazonS3)
+library(aws.s3)
 library(rdrop2)
 
 DB_NAME <- "shinyapps"
@@ -174,6 +174,7 @@ load_data_gsheets <- function() {
 #### Method 6: Dropbox ####
 
 save_data_dropbox <- function(data) {
+  # Create a temporary file to hold the data
   data <- t(data)
   file_name <- paste0(
     paste(
@@ -185,6 +186,8 @@ save_data_dropbox <- function(data) {
   )  
   file_path <- file.path(tempdir(), file_name)
   write.csv(data ,file_path, row.names = FALSE, quote = TRUE)
+
+  # Upload the file to dropbox
   drop_upload(file_path, dest = TABLE_NAME)
 }
 load_data_dropbox <- function() {
@@ -205,6 +208,8 @@ load_data_dropbox <- function() {
 s3_bucket_name <- TABLE_NAME %>% gsub("_", "-", .)
 
 save_data_s3 <- function(data) {
+  # Create a temporary file to hold the data
+  data <- t(data)
   file_name <- paste0(
     paste(
       get_time_human(),
@@ -213,18 +218,19 @@ save_data_s3 <- function(data) {
     ),
     ".csv"
   )
-  RAmazonS3::addFile(I(paste0(paste(names(data), collapse = ","),
-                              "\n",
-                              paste(data, collapse = ","))),
-                     s3_bucket_name, file_name, virtual = TRUE)
+  file_path <- file.path(tempdir(), file_name)
+  write.csv(data ,file_path, row.names = FALSE, quote = TRUE)
+
+  # Upload the file to S3
+  put_object(file = file_path, object = file_name, bucket = s3_bucket_name)
 }
 load_data_s3 <- function() {
-  files <- listBucket(s3_bucket_name)$Key %>% as.character
-  data <-
-    lapply(files, function(x) {
-      raw <- getFile(s3_bucket_name, x, virtual = TRUE)
-      read.csv(text = raw, stringsAsFactors = FALSE)
-    }) %>%
+  file_names <- get_bucket_df(s3_bucket_name)[["Key"]]
+  data <- lapply(file_names, function(x) {
+    object <- get_object(x, s3_bucket_name)
+    object_data <- readBin(object, "character")
+    read.csv(text = object_data, stringsAsFactors = FALSE)
+  }) %>%
     do.call(rbind, .)
 
   data
