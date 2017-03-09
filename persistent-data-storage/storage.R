@@ -162,6 +162,8 @@ load_data_mongodb <- function() {
 
 #### Method 5: Google Sheets ####
 
+gs_auth(token = "googlesheets_token.rds")
+
 save_data_gsheets <- function(data) {
   TABLE_NAME %>% gs_title %>% gs_add_row(input = data)
 }
