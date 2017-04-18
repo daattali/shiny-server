@@ -93,7 +93,8 @@ a:hover {
   background: #fafafa;
 }
 #contact-me-btn {
-  margin: 8px 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 #contact-me-btn .fa {
   width: 21px;
@@ -295,6 +296,8 @@ a:hover {
 
 .actionbtn {
   display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: arial;
   text-align: center;
   vertical-align: middle;
@@ -311,6 +314,16 @@ a:hover {
 .actionbtn:hover,
 .actionbtn:focus {
   background: #3fb13a;
+}
+#schedule-btn {
+  background: #ea9920;
+}
+#schedule-btn:hover,
+#schedule-btn:focus {
+  background: #ca8219;
+}
+#btns-sep {
+  display: none;
 }
 
 #shinyapps-big[data-columns]::before {
