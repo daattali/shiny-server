@@ -135,7 +135,7 @@ create_git_log_file <- function(
 
 get_git_df <- function(logfile, num_months) {
   library(dplyr)
-  
+
   date_cutoff <- as.POSIXct(seq(Sys.Date(), length = 2, by = paste0(-num_months, " months"))[2])
   gitdata <- read.csv(logfile, stringsAsFactors = FALSE) %>%
     dplyr::filter(project != "") %>%
@@ -199,7 +199,7 @@ plot_git_commits_helper <- function(gitdata, plot_type = "plotly", x = "repo", y
     p <- p +
       scale_y_datetime(labels = scales::date_format("%H:00"), date_breaks = "2 hour")
   }
-  
+
   if (plot_type == "plotly") {
     if (!requireNamespace("plotly", quietly = TRUE)) {
       stop("You need to install the 'plotly' package", call. = FALSE)

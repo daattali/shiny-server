@@ -77,7 +77,7 @@ ui <- fixedPage(
               "Upload my own data file" = "custom"
             )),
             sliderInput("num_months", "Number of recent months to display data", 
-                        1, 120, 12, 1, ticks = FALSE)
+                        1, 120, 24, 1, ticks = FALSE)
           ),
           div(
             conditionalPanel("input.user == 'custom'",
