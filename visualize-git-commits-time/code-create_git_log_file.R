@@ -85,11 +85,11 @@ create_git_log_file <- function(
 #   logfile = "dean-projects.csv"
 # )
 
-# create_git_log_file(
-#   username = "hadley",
-#   repos = c("tidyverse/forcats", "r-lib/pkgdown", "tidyverse/haven", "hadley/adv-r", "tidyverse/purrr", "tidyverse/dplyr", "tidyverse/dbplyr","tidyverse/tidyr", "tidyverse/ggplot2", "tidyverse/stringr", "r-lib/fs", "r-lib/testthat", "r-lib/usethis", "r-lib/devtools", "rstudio/ggvis", "r-lib/httr", "tidyverse/tibble","hadley/lazyeval", "hadley/multidplyr", "tidyverse/readr", "hadley/plyr", "hadley/rvest", "r-lib/xml2"),
-#   logfile = "hadley-projects.csv"
-# )
+create_git_log_file(
+  username = c("Hadley Wickham", "hadley"),
+  repos = c("tidyverse/forcats", "r-lib/pkgdown", "tidyverse/haven", "hadley/adv-r", "tidyverse/purrr", "tidyverse/dplyr", "tidyverse/dbplyr","tidyverse/tidyr", "tidyverse/ggplot2", "tidyverse/stringr", "r-lib/fs", "r-lib/testthat", "r-lib/usethis", "r-lib/devtools", "rstudio/ggvis", "r-lib/httr", "tidyverse/tibble","hadley/lazyeval", "hadley/multidplyr", "tidyverse/readr", "hadley/plyr", "hadley/rvest", "r-lib/xml2"),
+  logfile = "hadley-projects.csv"
+)
 
 # create_git_log_file(
 #   username = c("Jenny Bryan", "jennybc"),
@@ -98,13 +98,13 @@ create_git_log_file <- function(
 # )
 
 # create_git_log_file(
-#   username = c("yihui"),
+#   username = c("Yihui Xie", "yihui"),
 #   repos = c("rstudio/leaflet", "rstudio/bookdown", "yihui/formatR", "yihui/knitr", "yihui/knitr-examples", "yihui/r-ninja", "rstudio/rmarkdown", "rstudio/shiny", "rstudio/DT", "yihui/servr", "rstudio/bookdown"),
 #   logfile = "yihui-projects.csv"
 # )
 
 # create_git_log_file(
-#   username = c("jimhester"),
+#   username = c("Jim Hester", "jimhester"),
 #   repos = c("r-lib/devtools", "r-lib/fs", "r-lib/covr", "tidyverse/glue", "jimhester/lintr", "jimhester/gmailr", "r-lib/xml2", "r-dbi/odbc", "tidyverse/readr", "jimhester/knitrBootstrap", "travis-ci/travis-build"),
 #   logfile = "jim-projects.csv"
 # )
