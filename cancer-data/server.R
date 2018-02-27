@@ -21,7 +21,6 @@ cDatRaw <- getData()
 plotCols <- getPlotCols()
 
 shinyServer(function(input, output, session) {
-	
 	# =========== BUILDING THE INPUTS ===========
 	
 	# Create select box input for choosing cancer types

@@ -14,6 +14,7 @@ share <- list(
   twitter_user = "daattali"
 )
 
+function(request) {
 fluidPage(
   useShinyjs(),
   title = "Cancer data in the United States",
@@ -76,7 +77,6 @@ fluidPage(
 	
 	# all content goes here, and is hidden initially until the page fully loads
 	hidden(div(id = "allContent",
-		
 		# sidebar - filters for the data
 		sidebarLayout(
 			sidebarPanel(
@@ -115,14 +115,15 @@ fluidPage(
 				actionButton("updateBtn", "Update Data"),
 				
 				# footer - where the data was obtained
-				br(), br(), br(), br(),
+				br(), br(),
 				p("Data was obtained from ",
 					a("the United States CDC",
 						href = "http://wonder.cdc.gov/cancer.html",
 						target = "_blank")),
 				a(img(src = "us-cdc.png", alt = "US CDC"),
 					href = "http://wonder.cdc.gov/cancer.html",
-					target = "_blank")
+					target = "_blank"),
+                                br(), br(), bookmarkButton()
 			),
 			
 			# main panel has two tabs - one to show the data, one to plot it
@@ -161,3 +162,4 @@ fluidPage(
 		)
 	))
 )
+}

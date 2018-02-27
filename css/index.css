@@ -92,11 +92,11 @@ a:hover {
 #services .service:hover {
   background: #fafafa;
 }
-#contact-me-btn {
+.contact-me-btn {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-#contact-me-btn .fa {
+.contact-me-btn .fa {
   width: 21px;
   display: inline-block;
   vertical-align: top;
@@ -165,7 +165,7 @@ a:hover {
   max-width: 700px;
   height: 2px;
   background: #eee;
-  margin: 20px auto 0;
+  margin: 30px auto;
 }
 #qualifications .section-sep {
   background: #DDD;
@@ -315,14 +315,14 @@ a:hover {
 .actionbtn:focus {
   background: #3fb13a;
 }
-#schedule-btn {
+.schedule-btn {
   background: #ea9920;
 }
-#schedule-btn:hover,
-#schedule-btn:focus {
+.schedule-btn:hover,
+.schedule-btn:focus {
   background: #ca8219;
 }
-#btns-sep {
+.btns-sep {
   display: none;
 }
 

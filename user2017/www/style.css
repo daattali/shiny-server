@@ -1,0 +1,164 @@
+body {
+  background: #fafafa;
+}
+
+#header {
+  text-align: center;
+  color: #fdfdfd;
+  text-shadow: 0 0 1px #000;
+  padding: 65px 0 100px;
+  background: #2845ad;
+  background: linear-gradient(to left, #2845ad, #02adff);
+  border-bottom: 1px solid #ddd;
+  margin: 0 -15px;
+}
+
+#title {
+  font-size: 5em;
+  text-shadow: 0 0 5px #000;
+}
+
+#subtitle {
+  font-size: 2em;
+  margin-top: -5px;
+}
+
+#subsubtitle {
+  font-size: 1.3em;
+}
+
+#subsubtitle a {
+  color: #fdfdfd;
+  text-decoration: underline;
+}
+
+#mainnav {
+  margin-top: -50px;
+  margin-left: -25px;
+}
+
+#mainnav>li.active>a,
+#mainnav>li.active>a:hover,
+#mainnav>li.active>a:focus {
+  border-top: 2px solid orange;
+  border-bottom: 0;
+  font-weight: bold;
+  background: #fff;
+}
+
+#mainnav>li {
+  margin-left: 10px;
+}
+
+#mainnav>li>a {
+  background-color: #f0f0f0;
+  border: 1px solid #dddddd;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.2em;
+}
+
+#mainnav>li>a:hover,
+#mainnav>li>a:focus {
+  background-color: #dddddd;
+}
+
+#mainnav>li>a i.fa {
+  margin-right: 2px;
+}
+.tab-content>.tab-pane {
+  padding-top: 40px;
+}
+
+.vis-item .vis-item-overflow {
+  overflow: visible;
+}
+
+@media only screen and (max-width: 979px) {
+  #header {
+    padding: 35px 0 65px;
+  }
+  #title {
+    font-size: 4em;
+  }
+  #subtitle {
+    font-size: 2em;
+  }
+  #subsubtitle {
+    font-size: 1.2em;
+  }
+  #mainnav {
+    margin: -35px 0 0 -10px;
+  }
+  #mainnav>li {
+    margin-left: 5px;
+  }
+  #mainnav>li>a {
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #header {
+    padding: 35px 0 65px;
+  }
+  #title {
+    font-size: 3.5em;
+  }
+  #subtitle {
+    font-size: 1.7em;
+  }
+  #subsubtitle {
+    font-size: 1.2em;
+  }
+  #mainnav {
+    margin: -35px -15px 0;
+  }
+  #mainnav>li {
+    margin: 0;
+    float: none;
+  }
+  #mainnav>li>a {
+    margin-right: 0;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1.1em;
+    border-radius: 0;
+    border-bottom-width: 0;
+  }
+  #mainnav>li.active>a,
+  #mainnav>li.active>a:hover,
+  #mainnav>li.active>a:focus {
+    border-top: 0 none;
+    background: #fafafa;
+  }
+}
+
+.checkbox-inline {
+  width: 200px;
+  margin: 5px 0 0 0 !important;
+}
+#hover_info hr {
+  margin: 7px 0;
+  border-top-color: #888;
+}
+
+.col-settings {
+  padding: 30px;
+  font-size: 16px;
+}
+.col-tabs {
+  background: #fff;
+  border-left: 1px solid #eee;
+}
+#table {
+  overflow-x: auto;
+}
+#scatterplot {
+  margin-bottom: 150px;
+}

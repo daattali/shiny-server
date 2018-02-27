@@ -43,6 +43,12 @@
       </p>
 
       <p class="about-text">
+        <span class="fa fa-users about-icon fa-fw" aria-hidden="true"></span>
+        Creator of <a href="https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny-case-studies">"Shiny Case Studies"</a> course — an interactive, online video course
+      </p>
+
+
+      <p class="about-text">
         <span class="fa fa-microphone about-icon fa-fw" aria-hidden="true"></span>
         Invited speaker at the <strong>Shiny Developer Conference</strong> hosted by RStudio - <a href="https://www.rstudio.com/resources/videos/shinyjs/">30 min talk</a>
       </p>
@@ -64,21 +70,45 @@
       <div id="services-title">Services Include</div>
       <div id="services-list">
         <span class="service">Building Shiny apps and analytics dashboards</span>
-        <span class="service">Offering expert advice, guidance, and teachings with Shiny</span>
-        <span class="service">Code review and optimization of Shiny apps</span>
+        <span class="service">Offering expert advice and training with Shiny or R</span>
+        <span class="service">Code review and optimization of Shiny apps or R scripts</span>
       </div>
-      <a href="http://deanattali.com/contact" id="contact-me-btn" class="actionbtn">
+      <a href="http://deanattali.com/contact" class="contact-me-btn actionbtn">
         <span class="fa fa-envelope-o" aria-hidden="true"></span>
         CONTACT DEAN
       </a>
-      <div id="btns-sep"></div>
-      <a href="https://calendly.com/attalitech/meeting" id="schedule-btn" class="actionbtn">
+      <div class="btns-sep"></div>
+      <a href="https://calendly.com/attalitech/meeting" class="schedule-btn actionbtn">
         <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
         SCHEDULE MEETING
       </a>
     </div>
   </div>
 
+  <div id="clients-out">
+    <div id="clients">
+      <div id="clients-title">Clients</div>
+      <div id="clients-subtitle">Clients range from startups to universities to government agencies and large businesses</div>
+      <div id="client-logos">
+        <a href="https://www.imperial.ac.uk/" title="Imperial College London"><img src="img/logos/ICL.png" /></a>
+        <a href="http://dartmouth.edu/" title="Dartmouth College"><img src="img/logos/dartmouth.png" /></a>
+        <a href="http://www.ubc.ca/" title="University of British Columbia"><img src="img/logos/UBC.png" /></a>
+        <a href="http://www.bcstats.gov.bc.ca/" title="BC Stats (BC Government)"><img src="img/logos/BCStats.png" /></a>
+        <a href="https://morningconsultintelligence.com/" title="Morning Consult Intelligence"><img src="img/logos/MCI.png" style="height: 30px;"/></a>
+        <a href="https://uoregon.edu/" title="University of Oregon"><img src="img/logos/uoregon.png" /></a>
+        <a href="http://www.protolife.com/" title="ProtoLife"><img src="img/logos/protolife.png" style="height: 50px;"/></a>
+        <a href="https://www.certara.com/" title="Certara"><img src="img/logos/certara.png" style="height: 50px;" /></a>
+        <a href="http://www.resourcex.net/" title="ResourceX Priority Based Budgeting"><img src="img/logos/resourcex.png" /></a> 
+        <a href="http://neontherapeutics.com/" title="Neon Therapeutics"><img src="img/logos/neon.png" /></a>
+        <a href="http://www.repidemicsconsortium.org/" title="R Epidemics Consortium"><img src="img/logos/RECON.png" /></a>
+        <a href="https://newsroom.ly/" title="Newsroom.ly"><img src="img/logos/newsroomly.png" /></a>
+        <a href="http://www.navgathi.com/" title="Navgathi Marine Design & Constructions"><img src="img/logos/navgathi.png" /></a>
+      </div>
+    </div>
+  </div>
+
+  <hr id="clients-sep" class="section-sep"/>
+  
   <div id="portfolio-out">
     <div id="portfolio">
       <div id="portfolio-title">
@@ -143,7 +173,19 @@
               Cancer data
             </div>
             <div class="appdesc">
-              Interactively explore data about cancer incidences/deaths in the US
+              Interactively explore data about cancer incidences/deaths in the US.
+            </div>
+          </a>
+        </div>
+
+        <div class="shinyapp">
+          <a class="applink" href="./user2017/">
+            <img class="appimg" src="./img/user2017.png" />
+            <div class="apptitle">
+              useR! 2017 Attendance
+            </div>
+            <div class="appdesc">
+              Interactively explore the attendees' schedules from the useR! 2017 Conference.
             </div>
           </a>
         </div>
@@ -161,13 +203,13 @@
         </div>
 
         <div class="shinyapp">
-          <a class="applink" href="./visualize-git-commits-time/">
-            <img class="appimg" src="./img/visualize-git-commits.png" />
+          <a class="applink" href="./shinyalert-demo/">
+            <img class="appimg" src="./img/shinyalert.png" />
             <div class="apptitle">
-              Visualizing when I'm most productive during the day
+              shinyalert demo
             </div>
             <div class="appdesc">
-              Analyzing my (and others') git activity to see our work, or coding, patterns.
+              'shinyalert' is an R package I built for easily creating pretty popup messages (modals) in Shiny.
             </div>
           </a>
         </div>
@@ -192,6 +234,18 @@
             </div>
             <div class="appdesc">
               'shinyjs' is an R package I built that makes it easy to perform common JavaScript operations in Shiny apps. This demo allows you to experiment with different 'shinyjs' functions.
+            </div>
+          </a>
+        </div>
+
+        <div class="shinyapp">
+          <a class="applink" href="./visualize-git-commits-time/">
+            <img class="appimg" src="./img/visualize-git-commits.png" />
+            <div class="apptitle">
+              Visualizing when I'm most productive during the day
+            </div>
+            <div class="appdesc">
+              Analyzing my (and others') git activity to see our work, or coding, patterns.
             </div>
           </a>
         </div>
@@ -260,30 +314,6 @@
     </div>
   </div>
 
-  <hr id="clients-sep" class="section-sep"/>
-
-  <div id="clients-out">
-    <div id="clients">
-      <div id="clients-title">Clients</div>
-      <div id="clients-subtitle">Clients range from startups to universities to government agencies and large businesses</div>
-      <div id="client-logos">
-        <a href="https://www.imperial.ac.uk/" title="Imperial College London"><img src="img/logos/ICL.png" /></a>
-        <a href="http://dartmouth.edu/" title="Dartmouth College"><img src="img/logos/dartmouth.png" /></a>
-        <a href="http://www.ubc.ca/" title="University of British Columbia"><img src="img/logos/UBC.png" /></a>
-        <a href="http://www.bcstats.gov.bc.ca/" title="BC Stats (BC Government)"><img src="img/logos/BCStats.png" /></a>
-        <a href="https://morningconsultintelligence.com/" title="Morning Consult Intelligence"><img src="img/logos/MCI.png" style="height: 30px;"/></a>
-        <a href="https://uoregon.edu/" title="University of Oregon"><img src="img/logos/uoregon.png" /></a>
-        <a href="http://www.protolife.com/" title="ProtoLife"><img src="img/logos/protolife.png" style="height: 50px;"/></a>
-        <a href="https://www.certara.com/" title="Certara"><img src="img/logos/certara.png" style="height: 50px;" /></a>
-        <a href="http://www.resourcex.net/" title="ResourceX Priority Based Budgeting"><img src="img/logos/resourcex.png" /></a> 
-        <a href="http://neontherapeutics.com/" title="Neon Therapeutics"><img src="img/logos/neon.png" /></a>
-        <a href="http://www.repidemicsconsortium.org/" title="R Epidemics Consortium"><img src="img/logos/RECON.png" /></a>
-        <a href="https://newsroom.ly/" title="Newsroom.ly"><img src="img/logos/newsroomly.png" /></a>
-        <a href="http://www.navgathi.com/" title="Navgathi Marine Design & Constructions"><img src="img/logos/navgathi.png" /></a>
-      </div>
-    </div>
-  </div>
-
   <div id="qualifications-out">
     <div id="qualifications">
       <div id="qualifications-title">Credentials</div>
@@ -293,8 +323,12 @@
           MSc in Bioinformatics (UBC) &bull; Bachelor of Computer Science (University of Waterloo)
         </div>
         <div class="more-info">
+          <span class="fa fa-group fa-fw" aria-hidden="true"></span>
+          Taught the 'Intermediate Shiny' 2-day workshop at RStudio Conference 2018
+        </div>
+        <div class="more-info">
           <span class="fa fa-podcast fa-fw" aria-hidden="true"></span>
-          Interviewed for <a href="https://www.r-podcast.org/posts/the-r-podcast-episode-16-interview-with-dean-attali.html">Episode 16 of The R-Podcast</a>
+          Interviewed for <a href="https://www.r-podcast.org/posts/the-r-podcast-episode-16-interview-with-dean-attali.html">Episode 16</a> and <a href="https://r-podcast.org/episode/019-talking-shiny-at-rstudio-conf-with-barbara-borges-and-dean-attali/">Episode 19</a> of The R-Podcast</a>
         </div>
         <div class="more-info">
           <span class="fa fa-pencil fa-fw" aria-hidden="true"></span>
@@ -310,18 +344,20 @@
         </div>
         <div class="more-info">
           <span class="fa fa-book fa-fw" aria-hidden="true"></span>
-          Official book reviewer of the book <a href="https://www.packtpub.com/application-development/learning-shiny">"Learning Shiny"</a> (I personally do not recommend it...)
+          Official book reviewer of the book <a href="https://www.packtpub.com/application-development/learning-shiny">"Learning Shiny"</a> (not an endorsement)
         </div>
 
-        <hr class="section-sep"/>
+        <!--<hr class="section-sep"/>-->
 
+        <!--
         <div class="more-info">
           <span class="fa fa-info fa-fw" aria-hidden="true"></span>
           More information about my open source projects is available on <a href="http://deanattali.com/">my website</a>
         </div>
+        -->
         <div class="more-info">
           <span class="fa fa-info fa-fw" aria-hidden="true"></span>
-          Want to learn how to build Shiny apps? Learn using my <a href="http://deanattali.com/blog/building-shiny-apps-tutorial/">tutorial</a>, which several people have told me is "even better than the RStudio Shiny tutorial!"
+          Want to learn how to build Shiny apps? Learn using my <a href="http://deanattali.com/blog/building-shiny-apps-tutorial/">tutorial</a>, which many people have said is "even better than the RStudio Shiny tutorial"
         </div>
         <div class="more-info">
           <span class="fa fa-info fa-fw" aria-hidden="true"></span>
@@ -329,8 +365,20 @@
         </div>
       </div>
     </div>
+
+      <a href="http://deanattali.com/contact" class="contact-me-btn actionbtn">
+        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+        CONTACT DEAN
+      </a>
+      <div class="btns-sep"></div>
+      <a href="https://calendly.com/attalitech/meeting" class="schedule-btn actionbtn">
+        <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
+        SCHEDULE MEETING
+      </a>
+
   </div>
 
+    <!--
   <div id="more-links-out">
     <div id="more-links">
       <div id="more-links-title">More Shiny Apps Hosted Here</div>
@@ -347,6 +395,7 @@
       </div>
     </div>
   </div>
+    <-->
 
   <!-- AddThis plugin (floating social media sharing buttons on the left of each post) -->
   <!--
@@ -357,7 +406,7 @@
     // If deanattali.com asks for the page's height, return
     window.addEventListener("message", function(event) {
       // Ignore messages not coming from deanattali.com
-      if (event.origin !== "http://deanattali.com") {
+      if (event.origin !== "https://deanattali.com") {
         return;
       }
 

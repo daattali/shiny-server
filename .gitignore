@@ -5,6 +5,7 @@ shiny-server.Rproj
 .httr-oauth
 persistent-data-storage/responses/
 persistent-data-storage/googlesheets_token.rds
+dropbox_token.rds
 mimic-google-form/responses/
 *.sqlite
 request-basic-info/data/
@@ -14,3 +15,4 @@ restart.txt
 visualize-git-commits-time/data/*
 visualize-git-commits-time/analysis.html
 visualize-git-commits-time/www/analysis_files/*
+cgpcauth/

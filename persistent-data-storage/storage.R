@@ -175,6 +175,8 @@ load_data_gsheets <- function() {
 
 #### Method 6: Dropbox ####
 
+drop_auth(rdstoken = "dropbox_token.rds")
+
 save_data_dropbox <- function(data) {
   # Create a temporary file to hold the data
   data <- t(data)
@@ -190,11 +192,13 @@ save_data_dropbox <- function(data) {
   write.csv(data ,file_path, row.names = FALSE, quote = TRUE)
 
   # Upload the file to dropbox
-  drop_upload(file_path, dest = TABLE_NAME)
+  drop_upload(file_path, path = TABLE_NAME)
 }
 load_data_dropbox <- function() {
   files_info <- drop_dir(TABLE_NAME)
-  file_paths <- files_info$path
+  file_paths <- files_info$path_display
+  # Only take the last 20 because each file takes ~1 second to download
+  file_paths <- tail(file_paths, 20)
   data <-
     lapply(file_paths, drop_read_csv, stringsAsFactors = FALSE) %>%
     do.call(rbind, .)
