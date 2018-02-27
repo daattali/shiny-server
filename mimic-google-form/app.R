@@ -210,7 +210,8 @@ shinyApp(
         id = "adminPanel",
         h2("Previous responses (only visible to admins)"),
         downloadButton("downloadBtn", "Download responses"), br(), br(),
-        DT::dataTableOutput("responsesTable") 
+        DT::dataTableOutput("responsesTable"), br(),
+        "* There were over 2000 responses by Dec 4 2017, so all data prior to that date was deleted as a cleanup"
       )
     })
     
@@ -220,11 +221,15 @@ shinyApp(
     })    
     
     # Show the responses in the admin table
-    output$responsesTable <- DT::renderDataTable(
-      loadData(),
-      rownames = FALSE,
-      options = list(searching = FALSE, lengthChange = FALSE)
-    )
+    output$responsesTable <- DT::renderDataTable({
+      data <- loadData()
+      data$timestamp <- as.POSIXct(data$timestamp, origin="1970-01-01")
+      DT::datatable(
+        data,
+        rownames = FALSE,
+        options = list(searching = FALSE, lengthChange = FALSE)
+      )
+    })
     
     # Allow user to download responses
     output$downloadBtn <- downloadHandler(
