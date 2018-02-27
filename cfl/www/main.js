@@ -36,7 +36,7 @@ setline = function(pos, end_pos, is_home) {
 };
 
 playyoutube = function(youtube_info) {
-  $("#youtubeplayer").attr('src', 'https://www.youtube.com/v/' +
+  $("#youtubeplayer").attr('src', 'https://www.youtube.com/embed/' +
      youtube_info['videoId'] + '?start=' + youtube_info['startSeconds'] + '&end=' + youtube_info['endSeconds'] + '&autoplay=1');
   return;
   videonum++;

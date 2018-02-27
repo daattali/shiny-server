@@ -155,7 +155,7 @@ fluidPage(
   ),
   div(
     id = "footer",
-    "Created by",
+    "Created & Maintained by",
     a("Dean Attali", href = "http://deanattali.com"),
     HTML("&bull;"),
     "Team members: Tony Hui, Ogan Mancarci, Jonathan Ho",
