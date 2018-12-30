@@ -5,7 +5,7 @@
 # attendance preferences of conference attendees.
 # This code was written in a hurry while on a train, and it is far
 # from being "great and robust" scraping code, so beware trying to copy any of
-# thid code :)
+# this code :)
 
 library(rvest)
 

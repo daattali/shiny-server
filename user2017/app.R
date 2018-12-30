@@ -4,8 +4,8 @@ library(magrittr)
 
 share <- list(
   title = "useR! 2017 Attendance",
-  url = "http://daattali.com/shiny/user2017attendance",
-  image = "http://daattali.com/shiny/img/user2017attendance.png",
+  url = "https://daattali.com/shiny/user2017attendance",
+  image = "https://daattali.com/shiny/img/user2017attendance.png",
   description = "Explore the attendees' schedules from the useR! 2017 Conference",
   twitter_user = "daattali"
 )
@@ -30,7 +30,7 @@ ui <- fluidPage(
     tags$link(href = "style.css", rel = "stylesheet"),
 
     # Favicon
-    tags$link(rel = "shortcut icon", type="image/x-icon", href="http://daattali.com/shiny/img/favicon.ico"),
+    tags$link(rel = "shortcut icon", type="image/x-icon", href="https://daattali.com/shiny/img/favicon.ico"),
 
     # Facebook OpenGraph tags
     tags$meta(property = "og:title", content = share$title),
@@ -55,14 +55,14 @@ ui <- fluidPage(
           "Explore the attendees' schedules from the useR! 2017 Conference"),
       div(id = "subsubtitle",
           "By",
-          tags$a(href = "http://deanattali.com/", "Dean Attali"),
+          tags$a(href = "https://deanattali.com/", "Dean Attali"),
           HTML("&bull;"),
           "Code and data",
           tags$a(href = "https://github.com/daattali/user2017", "on GitHub"),
           HTML("&bull;"),
-          tags$a(href = "http://deanattali.com/colourpicker-user2017/", "My talk"),
+          tags$a(href = "https://deanattali.com/colourpicker-user2017/", "My talk"),
           HTML("&bull;"),
-          tags$a(href = "http://deanattali.com/blog/user2017/", "Blog post")
+          tags$a(href = "https://deanattali.com/blog/user2017/", "Blog post")
       )
   ),
   fluidRow(
