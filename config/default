@@ -27,7 +27,7 @@ server {
         ssl on;
         server_name daattali.com www.daattali.com;
 
-        ssl_certificate /etc/ssl/daattali_com.crt;
+        ssl_certificate /etc/ssl/cert_chain.crt;
         ssl_certificate_key /etc/ssl/daattali.com.key;
 
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -54,7 +54,7 @@ server {
 		# redirects /shiny/myapp to /shiny/myapp/
 		rewrite ^(/shiny/[^/]+)$ $1/ permanent;
 
-                sub_filter '</body>' '<a id="more-apps-by-dean" style="position: fixed;left: 0;bottom: 0;z-index: 99999;padding: 5px;background: rgba(0,0,0,0.8);color: white;font-size: 14px;" href="http://deanattali.com/shiny/">More apps by Dean</a></body>';
+                sub_filter '</body>' '<a id="more-apps-by-dean" style="position: fixed;right: 0;bottom: 0;z-index: 99999;padding: 5px;background: rgba(0,0,0,0.8);color: white;font-size: 14px;" href="http://deanattali.com/shiny/">More apps by Dean</a><style>#shiny-disconnected-overlay:before{content: "Your session has timed out.";text-align: center;font-size: 70px;background-color: #444;color:#fff;width:100%;position:absolute;padding:15px;top:50%;transform:translateY(-50%);}</style></body>';
                 sub_filter_once on;
 	}
 
@@ -66,6 +66,17 @@ server {
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection "upgrade";
 	}
+
+        location /shiny-admin/ {
+                rewrite ^/shiny-admin/(.*)$ /$1 break;
+                proxy_pass http://localhost:4151;
+                proxy_redirect / $scheme://$http_host/shiny-admin/;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection $connection_upgrade;
+                proxy_read_timeout 20d;
+                proxy_buffering off;
+        }
 
 	location / {
 		# First attempt to serve request as file, then
