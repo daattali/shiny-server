@@ -67,15 +67,11 @@ server {
                 proxy_set_header Connection "upgrade";
 	}
 
-        location /shiny-admin/ {
-                rewrite ^/shiny-admin/(.*)$ /$1 break;
-                proxy_pass http://localhost:4151;
-                proxy_redirect / $scheme://$http_host/shiny-admin/;
+        location /admin/ {
+                proxy_pass http://127.0.0.1:4151/;
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection $connection_upgrade;
-                proxy_read_timeout 20d;
-                proxy_buffering off;
+                proxy_set_header Connection "upgrade";
         }
 
 	location / {
