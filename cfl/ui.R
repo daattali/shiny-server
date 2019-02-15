@@ -9,7 +9,8 @@ allgames <- read.csv("data/cfl_games_trim.csv", stringsAsFactors = FALSE) %>%
 fluidPage(
   title = "Impact Replays",
   useShinyjs(),
-  extendShinyjs("www/shinyjs.js"),
+  extendShinyjs("www/shinyjs.js",
+                functions = c("setline", "newgame", "playyoutube")),
   includeScript("www/main.js"),
   includeCSS("www/style.css"),
   includeCSS("www/tony.css"),

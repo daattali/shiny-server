@@ -67,7 +67,7 @@ $().ready(function() {
   });
 
   $( "#welcome_list" ).on( "click", ".welcome_row", function(x){
-    Shiny.onInputChange("gamerowclick", $(this).data("gameinfo"));
+    Shiny.onInputChange("gamerowclick", [$(this).data("gameinfo"), Math.random()]);
   });
   
   videoId = 'pQ-TODedlzs';
