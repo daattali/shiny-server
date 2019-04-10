@@ -3,6 +3,7 @@
 #
 # This script scrapes data from the useR 2017 scheduling website to see the
 # attendance preferences of conference attendees.
+# There were 1,161 attendees in total, and 966 of them used the Sched app. 
 # This code was written in a hurry while on a train, and it is far
 # from being "great and robust" scraping code, so beware trying to copy any of
 # this code :)

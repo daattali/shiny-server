@@ -83,7 +83,8 @@ ui <- fluidPage(
       div(id = "aggregate-note",
           HTML("<strong>Note:</strong> when aggregating data, 'attendance' is the",
                "<strong>total</strong> attendance, while all other numeric",
-               "columns are the <strong>mean</strong> of the respective variable"))
+               "columns are the <strong>mean</strong> of the respective variable")),
+      downloadButton("download", "Download Data")
     ),
     column(
       9,
@@ -247,6 +248,13 @@ server <- function(input, output) {
   output$table <- DT::renderDataTable({
     talks_data_filtered()
   }, rownames = FALSE)
+
+  output$download <- downloadHandler(
+    filename = "user2017data.csv",
+    content = function(file) {
+      write.csv(talks_data_filtered(), file, row.names = FALSE)
+    }
+  )
 }
 
 shinyApp(ui, server)
