@@ -20,12 +20,12 @@ Note that all commit times are reported as PST timezone.
 
 ## **My work hours since first learning R**
 
-This plot shows the times of all my git commits since Sept 2013, colour-coded by git repo (aka project). The plot is fully interactive: you can zoom, move, or remove all observations from a specific repo by clicking on the repo name in the legend.
+This plot shows the times of all my git commits since Sept 2013, colour-coded by git repo (aka project).
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
 library(plotly)
-plot_git_commits(logfile = "data/dean-projects.csv", num_months = 100,
-                 plot_type = "plotly")
+plot_git_commits(logfile = "data/dean-projects.csv", date_begin = "2013-09-01",
+                 plot_type = "ggplot")
 ```
 
 September 2013 is when I first learned R in the beginning of my masters degree, and the project I was working on then ([statsTerrorismProject](https://github.com/daattali/statsTerrorismProject)) was my final project for STAT545.
@@ -40,11 +40,11 @@ After taking my introductory R course, I spent the next year on my other masters
 - There were a few days in July 2015 where I started coding at 7am! Nope, that's a lie, I was in Toronto that week so that's actually 10am as usual...
 - It's cool to see when I work on which projects. You can very clearly see the two-week effort on [timevis](https://github.com/daattali/timevis) in July 2016 for example
 
-## **My work hours in the past 6 months**
+## **My work hours in the past 6 months** (Feb-Aug 2016)
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
-plot_git_commits(logfile = "data/dean-projects.csv", num_months = 6,
-                     plot_type = "ggplot")
+plot_git_commits(logfile = "data/dean-projects.csv", date_begin = "2016-02-18",
+                 date_end = "2016-08-18", plot_type = "ggplot")
 ```
 
 #### **Observations**
@@ -60,8 +60,8 @@ It's interesting to see how my commits very closely relate to what's going on in
 Just for fun, I can use my [ggMarginal()](https://github.com/daattali/ggExtra) function to add marginal density plots, to make it more clear when most of my commits take place.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
-plot_git_commits(logfile = "data/dean-projects.csv", num_months = 6,
-                     plot_type = "density")
+plot_git_commits(logfile = "data/dean-projects.csv", date_begin = "2016-02-18",
+                 date_end = "2016-08-18", plot_type = "density")
 ```
 
 ## **How's my (ex) supervisor Jenny Bryan doing?**
@@ -71,8 +71,8 @@ After working with Jenny for a couple years, I learned that we have very compati
 With this graph we can see that our schedules really are very similar, although she is shifted 2 hours from me: I work 10am-4am, she works 8am-2am. What an early bird.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
-plot_git_commits(logfile = "data/jenny-projects.csv", num_months = 100,
-                     plot_type = "ggplot")
+plot_git_commits(logfile = "data/jenny-projects.csv", date_begin = "2010-01-01",
+                 plot_type = "ggplot")
 ```
 
 ## **And the grand finale: the R master Hadley**
@@ -82,8 +82,8 @@ No introduction needed, the name speaks for itself. (Note these are all PST time
 Just one thing I'd like to note: we've all heard "this is going to be the year of 'ggvis'!", yet it looks like 2013 was the year-est of 'ggvis' so far :)
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
-plot_git_commits(logfile = "data/hadley-projects.csv", num_months = 100,
-                     plot_type = "ggplot")
+plot_git_commits(logfile = "data/hadley-projects.csv", date_begin = "2010-01-01",
+                 plot_type = "ggplot")
 ```
 
 ## **Working on weekends**
@@ -91,13 +91,13 @@ plot_git_commits(logfile = "data/hadley-projects.csv", num_months = 100,
 If you look at day of the week, you'll see that weekends and weekdays are essentially the same to me.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
-plot_git_commits(logfile = "data/dean-projects.csv", num_months = 100,
-                     plot_type = "ggplot", x = "date", y = "weekday")
+plot_git_commits(logfile = "data/dean-projects.csv", date_begin = "2010-01-01",
+                 plot_type = "ggplot", x = "date", y = "weekday")
 ```
 
 But what's amazing is that if you look at Hadley, he seems to be such a good time manager that he manages to almost never work on weekends in the past 3 years, despite producing output at a speed of a dozen adults. That discipline of not working on weekends is commendable.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=12}
-plot_git_commits(logfile = "data/hadley-projects.csv", num_months = 100,
-                     plot_type = "ggplot", x = "date", y = "weekday")
+plot_git_commits(logfile = "data/hadley-projects.csv", date_begin = "2010-01-01",
+                 plot_type = "ggplot", x = "date", y = "weekday")
 ```

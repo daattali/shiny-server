@@ -59,6 +59,7 @@ ui <- fixedPage(
             tags$li(a(href="#working-on-weekends", "Working on weekends"))
           )
         ),
+        br(), actionButton("goToExplore2", "Interactively explore", class = "btn-success btn-lg center-block"), br(),
         includeHTML(path = "analysis.html")
       ), 
       tabPanel(
@@ -76,8 +77,8 @@ ui <- fixedPage(
               "====================" = "none",
               "Upload my own data file" = "custom"
             )),
-            sliderInput("num_months", "Number of recent months to display data", 
-                        1, 120, 24, 1, ticks = FALSE)
+            dateRangeInput("dates", "Display data between these dates",
+                           "2014-09-01", "2016-09-01", format = "M d, yyyy")
           ),
           div(
             conditionalPanel("input.user == 'custom'",
@@ -120,9 +121,9 @@ ui <- fixedPage(
 server <- function(input, output, session) {
   shinyjs::hide("loading-content", anim = TRUE, animType = "fade")
   
-  observeEvent(input$goToExplore, {
+  observeEvent(c(input$goToExplore, input$goToExplore2), {
     updateTabsetPanel(session, "mainNav", "explore")
-  })
+  }, ignoreInit = TRUE)
 
   values <- reactiveValues(logfile = NULL)
   
@@ -140,8 +141,8 @@ server <- function(input, output, session) {
   })
 
   output$plotly <- plotly::renderPlotly({
-    plot_git_commits(values$logfile, input$num_months, plot_type = "plotly",
-                     x = input$xvar, y = input$yvar)
+    plot_git_commits(values$logfile, input$dates[1], input$dates[2],
+                     plot_type = "plotly", x = input$xvar, y = input$yvar)
   })
 }
 

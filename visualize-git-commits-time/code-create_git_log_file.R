@@ -54,8 +54,8 @@ create_git_log_file <- function(
     commits <- git2r::commits(repo)
 
     dates <- unlist(lapply(commits, function(commit) {
-      if (commit@author@name %in% username) {
-        as.character(as.POSIXlt(commit@author@when@time, origin = "1970-01-01"))
+      if (commit$author$name %in% username) {
+        as.character(as.POSIXlt(commit$author$when$time, origin = "1970-01-01"))
       } else {
         NULL
       }
@@ -79,11 +79,11 @@ create_git_log_file <- function(
   return(logfile)
 }
 
-# create_git_log_file(
-#   username = c("Dean Attali", "daattali"),
-#   repos = c("daattali/addinslist", "daattali/beautiful-jekyll", "jennybc/bingo", "daattali/colourpicker", "daattali/daattali.github.io", "daattali/ddpcr","daattali/ggExtra", "daattali/lightsout", "daattali/rsalad", "daattali/shinyjs", "daattali/statsTerrorismProject", "daattali/timevis", "daattali/shinyforms", "daattali/advanced-shiny", "daattali/shinyalert"),
-#   logfile = "dean-projects.csv"
-# )
+create_git_log_file(
+  username = c("Dean Attali", "daattali"),
+  repos = c("daattali/addinslist", "daattali/beautiful-jekyll", "jennybc/bingo", "daattali/colourpicker", "daattali/daattali.github.io", "daattali/ddpcr","daattali/ggExtra", "daattali/lightsout", "daattali/rsalad", "daattali/shinyjs", "daattali/statsTerrorismProject", "daattali/timevis", "daattali/shinyforms", "daattali/advanced-shiny", "daattali/shinyalert"),
+  logfile = "dean-projects.csv"
+)
 
 create_git_log_file(
   username = c("Hadley Wickham", "hadley"),
@@ -91,20 +91,20 @@ create_git_log_file(
   logfile = "hadley-projects.csv"
 )
 
-# create_git_log_file(
-#   username = c("Jenny Bryan", "jennybc"),
-#   repos = c("jennybc/bingo", "rsheets/cellranger", "r-lib/devtools", "jennybc/gapminder", "jennybc/githug", "jennybc/googlesheets", "jennybc/jadd", "rsheets/jailbreakr", "rsheets/linen", "jennybc/r-graph-catalog", "rsheets/rexcel", "tidyverse/reprex", "r-lib/usethis", "tidyverse/googledrive"),
-#   logfile = "jenny-projects.csv"
-# )
+create_git_log_file(
+  username = c("Jenny Bryan", "jennybc"),
+  repos = c("jennybc/bingo", "rsheets/cellranger", "r-lib/devtools", "jennybc/gapminder", "jennybc/githug", "jennybc/googlesheets", "jennybc/jadd", "rsheets/jailbreakr", "rsheets/linen", "jennybc/r-graph-catalog", "rsheets/rexcel", "tidyverse/reprex", "r-lib/usethis", "tidyverse/googledrive"),
+  logfile = "jenny-projects.csv"
+)
 
-# create_git_log_file(
-#   username = c("Yihui Xie", "yihui"),
-#   repos = c("rstudio/leaflet", "rstudio/bookdown", "yihui/formatR", "yihui/knitr", "yihui/knitr-examples", "yihui/r-ninja", "rstudio/rmarkdown", "rstudio/shiny", "rstudio/DT", "yihui/servr", "rstudio/bookdown"),
-#   logfile = "yihui-projects.csv"
-# )
+create_git_log_file(
+  username = c("Yihui Xie", "yihui"),
+  repos = c("rstudio/leaflet", "rstudio/bookdown", "yihui/formatR", "yihui/knitr", "yihui/knitr-examples", "yihui/r-ninja", "rstudio/rmarkdown", "rstudio/shiny", "rstudio/DT", "yihui/servr", "rstudio/bookdown"),
+  logfile = "yihui-projects.csv"
+)
 
-# create_git_log_file(
-#   username = c("Jim Hester", "jimhester"),
-#   repos = c("r-lib/devtools", "r-lib/fs", "r-lib/covr", "tidyverse/glue", "jimhester/lintr", "jimhester/gmailr", "r-lib/xml2", "r-dbi/odbc", "tidyverse/readr", "jimhester/knitrBootstrap", "travis-ci/travis-build"),
-#   logfile = "jim-projects.csv"
-# )
+create_git_log_file(
+  username = c("Jim Hester", "jimhester"),
+  repos = c("r-lib/devtools", "r-lib/fs", "r-lib/covr", "tidyverse/glue", "jimhester/lintr", "jimhester/gmailr", "r-lib/xml2", "r-dbi/odbc", "tidyverse/readr", "jimhester/knitrBootstrap", "travis-ci/travis-build"),
+  logfile = "jim-projects.csv"
+)
