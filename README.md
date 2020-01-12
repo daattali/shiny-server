@@ -1,7 +1,5 @@
 # Dean Attali's Shiny Server
 
-[![saythanks](http://i.imgur.com/L88apDa.png)](https://saythanks.io/to/daattali)
-
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
 This repo contains the setup of [my Shiny server](http://daattali.com/shiny/).  It is a git repo under `/srv/shiny-server` on my server.
