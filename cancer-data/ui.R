@@ -17,6 +17,7 @@ share <- list(
 function(request) {
 fluidPage(
   useShinyjs(),
+  shinydisconnect::disconnectMessage2(),
   title = "Cancer data in the United States",
   
   # add custom JS and CSS

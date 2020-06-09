@@ -24,6 +24,7 @@ fix_name <- function(x) {
 }
 
 ui <- fluidPage(
+  shinydisconnect::disconnectMessage2(),
   title = "useR! 2017 Attendance",
   shinyjs::useShinyjs(),
   tags$head(

@@ -36,6 +36,7 @@ if (file.exists(filename)) {
 }
 
 ui <- fluidPage(
+  shinydisconnect::disconnectMessage2(),
   # Ignore this tags$head section, just adding metadata for facebook/twitter sharing
   tags$head(
     tags$link(rel = "shortcut icon", type="image/x-icon", href="http://daattali.com/shiny/img/favicon.ico"),

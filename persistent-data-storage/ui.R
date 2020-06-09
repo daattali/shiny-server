@@ -11,6 +11,7 @@ storage_types <- c(
 )
 
 shinyUI(fluidPage(
+  shinydisconnect::disconnectMessage2(),
   title = "Persistent data storage with Shiny",
   shinyjs::useShinyjs(),
   tags$head(includeCSS(file.path("www", "app.css"))),

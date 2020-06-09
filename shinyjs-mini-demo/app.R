@@ -102,6 +102,7 @@ font-size: 20px;
 "
 
 ui <- fixedPage(
+  shinydisconnect::disconnectMessage2(), 
   shinyjs::useShinyjs(),
   tags$style(css),
   div(id = "expr-container",
