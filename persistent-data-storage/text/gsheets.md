@@ -6,8 +6,8 @@ Since all responses will be recorded in the same sheet, all the responses must h
 
 #### Setup
 
-All you need to do is create a Google Sheet and set the top row with the names of the fields.  You can either do that via the web or using the [googlesheets](https://github.com/jennybc/googlesheets) package. You also need to have a Google account, which I can safely assume you do.
+First you need to have a Google account, which I can safely assume you do. Then you need to create a Google Sheet and set the top row with the names of the fields.  You can either do that via the web or using the [googlesheets4](https://github.com/tidyverse/googlesheets4) package.
 
 #### Details
 
-You can use the [googlesheets](https://github.com/jennybc/googlesheets) package to interact with Google Sheets from R. To connect to a specific sheet, you will need either the sheet's title or key (preferably key, as it's unique).
+You can use the [googlesheets4](https://github.com/tidyverse/googlesheets4) package to interact with Google Sheets from R. To connect to a specific sheet, you will need the sheet's key/ID. In order to get R to **automatically** write to the Google Sheet without asking for your authorization every time, you must set up the {googlesheets4} authentication, which is the hardest step here. Refer to the package documentation for instructions. 

@@ -5,6 +5,7 @@ shiny-server.Rproj
 .httr-oauth
 persistent-data-storage/responses/
 persistent-data-storage/googlesheets_token.rds
+persistent-data-storage/*.json
 dropbox_token.rds
 mimic-google-form/responses/
 *.sqlite

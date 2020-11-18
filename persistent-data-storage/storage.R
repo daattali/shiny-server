@@ -4,12 +4,13 @@ library(DBI)
 library(RMySQL)
 library(RSQLite)
 library(mongolite)
-library(googlesheets)
+library(googlesheets4)
 library(aws.s3)
 library(rdrop2)
 
 DB_NAME <- "shinyapps"
 TABLE_NAME <- "google_form_mock"
+SHEET_ID <- "126sYt93gzRGJE6n54CY1Z5VgyXl19btsy8zVweLvYu8"
 
 # decide which function to use to save based on storage type
 get_save_fxn <- function(type) {
@@ -162,13 +163,14 @@ load_data_mongodb <- function() {
 
 #### Method 5: Google Sheets ####
 
-gs_auth(token = "googlesheets_token.rds")
+gs4_auth(path = "googlesheets_serviceaccount.json")
 
 save_data_gsheets <- function(data) {
-  TABLE_NAME %>% gs_title %>% gs_add_row(input = data)
+  data <- data %>% as.list() %>% data.frame()
+  sheet_append(SHEET_ID, data)
 }
 load_data_gsheets <- function() {
-  TABLE_NAME %>% gs_title %>% gs_read_csv
+  read_sheet(SHEET_ID)
 }
 
 
