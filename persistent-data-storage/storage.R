@@ -138,22 +138,26 @@ collection_name <- sprintf("%s.%s", DB_NAME, TABLE_NAME)
 save_data_mongodb <- function(data) {
   db <- mongo(collection = TABLE_NAME,
               url = sprintf(
-                "mongodb://%s:%s@%s/%s",
+                "mongodb+srv://%s:%s@%s/%s",
                 options()$mongodb$username,
                 options()$mongodb$password,
                 options()$mongodb$host,
-                DB_NAME))
+                DB_NAME
+              ),
+              options = ssl_options(weak_cert_validation = TRUE))
   data <- as.data.frame(t(data))
   db$insert(data)
 }
 load_data_mongodb <- function() {
   db <- mongo(collection = TABLE_NAME,
               url = sprintf(
-                "mongodb://%s:%s@%s/%s",
+                "mongodb+srv://%s:%s@%s/%s",
                 options()$mongodb$username,
                 options()$mongodb$password,
                 options()$mongodb$host,
-                DB_NAME))
+                DB_NAME
+              ),
+              options = ssl_options(weak_cert_validation = TRUE))
   data <- db$find()
 
   data

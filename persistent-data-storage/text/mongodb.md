@@ -6,7 +6,7 @@ Being NoSQL means that the database is schema-less. That means that different re
 
 #### Setup
 
-All you need to do is create a mongoDB database. Since there is no schema, it's not mandatory to create a collection (collection in mongoDB = table in SQL) before populating it. You can either install mongoDB locally, remotely, or use a web service that provides mongoDB hosting such as [mLab](https://mlab.com/).
+All you need to do is create a mongoDB database. Since there is no schema, it's not mandatory to create a collection (collection in mongoDB = table in SQL) before populating it. You can either install mongoDB locally, remotely, or use a web service that provides mongoDB hosting such as [mongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 
 #### Details
 
