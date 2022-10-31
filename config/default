@@ -32,8 +32,8 @@ server {
         ssl on;
         server_name daattali.com www.daattali.com;
 
-        ssl_certificate /etc/ssl/cert_chain.crt;
-        ssl_certificate_key /etc/ssl/daattali.com.key;
+        ssl_certificate /etc/ssl/2021/daattali_com_chain.crt;
+        ssl_certificate_key /etc/ssl/2021/daattali.com.key;
 
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_prefer_server_ciphers on;
@@ -50,6 +50,7 @@ server {
 #	rewrite ^(.*[^/])$ $1/ permanent;
 
 	location /shiny/ {
+
 		proxy_pass http://127.0.0.1:3838/;
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
@@ -60,7 +61,7 @@ server {
 		# redirects /shiny/myapp to /shiny/myapp/
 	        rewrite ^(/shiny/[^/]+)$ $1/ permanent;
 
-                sub_filter '</body>' '<a id="more-apps-by-dean" style="position: fixed;right: 0;bottom: 0;z-index: 99999;padding: 5px;background: rgba(0,0,0,0.8);color: white;font-size: 14px;" href="https://attalitech.com/#portfolio">More apps by Dean</a></body>';
+                sub_filter '</body>' '<div id="more-apps-by-dean" style="position: fixed;right: 0;bottom: 0;padding: 4px;text-align: center;z-index: 99999;background: rgba(0,0,0,0.8);font-size: 14px;color: #fff;"><a href="https://attalitech.com/#portfolio" style="color: #fff;">More apps by Dean</a> • <a href="https://github.com/sponsors/daattali" style="color: hotpink; font-weight: bold;">❤ Support</a></div></body>';
                 sub_filter_once on;
 	}
 
@@ -98,6 +99,14 @@ server {
         location ~ /.well-known {
                 allow all;
         }
+
+        error_page 500 502 503 504 /5xx.html;
+        location /5xx.html {
+        }
+        error_page 404 /4xx.html;
+        location /4xx.html {
+        }
+
 
 	# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
 	#location /RequestDenied {
