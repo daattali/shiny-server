@@ -167,7 +167,7 @@ load_data_mongodb <- function() {
 
 #### Method 5: Google Sheets ####
 
-gs4_auth(path = "googlesheets_serviceaccount.json")
+gs4_auth(path = "googlesheets_serviceaccount.json", email = "daattali@gmail.com", cache = "secrets")
 
 save_data_gsheets <- function(data) {
   data <- data %>% as.list() %>% data.frame()
