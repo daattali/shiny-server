@@ -32,8 +32,8 @@ server {
         ssl on;
         server_name daattali.com www.daattali.com;
 
-        ssl_certificate /etc/ssl/2021/daattali_com_chain.crt;
-        ssl_certificate_key /etc/ssl/2021/daattali.com.key;
+        ssl_certificate /home/dean/ssl/2023/daattali_com.crt;
+        ssl_certificate_key /home/dean/ssl/2023/daattali.com.key;
 
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_prefer_server_ciphers on;
@@ -61,6 +61,12 @@ server {
 		# redirects /shiny/myapp to /shiny/myapp/
 	        rewrite ^(/shiny/[^/]+)$ $1/ permanent;
 
+                sub_filter '</head>' '<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7PFZ8V9VS"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-G7PFZ8V9VS");
+</script></head>';
                 sub_filter '</body>' '<div id="more-apps-by-dean" style="position: fixed;right: 0;bottom: 0;padding: 4px;text-align: center;z-index: 99999;background: rgba(0,0,0,0.8);font-size: 14px;color: #fff;"><a href="https://attalitech.com/#portfolio" style="color: #fff;">More apps by Dean</a> • <a href="https://github.com/sponsors/daattali" style="color: hotpink; font-weight: bold;">❤ Support</a></div></body>';
                 sub_filter_once on;
 	}
