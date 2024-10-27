@@ -19,7 +19,7 @@ getData <- function() {
 																			"cancerData-order-cancerType.txt"),
 																	header = FALSE, row.names = NULL, sep = ",")
 	cDatTypeOrder %<>%
-		first
+		pull(1)
 	cDat %<>%
 		mutate(cancerType = factor(cancerType, cDatTypeOrder))
 	
