@@ -211,7 +211,7 @@ shinyApp(
         h2("Previous responses (only visible to admins)"),
         downloadButton("downloadBtn", "Download responses"), br(), br(),
         DT::dataTableOutput("responsesTable"), br(),
-        "* There were over 2000 responses by Dec 4 2017, so all data prior to that date was deleted as a cleanup"
+        "* There were over 5000 responses by 2023, so all data prior to 2023 was deleted as a cleanup"
       )
     })
     

@@ -114,7 +114,7 @@ shinyUI(fluidPage(
           title = "View responses", id = "viewTab", value = "viewTab",
           br(),
           downloadButton("downloadBtn", "Download responses"), br(), br(),
-          p("(Only showing data from year 2020)"),
+          p("(Only showing data since 2023)"),
           shinycssloaders::withSpinner(DT::dataTableOutput("responsesTable"))
         )
       )
