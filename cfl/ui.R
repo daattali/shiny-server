@@ -10,7 +10,7 @@ fluidPage(
   title = "Impact Replays",
   shinydisconnect::disconnectMessage2(),
   useShinyjs(),
-  extendShinyjs("www/shinyjs.js",
+  extendShinyjs("shinyjs.js",
                 functions = c("setline", "newgame", "playyoutube")),
   includeScript("www/main.js"),
   includeCSS("www/style.css"),
